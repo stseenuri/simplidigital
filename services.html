@@ -293,14 +293,14 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 <!-- STICKY SERVICE TABS -->
 <div class="srv-tabs" id="services-nav" role="navigation" aria-label="Jump to service">
   <div class="tabs-inner">
-    <button class="tab-btn active" onclick="scrollTo('seo')">SEO</button>
-    <button class="tab-btn" onclick="scrollTo('smm')">Social Media</button>
-    <button class="tab-btn" onclick="scrollTo('web')">Website Design</button>
-    <button class="tab-btn" onclick="scrollTo('brand')">Branding</button>
-    <button class="tab-btn" onclick="scrollTo('ads')">Paid Ads</button>
-    <button class="tab-btn" onclick="scrollTo('content')">Content</button>
-    <button class="tab-btn" onclick="scrollTo('gmb')">Google My Business</button>
-    <button class="tab-btn" onclick="scrollTo('analytics')">Analytics</button>
+    <button class="tab-btn active" onclick="scrollToSection('seo')">SEO</button>
+    <button class="tab-btn" onclick="scrollToSection('smm')">Social Media</button>
+    <button class="tab-btn" onclick="scrollToSection('web')">Website Design</button>
+    <button class="tab-btn" onclick="scrollToSection('brand')">Branding</button>
+    <button class="tab-btn" onclick="scrollToSection('ads')">Paid Ads</button>
+    <button class="tab-btn" onclick="scrollToSection('content')">Content</button>
+    <button class="tab-btn" onclick="scrollToSection('gmb')">Google My Business</button>
+    <button class="tab-btn" onclick="scrollToSection('analytics')">Analytics</button>
   </div>
 </div>
 
@@ -779,11 +779,12 @@ window.addEventListener('scroll',function(){
 },{passive:true});
 
 // SCROLL TO SECTION
-function scrollTo(id){
+function scrollToSection(id){
   var el=document.getElementById(id);
   if(!el)return;
-  var offset=document.querySelector('.srv-tabs').offsetHeight+64;
-  var top=el.getBoundingClientRect().top+window.pageYOffset-offset;
+  var navH=64;
+  var tabsH=document.getElementById('services-nav').offsetHeight;
+  var top=el.getBoundingClientRect().top+window.pageYOffset-(navH+tabsH+8);
   window.scrollTo({top:top,behavior:'smooth'});
 }
 
