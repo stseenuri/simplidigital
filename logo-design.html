@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Logo Design Agency India — Brand Identity Design | SimpliDigital</title>
+<meta name="description" content="SimpliDigital designs logos and brand identities for businesses across India. See our portfolio of logos designed for food, fashion, wellness, interior design and more. Free consultation available."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.simplidigital.in/logo-design"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="Logo Design Agency India — SimpliDigital"/>
+<meta property="og:description" content="Logos and brand identities that make your business look credible from the first impression. See our work across 6 industries."/>
+<meta property="og:url" content="https://www.simplidigital.in/logo-design"/>
+<meta property="og:image" content="https://www.simplidigital.in/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<link rel="icon" href="sdlogo.png"/>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Service",
+  "name":"Logo Design and Brand Identity",
+  "provider":{"@type":"Organization","name":"SimpliDigital","url":"https://www.simplidigital.in"},
+  "description":"Professional logo design and brand identity services for businesses across India. Custom logos, colour palettes, typography and brand guidelines.",
+  "areaServed":"India",
+  "serviceType":"Logo Design"
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --teal:#00C2CB;
+  --gold:#F4A100;
+  --navy:#04090f;
+  --white:#f5f5f7;
+  --line:rgba(255,255,255,.07);
+  --nh:64px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
+
+#c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
+#c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+
+/* NAV */
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(4,9,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.n-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
+.n-logo img{height:28px;width:auto;display:block}
+.n-brand{font-size:.95rem;font-weight:700;letter-spacing:-.2px;color:var(--white)}
+.n-brand em{color:var(--teal);font-style:normal}
+.n-links{display:flex;gap:28px;list-style:none;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
+.n-links a{font-size:.75rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;font-weight:500;white-space:nowrap}
+.n-links a:hover,.n-links a.active{color:var(--white)}
+.n-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.n-cta{font-size:.74rem;font-weight:600;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:7px 18px;border-radius:980px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.n-cta:hover{background:var(--teal);color:var(--navy)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .35s;transform-origin:center}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+#mmenu{position:fixed;inset:0;background:rgba(4,9,15,.97);backdrop-filter:blur(28px);z-index:590;display:none;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;pointer-events:none;transition:opacity .4s}
+#mmenu.open{display:flex;opacity:1;pointer-events:auto}
+#mmenu a{font-size:1.8rem;font-weight:700;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
+#mmenu a:hover{color:var(--white)}
+#mmenu .mm-cta{font-size:1.1rem;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:14px 36px;border-radius:980px}
+
+/* HERO */
+#hero{position:relative;min-height:60vh;padding-top:var(--nh);display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--navy);border-bottom:1px solid var(--line)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.028) 1px,transparent 1px);background-size:55px 55px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 20%,transparent 100%);pointer-events:none}
+.hero-glow{position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.hero-c{position:relative;z-index:2;text-align:center;padding:60px 6vw 80px;max-width:860px;width:100%}
+.hero-eyebrow{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:20px}
+.hero-eyebrow::before,.hero-eyebrow::after{content:'';width:20px;height:1px;background:var(--teal)}
+h1.page-h1{font-size:clamp(2.6rem,6vw,5.5rem);font-weight:800;line-height:1.05;letter-spacing:-2px;color:var(--white);margin-bottom:20px;opacity:0;transform:translateY(20px);transition:opacity .8s .1s,transform .8s .1s}
+h1.page-h1 em{color:var(--teal);font-style:normal}
+h1.page-h1.in{opacity:1;transform:translateY(0)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.4);line-height:1.8;font-weight:300;max-width:540px;margin:0 auto 36px;opacity:0;transform:translateY(16px);transition:opacity .8s .4s,transform .8s .4s}
+.hero-sub.in{opacity:1;transform:translateY(0)}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;opacity:0;transition:opacity .7s .7s}
+.hero-btns.in{opacity:1}
+.btn-p{background:var(--teal);color:var(--navy);padding:12px 26px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+.btn-p:hover{transform:scale(1.04);box-shadow:0 0 36px rgba(0,194,203,.4)}
+.btn-s{background:rgba(255,255,255,.06);color:rgba(255,255,255,.6);padding:12px 26px;border-radius:980px;font-weight:500;font-size:.84rem;text-decoration:none;transition:all .3s;border:1px solid rgba(255,255,255,.1)}
+.btn-s:hover{background:rgba(255,255,255,.1);color:var(--white)}
+
+/* STATS STRIP */
+.stats-strip{background:#050d18;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:40px 5vw}
+.stats-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden;max-width:800px;margin:0 auto}
+.stat-item{background:#050d18;padding:24px 20px;text-align:center}
+.stat-num{font-size:2rem;font-weight:900;color:var(--teal);letter-spacing:-1px;line-height:1;margin-bottom:6px}
+.stat-lbl{font-size:.7rem;color:rgba(255,255,255,.3);font-weight:300;line-height:1.4}
+
+/* PORTFOLIO */
+#portfolio{padding:100px 5vw;background:var(--navy)}
+.port-intro{text-align:center;max-width:640px;margin:0 auto 64px}
+.sec-label{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sec-label::before,.sec-label::after{content:'';width:20px;height:1px;background:var(--teal)}
+.sec-label.c{justify-content:center}
+.sec-h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1.2px;line-height:1.12;color:var(--white)}
+
+/* Portfolio grid — 3 col desktop, 2 col tablet, 1 col mobile */
+.port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden;max-width:1100px;margin:0 auto}
+
+.port-card{background:var(--navy);position:relative;overflow:hidden;cursor:pointer;aspect-ratio:1}
+.port-card:hover .port-overlay{opacity:1}
+.port-card:hover .port-logo{transform:scale(1.06)}
+
+/* Logo display area */
+.port-logo-wrap{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:40px;background:var(--navy);position:relative}
+.port-logo{width:100%;max-width:200px;height:auto;object-fit:contain;transition:transform .5s cubic-bezier(.16,1,.3,1);display:block}
+
+/* Hover overlay */
+.port-overlay{position:absolute;inset:0;background:rgba(4,9,15,.92);backdrop-filter:blur(8px);display:flex;flex-direction:column;justify-content:flex-end;padding:28px;opacity:0;transition:opacity .4s}
+.port-overlay::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),var(--gold))}
+.port-ind-tag{font-size:.58rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);margin-bottom:8px}
+.port-overlay h3{font-size:1.1rem;font-weight:800;color:var(--white);letter-spacing:-.3px;margin-bottom:6px}
+.port-overlay p{font-size:.76rem;color:rgba(255,255,255,.4);line-height:1.6;font-weight:300}
+
+/* Subtle bg color per card */
+.port-card:nth-child(1) .port-logo-wrap{background:linear-gradient(135deg,#04090f 0%,#0a1a0a 100%)}
+.port-card:nth-child(2) .port-logo-wrap{background:linear-gradient(135deg,#04090f 0%,#0f0d1a 100%)}
+.port-card:nth-child(3) .port-logo-wrap{background:linear-gradient(135deg,#04090f 0%,#1a0d0d 100%)}
+.port-card:nth-child(4) .port-logo-wrap{background:linear-gradient(135deg,#04090f 0%,#0d1a17 100%)}
+.port-card:nth-child(5) .port-logo-wrap{background:linear-gradient(135deg,#04090f 0%,#1a160d 100%)}
+.port-card:nth-child(6) .port-logo-wrap{background:linear-gradient(135deg,#04090f 0%,#0d1318 100%)}
+
+/* WHAT IS INCLUDED */
+#included{padding:100px 5vw;background:#050d18}
+.inc-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1100px;margin:48px auto 0}
+.inc-content h2{font-size:clamp(2rem,3.5vw,3rem);font-weight:800;line-height:1.1;letter-spacing:-1px;color:var(--white);margin-bottom:16px}
+.inc-content h2 em{color:var(--teal);font-style:normal}
+.inc-content p{font-size:1rem;color:rgba(255,255,255,.4);line-height:1.8;font-weight:300;margin-bottom:32px}
+.inc-list{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.inc-item{display:flex;align-items:center;gap:16px;padding:18px 24px;border-bottom:1px solid var(--line);transition:background .3s}
+.inc-item:last-child{border-bottom:none}
+.inc-item:hover{background:rgba(0,194,203,.03)}
+.inc-icon{width:36px;height:36px;border-radius:10px;background:rgba(0,194,203,.08);border:1px solid rgba(0,194,203,.15);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.inc-text h3{font-size:.84rem;font-weight:600;color:var(--white);margin-bottom:2px}
+.inc-text p{font-size:.74rem;color:rgba(255,255,255,.3);font-weight:300}
+
+/* PROCESS */
+#process{padding:100px 5vw;background:var(--navy)}
+.proc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;max-width:1100px;margin:48px auto 0}
+.proc-step{background:var(--navy);padding:32px 24px;position:relative;transition:background .3s}
+.proc-step:hover{background:rgba(0,194,203,.03)}
+.proc-step::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.proc-step:hover::after{transform:scaleX(1)}
+.proc-n{font-size:3rem;font-weight:900;color:rgba(0,194,203,.08);letter-spacing:-2px;line-height:1;margin-bottom:16px}
+.proc-step h3{font-size:.88rem;font-weight:700;color:var(--white);margin-bottom:8px}
+.proc-step p{font-size:.76rem;color:rgba(255,255,255,.35);line-height:1.65;font-weight:300}
+.proc-tag{display:inline-block;margin-top:12px;font-size:.58rem;font-weight:700;color:var(--teal);background:rgba(0,194,203,.07);border:1px solid rgba(0,194,203,.13);padding:2px 9px;border-radius:100px;letter-spacing:.5px}
+
+/* INDUSTRIES */
+#industries{padding:80px 5vw;background:#050d18}
+.ind-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;max-width:1100px;margin:40px auto 0}
+.ind-tag{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:10px;padding:14px 16px;text-align:center;font-size:.75rem;font-weight:600;color:rgba(255,255,255,.45);transition:all .3s}
+.ind-tag:hover{border-color:rgba(0,194,203,.25);color:var(--teal);background:rgba(0,194,203,.04)}
+.ind-tag span{display:block;font-size:1.2rem;margin-bottom:6px}
+
+/* WHY */
+#why{padding:100px 5vw;background:var(--navy)}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1100px;margin:48px auto 0}
+.why-card{background:rgba(255,255,255,.022);border:1px solid rgba(255,255,255,.06);border-radius:16px;padding:28px 24px;transition:all .35s}
+.why-card:hover{border-color:rgba(0,194,203,.2);transform:translateY(-5px)}
+.why-ico{font-size:1.4rem;margin-bottom:14px}
+.why-card h3{font-size:.88rem;font-weight:700;color:var(--white);margin-bottom:8px}
+.why-card p{font-size:.78rem;color:rgba(255,255,255,.35);line-height:1.65;font-weight:300}
+
+/* CTA */
+#cta{padding:100px 5vw;background:#050d18;text-align:center;position:relative;overflow:hidden}
+.cta-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-inner{position:relative;z-index:2;max-width:680px;margin:0 auto}
+.cta-h2{font-size:clamp(2.2rem,5vw,4rem);font-weight:800;line-height:1.08;letter-spacing:-1.5px;margin-bottom:16px;color:var(--white)}
+.cta-h2 em{color:var(--teal);font-style:normal}
+.cta-p{font-size:1rem;color:rgba(255,255,255,.4);line-height:1.8;font-weight:300;margin-bottom:32px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:18px}
+.btn-wa{background:#25D366;color:#fff;padding:12px 24px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+.btn-wa:hover{transform:scale(1.04);box-shadow:0 0 28px rgba(37,211,102,.35)}
+.cta-contact{font-size:.75rem;color:rgba(255,255,255,.18)}
+.cta-contact a{color:rgba(0,194,203,.55);text-decoration:none}
+.cta-contact a:hover{color:var(--teal)}
+
+/* FOOTER */
+footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.f-brand{display:flex;align-items:center;gap:8px}
+.f-brand img{height:22px;width:auto}
+.f-name{font-size:.8rem;font-weight:700;color:var(--white)}
+.f-name em{color:var(--teal);font-style:normal}
+.f-tagline{font-size:.6rem;color:rgba(255,255,255,.18);font-style:italic;margin-top:1px}
+.f-links{display:flex;gap:16px;flex-wrap:wrap}
+.f-links a{font-size:.68rem;color:rgba(255,255,255,.22);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:var(--teal)}
+.f-copy{font-size:.6rem;color:rgba(255,255,255,.1)}
+
+.rv{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
+.rv.on{opacity:1;transform:translateY(0)}
+
+@media(max-width:860px){
+  .n-links{display:none !important}
+  .n-cta{display:none !important}
+  .ham{display:flex !important}
+  .port-grid{grid-template-columns:1fr 1fr}
+  .inc-grid{grid-template-columns:1fr;gap:40px}
+  .proc-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr 1fr}
+  .ind-grid{grid-template-columns:repeat(3,1fr)}
+  .stats-inner{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .port-grid{grid-template-columns:1fr}
+  .proc-grid{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .ind-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-inner{grid-template-columns:1fr 1fr}
+  h1.page-h1{letter-spacing:-1px}
+}
+</style>
+</head>
+<body>
+<div id="c1"></div><div id="c2"></div>
+
+<div id="mmenu" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <a href="index.html" onclick="closeMM()">Home</a>
+  <a href="services.html" onclick="closeMM()">Services</a>
+  <a href="index.html#why" onclick="closeMM()">Why Us</a>
+  <a href="#cta" class="mm-cta" onclick="closeMM()">Free Consultation</a>
+</div>
+
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a class="n-logo" href="index.html" aria-label="SimpliDigital homepage">
+    <img src="sdlogo.webp" alt="SimpliDigital logo" width="56" height="28"/>
+    <span class="n-brand">Simpli<em>Digital</em></span>
+  </a>
+  <ul class="n-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="logo-design.html" class="active">Logo Design</a></li>
+    <li><a href="index.html#process">Process</a></li>
+  </ul>
+  <div class="n-right">
+    <a class="n-cta" href="#cta">Get a Quote</a>
+    <button class="ham" id="hambtn" onclick="toggleMM()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero" aria-labelledby="page-h1">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-c">
+    <div class="hero-eyebrow">Logo and Brand Identity Design</div>
+    <h1 class="page-h1" id="page-h1">A logo your customers<br/>remember. A brand they <em>trust.</em></h1>
+    <p class="hero-sub">First impressions are permanent. We design logos and brand identity systems that make your business look credible, memorable and professional from the very first moment a customer sees you.</p>
+    <div class="hero-btns">
+      <a href="#portfolio" class="btn-p">See Our Work <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="#cta" class="btn-s">Get a Free Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip rv">
+  <div class="stats-inner">
+    <div class="stat-item"><div class="stat-num">7s</div><div class="stat-lbl">to form a lasting brand impression</div></div>
+    <div class="stat-item"><div class="stat-num">3x</div><div class="stat-lbl">more revenue with consistent branding</div></div>
+    <div class="stat-item"><div class="stat-num">80%</div><div class="stat-lbl">more likely to buy from brands they recognise</div></div>
+    <div class="stat-item"><div class="stat-num">6</div><div class="stat-lbl">industries we have designed for</div></div>
+  </div>
+</div>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" aria-labelledby="port-h2">
+  <div class="port-intro rv">
+    <div class="sec-label c">Our Work</div>
+    <h2 id="port-h2" class="sec-h2">Six brands. Six industries.<br/>One design team.</h2>
+    <p style="font-size:.9rem;color:rgba(255,255,255,.35);margin-top:14px;line-height:1.7;font-weight:300">Hover over each logo to learn about the brand behind it.</p>
+  </div>
+
+  <div class="port-grid rv" role="list">
+
+    <!-- Farm Mutton -->
+    <article class="port-card" role="listitem" aria-label="Farm Mutton logo">
+      <div class="port-logo-wrap">
+        <img class="port-logo" src="fm_logo.png" alt="Farm Mutton logo — online grass fed mutton delivery brand" loading="lazy"/>
+      </div>
+      <div class="port-overlay">
+        <div class="port-ind-tag">Food and E-commerce</div>
+        <h3>Farm Mutton</h3>
+        <p>Online mutton delivery platform specialising in grass fed, farm to door fresh meat. Brand identity built around trust, freshness and farm heritage.</p>
+      </div>
+    </article>
+
+    <!-- Mani's Atelier -->
+    <article class="port-card" role="listitem" aria-label="Mani's Atelier logo">
+      <div class="port-logo-wrap">
+        <img class="port-logo" src="ma_logo.png" alt="Mani's Atelier logo — premium interior design studio brand identity" loading="lazy"/>
+      </div>
+      <div class="port-overlay">
+        <div class="port-ind-tag">Interior Design</div>
+        <h3>Mani's Atelier</h3>
+        <p>Premium interior design studio. Brand identity crafted to communicate sophistication, precision and high end residential design expertise.</p>
+      </div>
+    </article>
+
+    <!-- Chinkulu -->
+    <article class="port-card" role="listitem" aria-label="Chinkulu logo">
+      <div class="port-logo-wrap">
+        <img class="port-logo" src="logo-chinkulu.png" alt="Chinkulu logo — female led village fashion brand identity" loading="lazy"/>
+      </div>
+      <div class="port-overlay">
+        <div class="port-ind-tag">Fashion and Culture</div>
+        <h3>Chinkulu</h3>
+        <p>Female led fashion brand rooted in village community culture. Identity designed to honour heritage while appealing to a modern fashion audience.</p>
+      </div>
+    </article>
+
+    <!-- Vinthapadalu -->
+    <article class="port-card" role="listitem" aria-label="Vinthapadalu logo">
+      <div class="port-logo-wrap">
+        <img class="port-logo" src="logo-vinthapadalu.png" alt="Vinthapadalu logo — Telugu social community platform brand" loading="lazy"/>
+      </div>
+      <div class="port-overlay">
+        <div class="port-ind-tag">Social and Media</div>
+        <h3>Vinthapadalu</h3>
+        <p>Telugu social community platform bringing together stories, culture and conversations. Brand built around community, curiosity and regional pride.</p>
+      </div>
+    </article>
+
+    <!-- Thanu Yoga Studio -->
+    <article class="port-card" role="listitem" aria-label="Thanu Yoga Studio logo">
+      <div class="port-logo-wrap">
+        <img class="port-logo" src="tys.jpeg" alt="Thanu Yoga Studio logo — online yoga classes wellness brand" loading="lazy"/>
+      </div>
+      <div class="port-overlay">
+        <div class="port-ind-tag">Health and Wellness</div>
+        <h3>Thanu Yoga Studio</h3>
+        <p>Online yoga classes and wellness studio. Identity designed to communicate calm, balance and the transformative power of consistent practice.</p>
+      </div>
+    </article>
+
+    <!-- Zapwash -->
+    <article class="port-card" role="listitem" aria-label="Zapwash logo">
+      <div class="port-logo-wrap">
+        <img class="port-logo" src="zapwash.png" alt="Zapwash logo — instant laundry services brand identity" loading="lazy"/>
+      </div>
+      <div class="port-overlay">
+        <div class="port-ind-tag">Home Services</div>
+        <h3>Zapwash</h3>
+        <p>Instant laundry services platform. Brand built around speed, reliability and the everyday convenience modern urban customers expect.</p>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- WHAT IS INCLUDED -->
+<section id="included" aria-labelledby="inc-h2">
+  <div class="inc-grid rv">
+    <div class="inc-content">
+      <div class="sec-label" style="justify-content:flex-start">What You Get</div>
+      <h2 id="inc-h2">Everything you need to<br/>look <em>professional everywhere.</em></h2>
+      <p>Every logo project includes the full brand identity system — not just an image file. You get everything you need to look consistent and credible across your website, social media, print and packaging.</p>
+      <a href="#cta" class="btn-p" style="display:inline-flex;align-items:center;gap:8px">Start Your Brand <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <div class="inc-list">
+      <div class="inc-item"><div class="inc-icon" aria-hidden="true">&#127775;</div><div class="inc-text"><h3>Primary Logo Design</h3><p>Full concept exploration with multiple directions before final delivery</p></div></div>
+      <div class="inc-item"><div class="inc-icon" aria-hidden="true">&#127912;</div><div class="inc-text"><h3>Colour Palette</h3><p>Primary, secondary and accent colours with hex, RGB and CMYK values</p></div></div>
+      <div class="inc-item"><div class="inc-icon" aria-hidden="true">&#128200;</div><div class="inc-text"><h3>Typography System</h3><p>Heading and body font pairing that works across digital and print</p></div></div>
+      <div class="inc-item"><div class="inc-icon" aria-hidden="true">&#128205;</div><div class="inc-text"><h3>Social Media Templates</h3><p>Profile photo, cover image and post templates for Instagram and Facebook</p></div></div>
+      <div class="inc-item"><div class="inc-icon" aria-hidden="true">&#128196;</div><div class="inc-text"><h3>Brand Guidelines</h3><p>A one page document showing how to use your brand correctly every time</p></div></div>
+      <div class="inc-item"><div class="inc-icon" aria-hidden="true">&#128190;</div><div class="inc-text"><h3>All File Formats</h3><p>PNG, JPG, SVG and PDF delivered in colour, black and white and transparent versions</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" aria-labelledby="proc-h2">
+  <div style="text-align:center;max-width:640px;margin:0 auto" class="rv">
+    <div class="sec-label c">How It Works</div>
+    <h2 id="proc-h2" class="sec-h2">From brief to brand<br/>in four steps.</h2>
+  </div>
+  <div class="proc-grid rv">
+    <div class="proc-step">
+      <div class="proc-n">01</div>
+      <h3>Discovery Call</h3>
+      <p>We learn about your business, your audience, your competitors and what feeling you want your brand to create. The brief shapes everything that follows.</p>
+      <span class="proc-tag">Day 1</span>
+    </div>
+    <div class="proc-step">
+      <div class="proc-n">02</div>
+      <h3>Concept Design</h3>
+      <p>We develop two to three distinct logo directions based on your brief. Each concept comes with a rationale explaining the thinking behind it.</p>
+      <span class="proc-tag">Day 3 to 5</span>
+    </div>
+    <div class="proc-step">
+      <div class="proc-n">03</div>
+      <h3>Refinement</h3>
+      <p>You choose your preferred direction and we refine it based on your feedback. Two rounds of revisions are included in every project.</p>
+      <span class="proc-tag">Day 6 to 8</span>
+    </div>
+    <div class="proc-step">
+      <div class="proc-n">04</div>
+      <h3>Final Delivery</h3>
+      <p>All files delivered in every format you will ever need along with your brand guidelines document. Your brand is ready to use everywhere from day one.</p>
+      <span class="proc-tag">Day 9 to 10</span>
+    </div>
+  </div>
+</section>
+
+<!-- INDUSTRIES -->
+<section id="industries" aria-labelledby="ind-h2">
+  <div style="text-align:center;max-width:640px;margin:0 auto" class="rv">
+    <div class="sec-label c">Industries</div>
+    <h2 id="ind-h2" class="sec-h2">We have designed for<br/>businesses like yours.</h2>
+  </div>
+  <div class="ind-grid rv">
+    <div class="ind-tag"><span>&#127869;</span>Food and Beverage</div>
+    <div class="ind-tag"><span>&#127968;</span>Interior Design</div>
+    <div class="ind-tag"><span>&#128248;</span>Fashion and Apparel</div>
+    <div class="ind-tag"><span>&#128241;</span>Social and Media</div>
+    <div class="ind-tag"><span>&#129504;</span>Health and Wellness</div>
+    <div class="ind-tag"><span>&#128167;</span>Home Services</div>
+    <div class="ind-tag"><span>&#127981;</span>Retail and E-commerce</div>
+    <div class="ind-tag"><span>&#127979;</span>Education</div>
+    <div class="ind-tag"><span>&#127963;</span>Real Estate</div>
+    <div class="ind-tag"><span>&#9877;&#65039;</span>Technology</div>
+    <div class="ind-tag"><span>&#128176;</span>Finance</div>
+    <div class="ind-tag"><span>&#127775;</span>Lifestyle</div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why" aria-labelledby="why-h2">
+  <div style="text-align:center;max-width:640px;margin:0 auto" class="rv">
+    <div class="sec-label c">Why SimpliDigital</div>
+    <h2 id="why-h2" class="sec-h2">More than just a logo.</h2>
+  </div>
+  <div class="why-grid rv">
+    <div class="why-card"><div class="why-ico" aria-hidden="true">&#127963;</div><h3>Brand Thinking First</h3><p>We do not start in design software. We start with your audience, your competitors and your positioning. The logo is the output of strategy, not the starting point.</p></div>
+    <div class="why-card"><div class="why-ico" aria-hidden="true">&#9889;</div><h3>Delivered in 10 Days</h3><p>Most agencies take 4 to 6 weeks. We deliver a complete brand identity in 10 working days because your business cannot wait indefinitely to start looking professional.</p></div>
+    <div class="why-card"><div class="why-ico" aria-hidden="true">&#128279;</div><h3>Built for Digital First</h3><p>Your logo will look just as sharp on a phone screen as it does on a billboard. Every design is tested across every context before delivery.</p></div>
+    <div class="why-card"><div class="why-ico" aria-hidden="true">&#127775;</div><h3>Unlimited File Formats</h3><p>PNG, JPG, SVG, PDF — light and dark versions, transparent backgrounds, favicon sizes. Everything you will ever need, delivered once, organised clearly.</p></div>
+    <div class="why-card"><div class="why-ico" aria-hidden="true">&#128200;</div><h3>Full Agency Behind You</h3><p>Your logo is just the start. When you are ready to build the website or run ads or grow on social media, the same team that built your brand handles everything else.</p></div>
+    <div class="why-card"><div class="why-ico" aria-hidden="true">&#129309;</div><h3>Revision Friendly</h3><p>Two full rounds of revisions included in every project. We work until you love it because a logo you are not proud of is a logo you will not use consistently.</p></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" aria-labelledby="cta-h2">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-inner rv">
+    <div class="sec-label c">Start Your Brand</div>
+    <h2 class="cta-h2" id="cta-h2">Your business deserves<br/>a brand that works as hard<br/><em>as you do.</em></h2>
+    <p class="cta-p">Tell us about your business and we will put together a brand identity that makes you look credible from day one. Free consultation, no obligation.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20a%20logo%20design%20quote." class="btn-wa" aria-label="WhatsApp SimpliDigital for a logo design quote">&#128172; WhatsApp Us</a>
+      <a href="mailto:hello@simplidigital.in?subject=Logo%20Design%20Enquiry" class="btn-p" aria-label="Email SimpliDigital for a logo design quote">Email Us <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <p class="cta-contact">Call: <a href="tel:+917382312386">+91 73823 12386</a> &nbsp;·&nbsp; <a href="mailto:hello@simplidigital.in">hello@simplidigital.in</a></p>
+  </div>
+</section>
+
+<footer role="contentinfo">
+  <div class="f-brand">
+    <img src="sdlogo.webp" alt="SimpliDigital logo design agency India" width="44" height="22"/>
+    <div>
+      <div class="f-name">Simpli<em>Digital</em></div>
+      <div class="f-tagline">Simplifying Digital. Amplifying Growth.</div>
+    </div>
+  </div>
+  <div class="f-links" role="navigation" aria-label="Footer navigation">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="logo-design.html">Logo Design</a>
+    <a href="https://wa.me/917382312386" aria-label="WhatsApp">WhatsApp</a>
+    <a href="mailto:hello@simplidigital.in" aria-label="Email">Email</a>
+  </div>
+  <p class="f-copy">&copy; 2026 SimpliDigital · India</p>
+</footer>
+
+<script>
+var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
+document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
+(function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();
+document.querySelectorAll('a,button').forEach(function(el){
+  el.addEventListener('mouseenter',function(){c1.style.width='4px';c1.style.height='4px';c2.style.width='48px';c2.style.height='48px'});
+  el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px'});
+});
+
+function toggleMM(){
+  var mm=document.getElementById('mmenu'),hb=document.getElementById('hambtn');
+  var willOpen=!mm.classList.contains('open');
+  if(willOpen){mm.style.display='flex';requestAnimationFrame(function(){mm.classList.add('open')})}
+  else{mm.classList.remove('open');setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420)}
+  hb.classList.toggle('open',willOpen);
+  hb.setAttribute('aria-expanded',String(willOpen));
+  document.body.style.overflow=willOpen?'hidden':'';
+}
+function closeMM(){
+  var mm=document.getElementById('mmenu'),hb=document.getElementById('hambtn');
+  mm.classList.remove('open');
+  setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);
+  hb.classList.remove('open');hb.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+
+window.addEventListener('load',function(){
+  document.querySelector('h1.page-h1').classList.add('in');
+  document.querySelector('.hero-sub').classList.add('in');
+  document.querySelector('.hero-btns').classList.add('in');
+});
+
+window.addEventListener('scroll',function(){
+  document.querySelectorAll('.rv').forEach(function(el){
+    if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on');
+  });
+},{passive:true});
+
+document.querySelectorAll('.rv').forEach(function(el){
+  if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on');
+});
+</script>
+</body>
+</html>
