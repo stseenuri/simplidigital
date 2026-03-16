@@ -3,12 +3,48 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>SimpliDigital</title>
+<title>SimpliDigital — Full Service Digital Marketing Agency India</title>
+<meta name="description" content="SimpliDigital is a full service digital marketing agency in India. SEO, social media marketing, website design, logo creation, content strategy and paid ads. Free consultation available."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.simplidigital.in/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="SimpliDigital — Full Service Digital Marketing Agency India"/>
+<meta property="og:description" content="From logo to website to SEO to social media, SimpliDigital handles your entire digital presence. One agency. Everything done."/>
+<meta property="og:url" content="https://www.simplidigital.in/"/>
+<meta property="og:image" content="https://www.simplidigital.in/og-image.jpg"/>
+<meta property="og:site_name" content="SimpliDigital"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="SimpliDigital — Full Service Digital Marketing Agency India"/>
+<meta name="twitter:description" content="SEO, SMM, website design, branding and paid ads. One agency. Everything done."/>
 <link rel="icon" href="sdlogo.png"/>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"MarketingAgency",
+  "name":"SimpliDigital",
+  "url":"https://www.simplidigital.in",
+  "logo":"https://www.simplidigital.in/sdlogo.webp",
+  "description":"Full service digital marketing agency offering SEO, social media marketing, website design, logo creation and paid advertising for businesses across India.",
+  "telephone":"+917382312386",
+  "email":"hello@simplidigital.in",
+  "address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","addressCountry":"IN"},
+  "areaServed":"India",
+  "serviceType":["SEO","Social Media Marketing","Website Design","Logo Design","Content Marketing","Paid Advertising"]
+}
+</script>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--teal:#00C2CB;--gold:#F4A100;--navy:#04090f;--white:#f5f5f7}
+:root{
+  --teal:#00C2CB;
+  --gold:#F4A100;
+  --navy:#04090f;
+  --white:#f5f5f7;
+  --line:rgba(255,255,255,.07);
+  --nh:64px;
+}
 html{scroll-behavior:auto}
 body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
 
@@ -16,128 +52,176 @@ body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;ov
 #c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
 #c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
 
-/* LOADER */
-#loader{position:fixed;inset:0;background:var(--navy);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px}
-#loader img.ld-logo{height:52px;opacity:0;transform:scale(.85);transition:opacity .6s,transform .6s}
-#loader img.ld-logo.in{opacity:1;transform:scale(1)}
-.ld-bar{width:160px;height:1px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden;margin-top:4px}
-.ld-prog{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--gold));transition:width .04s linear}
-.ld-n{font-size:.6rem;letter-spacing:4px;color:rgba(255,255,255,.18);margin-top:4px}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 5vw;height:60px;display:flex;align-items:center;justify-content:space-between;transition:background .5s,border-color .5s;border-bottom:1px solid transparent}
-nav.on{background:rgba(4,9,15,.88);backdrop-filter:blur(28px) saturate(1.8);border-color:rgba(255,255,255,.06)}
-.n-logo{display:flex;align-items:center;gap:9px;text-decoration:none}
-.n-logo img{height:28px}
-.n-logo span{font-size:.95rem;font-weight:700;letter-spacing:-.2px}
-.n-logo span em{color:var(--teal);font-style:normal}
-.n-links{display:flex;gap:28px;list-style:none}
-.n-links a{font-size:.75rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;font-weight:500}
+/* ══ NAV ══════════════════════════════════════════════ */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:600;
+  height:var(--nh);
+  padding:0 5vw;
+  display:flex;align-items:center;justify-content:space-between;
+  background:rgba(4,9,15,.92);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line);
+  transition:background .4s,border-color .4s;
+}
+nav.scrolled{background:rgba(4,9,15,.98);}
+.n-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
+.n-logo img{height:28px;width:auto;display:block}
+.n-brand{font-size:.95rem;font-weight:700;letter-spacing:-.2px;color:var(--white)}
+.n-brand em{color:var(--teal);font-style:normal}
+.n-links{display:flex;gap:28px;list-style:none;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
+.n-links a{font-size:.75rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;font-weight:500;white-space:nowrap}
 .n-links a:hover{color:var(--white)}
-.n-cta{font-size:.74rem;font-weight:600;color:var(--teal);border:1px solid rgba(0,194,203,.28);padding:6px 16px;border-radius:980px;text-decoration:none;transition:all .25s}
+.n-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.n-cta{font-size:.74rem;font-weight:600;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:7px 18px;border-radius:980px;text-decoration:none;transition:all .25s;white-space:nowrap}
 .n-cta:hover{background:var(--teal);color:var(--navy)}
 
-/* =====================================================
-   CINEMATIC SCROLL SYSTEM
-   Each panel = 100vh, content pins and animates
-   ===================================================== */
+/* HAMBURGER — mobile only */
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none;line-height:0}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .35s;transform-origin:center}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
-/* PANEL WRAPPER */
-.panel{position:relative;will-change:transform}
+/* MOBILE MENU */
+#mmenu{position:fixed;inset:0;background:rgba(4,9,15,.97);backdrop-filter:blur(28px);z-index:590;display:none;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;pointer-events:none;transition:opacity .4s}
+#mmenu.open{display:flex;opacity:1;pointer-events:auto}
+/* mmenu.open handled above */
+#mmenu a{font-size:1.8rem;font-weight:700;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;letter-spacing:-.5px}
+#mmenu a:hover{color:var(--white)}
+#mmenu .mm-cta{font-size:1.1rem;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:14px 36px;border-radius:980px}
 
-/* ── HERO ── */
-#p0{height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--navy)}
-.hero-bg{position:absolute;inset:0;overflow:hidden}
-/* animated radial that breathes */
-.hero-glow{position:absolute;width:140vmax;height:140vmax;top:50%;left:50%;transform:translate(-50%,-50%);background:conic-gradient(from 0deg,transparent 0%,rgba(0,194,203,.04) 20%,transparent 40%,rgba(244,161,0,.03) 60%,transparent 80%,rgba(0,194,203,.04) 100%);animation:spin 30s linear infinite}
-@keyframes spin{to{transform:translate(-50%,-50%) rotate(360deg)}}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.028) 1px,transparent 1px);background-size:55px 55px;mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black 10%,transparent 100%)}
-.hero-c{position:relative;z-index:2;text-align:center;padding:0 5vw;max-width:1000px}
-.hero-eyebrow{font-size:.65rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:36px;opacity:0;transform:translateY(12px);transition:opacity .8s,transform .8s}
-.hero-title{font-size:clamp(3.2rem,8vw,7rem);font-weight:800;line-height:1.02;letter-spacing:-3px;margin-bottom:28px}
-.hero-title .line{display:block;overflow:hidden}
-.hero-title .line span{display:block;transform:translateY(110%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
-.hero-title .tc{color:var(--teal)}
-.hero-title .dim{color:rgba(255,255,255,.28)}
-.hero-sub{font-size:1.15rem;color:rgba(255,255,255,.42);line-height:1.7;font-weight:300;max-width:520px;margin:0 auto 44px;opacity:0;transition:opacity .8s .5s,transform .8s .5s;transform:translateY(16px)}
-.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;transition:opacity .7s .7s,transform .7s .7s;transform:translateY(16px)}
-.btn-a{background:var(--teal);color:var(--navy);padding:13px 28px;border-radius:980px;font-weight:700;font-size:.86rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
-.btn-a:hover{transform:scale(1.04);box-shadow:0 0 40px rgba(0,194,203,.4)}
-.btn-b{background:rgba(255,255,255,.06);color:rgba(255,255,255,.65);padding:13px 28px;border-radius:980px;font-weight:500;font-size:.86rem;text-decoration:none;transition:all .3s;border:1px solid rgba(255,255,255,.1)}
-.btn-b:hover{background:rgba(255,255,255,.1);color:var(--white)}
-/* scroll arrow */
-.hero-arrow{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;opacity:0;transition:opacity .6s 1.4s;cursor:pointer}
-.hero-arrow span{font-size:.56rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.18)}
+/* LOADER */
+#loader{position:fixed;inset:0;background:var(--navy);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px}
+#loader img{height:52px;width:auto;opacity:0;transform:scale(.85);transition:opacity .6s,transform .6s}
+#loader img.in{opacity:1;transform:scale(1)}
+.ld-bar{width:160px;height:1px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden}
+.ld-prog{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--gold));transition:width .04s linear}
+.ld-pct{font-size:.6rem;letter-spacing:4px;color:rgba(255,255,255,.18)}
+
+/* ══ HERO ═════════════════════════════════════════════
+   padding-top = nav height so H1 is never hidden under nav
+   min-height = 100vh so it fills the screen
+═══════════════════════════════════════════════════════ */
+#hero{
+  position:relative;
+  min-height:100vh;
+  padding-top:var(--nh);
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;background:var(--navy);
+}
+.hero-glow{position:absolute;inset:0;background:conic-gradient(from 0deg at 50% 50%,transparent 0%,rgba(0,194,203,.04) 20%,transparent 40%,rgba(244,161,0,.03) 60%,transparent 80%,rgba(0,194,203,.04) 100%);animation:spin 30s linear infinite;pointer-events:none}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.028) 1px,transparent 1px);background-size:55px 55px;mask-image:radial-gradient(ellipse 80% 70% at 50% 50%,black 10%,transparent 100%);pointer-events:none}
+.hero-c{position:relative;z-index:2;text-align:center;padding:48px 6vw 80px;max-width:1000px;width:100%}
+.hero-eyebrow{font-size:.65rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:24px;opacity:0;transform:translateY(12px);transition:opacity .8s,transform .8s}
+h1.hero-h1{font-size:clamp(2.6rem,7vw,6.5rem);font-weight:800;line-height:1.04;letter-spacing:-2.5px;margin-bottom:24px;color:var(--white)}
+h1.hero-h1 .line{display:block;overflow:hidden}
+h1.hero-h1 .line span{display:block;transform:translateY(110%);transition:transform .9s cubic-bezier(.16,1,.3,1)}
+h1.hero-h1 .tc{color:var(--teal)}
+.hero-sub{font-size:1.05rem;color:rgba(255,255,255,.42);line-height:1.8;font-weight:300;max-width:580px;margin:0 auto 40px;opacity:0;transform:translateY(16px);transition:opacity .8s .5s,transform .8s .5s}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;transform:translateY(16px);transition:opacity .7s .7s,transform .7s .7s}
+.btn-p{background:var(--teal);color:var(--navy);padding:13px 28px;border-radius:980px;font-weight:700;font-size:.86rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+.btn-p:hover{transform:scale(1.04);box-shadow:0 0 40px rgba(0,194,203,.4)}
+.btn-s{background:rgba(255,255,255,.06);color:rgba(255,255,255,.65);padding:13px 28px;border-radius:980px;font-weight:500;font-size:.86rem;text-decoration:none;transition:all .3s;border:1px solid rgba(255,255,255,.1)}
+.btn-s:hover{background:rgba(255,255,255,.1);color:var(--white)}
+.hero-arrow{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:5px;opacity:0;transition:opacity .6s 1.4s;cursor:pointer;z-index:2}
+.hero-arrow span{font-size:.56rem;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.2)}
 .ha-line{width:1px;height:44px;background:linear-gradient(to bottom,rgba(0,194,203,.6),transparent);animation:haline 2.4s ease-in-out infinite}
 @keyframes haline{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:.15;transform:scaleY(.25)}}
 
-/* ── TICKER ── */
+/* TICKER */
 .ticker{background:var(--teal);padding:10px 0;overflow:hidden}
-.t-inner{display:inline-flex;animation:tick 32s linear infinite;white-space:nowrap}
+.t-inner{display:inline-flex;animation:tick 36s linear infinite;white-space:nowrap}
 .t-item{font-size:.65rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--navy);padding:0 20px}
 .t-item::after{content:' ✦ ';margin-left:20px}
 @keyframes tick{to{transform:translateX(-50%)}}
 
-/* ── STICKY SCENE SYSTEM ── */
-/* Each .sticky-wrap = tall scroll container
-   .sticky-stage = fixed content inside */
+/* SHARED */
+.sec-label{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sec-label::before,.sec-label::after{content:'';width:20px;height:1px;background:var(--teal)}
+.sec-label.c{justify-content:center}
+.sec-label.l{justify-content:flex-start}
+
+/* ══ RESULTS ══════════════════════════════════════════ */
+#results{background:#050d18;padding:80px 5vw}
+.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;max-width:900px;margin:0 auto}
+.r-card{background:#050d18;padding:36px 32px;transition:background .3s}
+.r-card:hover{background:rgba(0,194,203,.03)}
+.r-big{font-size:3rem;font-weight:900;color:var(--teal);letter-spacing:-2px;line-height:1;margin-bottom:8px}
+.r-card h3{font-size:.82rem;font-weight:700;color:var(--white);margin-bottom:6px}
+.r-who{font-size:.72rem;color:rgba(255,255,255,.3);font-weight:300}
+
+/* ══ STICKY SCENE SYSTEM ══════════════════════════════
+   Used for Problem, Services and each service detail
+═══════════════════════════════════════════════════════ */
 .sticky-wrap{position:relative}
 .sticky-stage{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center}
-
-/* scene text base */
-.scene-text{position:absolute;text-align:center;padding:0 5vw;max-width:860px;opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s;pointer-events:none}
+.scene-text{position:absolute;text-align:center;padding:0 6vw;max-width:860px;width:100%;opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s;pointer-events:none}
 .scene-text.active{opacity:1;transform:translateY(0);pointer-events:auto}
 .scene-text.exit{opacity:0;transform:translateY(-30px)}
+.ghost-bg{position:absolute;font-size:28vw;font-weight:900;color:rgba(0,194,203,.022);letter-spacing:-8px;line-height:1;user-select:none;pointer-events:none}
 
-/* ── PROBLEM SCENE ── */
-#prob-wrap{height:300vh;background:linear-gradient(180deg,var(--navy) 0%,#050d18 100%)}
-.prob-stage{background:linear-gradient(180deg,var(--navy),#050d18)}
-.prob-ghost{position:absolute;font-size:28vw;font-weight:900;color:rgba(0,194,203,.022);letter-spacing:-8px;line-height:1;user-select:none;pointer-events:none}
-.scene-lbl{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:10px}
-.scene-lbl::before,.scene-lbl::after{content:'';width:20px;height:1px;background:var(--teal)}
-.scene-h{font-size:clamp(2.2rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px}
-.scene-h em{color:var(--teal);font-style:normal}
-.scene-p{font-size:1rem;color:rgba(255,255,255,.45);line-height:1.88;font-weight:300;max-width:560px;margin:0 auto}
+.sec-h2{font-size:clamp(2rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px;color:var(--white)}
+.sec-h2 em{color:var(--teal);font-style:normal}
+.scene-p{font-size:1rem;color:rgba(255,255,255,.45);line-height:1.9;font-weight:300;max-width:580px;margin:0 auto}
 .scene-p strong{color:var(--white);font-weight:600}
-/* stats row */
+
 .stats-row{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;margin-top:36px}
 .st-item{text-align:center}
-.st-big{font-size:3rem;font-weight:900;color:var(--teal);letter-spacing:-2px;line-height:1}
-.st-lbl{font-size:.75rem;color:rgba(255,255,255,.32);font-weight:300;margin-top:6px;max-width:120px}
+.st-num{font-size:3rem;font-weight:900;color:var(--teal);letter-spacing:-2px;line-height:1}
+.st-item h3{font-size:.75rem;color:rgba(255,255,255,.32);font-weight:300;margin-top:6px;max-width:130px}
 
-/* ── SERVICES SCENE ── */
-#srv-wrap{height:500vh;background:#050d18}
-.srv-stage{background:#050d18}
-/* card grid that fades in */
-.srv-grid-c{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.05);border-radius:20px;overflow:hidden;max-width:900px;width:100%}
-.srv-card{background:#050d18;padding:32px 28px;position:relative;overflow:hidden;transition:background .3s;opacity:0;transform:translateY(24px);transition:opacity .5s,transform .5s,background .3s}
-.srv-card.show{opacity:1;transform:translateY(0)}
-.srv-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1.5px;background:linear-gradient(90deg,var(--teal),transparent);transform:scaleX(0);transform-origin:left;transition:transform .5s}
-.srv-card:hover{background:rgba(0,194,203,.04)}
-.srv-card:hover::after{transform:scaleX(1)}
-.srv-card:hover .srv-icon{transform:scale(1.15) rotate(-8deg)}
-.srv-n{font-size:.58rem;font-weight:700;color:rgba(0,194,203,.28);letter-spacing:2.5px;margin-bottom:16px}
-.srv-icon{font-size:1.6rem;margin-bottom:14px;display:block;transition:transform .3s}
-.srv-title{font-size:.88rem;font-weight:700;margin-bottom:8px;letter-spacing:-.1px}
-.srv-desc{font-size:.78rem;color:rgba(255,255,255,.35);line-height:1.7;font-weight:300}
+/* ══ SERVICES — scroll reveal like problem scenes ═════
+   Each service is its own scene-text that fades in/out
+   as user scrolls through the sticky container
+═══════════════════════════════════════════════════════ */
+#services{height:1000vh;background:#050d18}
+.srv-sticky{position:sticky;top:0;height:100vh;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#050d18}
 
-/* ── WHY SCENE (horizontal drag) ── */
-#why-wrap{background:var(--navy);padding:100px 0}
-.why-inner{padding:0 5vw;margin-bottom:40px}
-.drag-row{display:flex;gap:16px;overflow-x:auto;padding:0 5vw 24px;scrollbar-width:none;cursor:grab}
-.drag-row:active{cursor:grabbing}
-.drag-row::-webkit-scrollbar{display:none}
-.d-card{flex-shrink:0;width:260px;background:rgba(255,255,255,.022);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:26px 22px;transition:border-color .3s,transform .3s}
+/* The scene content for each service */
+.srv-scene{position:absolute;text-align:left;max-width:860px;width:90vw;opacity:0;transform:translateY(30px);transition:opacity .6s,transform .6s;pointer-events:none;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.srv-scene.active{opacity:1;transform:translateY(0);pointer-events:auto}
+.srv-scene.exit{opacity:0;transform:translateY(-30px)}
+
+/* Left: number + label + heading */
+.srv-left{}
+.srv-num{font-size:7rem;font-weight:900;color:rgba(0,194,203,.07);letter-spacing:-4px;line-height:1;margin-bottom:0;display:block}
+.srv-tag{font-size:.6rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:16px;display:block}
+.srv-scene h2{font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;line-height:1.12;letter-spacing:-1px;color:var(--white);margin-bottom:0}
+
+/* Right: icon + description + stat */
+.srv-right{}
+.srv-icon-big{font-size:3rem;margin-bottom:20px;display:block}
+.srv-scene p{font-size:1rem;color:rgba(255,255,255,.45);line-height:1.85;font-weight:300;margin-bottom:20px}
+.srv-stat{display:inline-flex;align-items:center;gap:10px;background:rgba(0,194,203,.06);border:1px solid rgba(0,194,203,.14);padding:10px 18px;border-radius:12px}
+.srv-stat-num{font-size:1.5rem;font-weight:900;color:var(--teal);letter-spacing:-1px}
+.srv-stat-lbl{font-size:.7rem;color:rgba(255,255,255,.35);font-weight:300;line-height:1.3;max-width:120px}
+
+/* progress dots */
+.srv-dots{position:absolute;right:5vw;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px}
+.srv-dot{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,.15);transition:all .4s}
+.srv-dot.active{background:var(--teal);transform:scale(1.6)}
+
+/* ghost counter */
+.srv-ghost-num{position:absolute;font-size:28vw;font-weight:900;color:rgba(0,194,203,.018);letter-spacing:-8px;line-height:1;user-select:none;pointer-events:none;transition:opacity .6s}
+
+/* ══ WHY US ═══════════════════════════════════════════ */
+#why{background:var(--navy);padding:100px 0}
+.why-head{padding:0 5vw;margin-bottom:40px}
+.drag-track{display:flex;gap:16px;overflow-x:auto;padding:0 5vw 24px;scrollbar-width:none;cursor:grab}
+.drag-track:active{cursor:grabbing}
+.drag-track::-webkit-scrollbar{display:none}
+.d-card{flex-shrink:0;width:268px;background:rgba(255,255,255,.022);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:26px 22px;transition:border-color .3s,transform .3s}
 .d-card:hover{border-color:rgba(0,194,203,.2);transform:translateY(-5px)}
 .d-ico{font-size:1.3rem;margin-bottom:12px}
-.d-title{font-size:.84rem;font-weight:700;margin-bottom:6px}
+.d-card h3{font-size:.84rem;font-weight:700;margin-bottom:6px;color:var(--white)}
 .d-text{font-size:.77rem;color:rgba(255,255,255,.36);line-height:1.65;font-weight:300}
 .d-chip{display:inline-block;margin-top:10px;font-size:.6rem;font-weight:700;color:var(--teal);background:rgba(0,194,203,.07);border:1px solid rgba(0,194,203,.13);padding:2px 9px;border-radius:100px;letter-spacing:.5px}
 
-/* ── PROCESS SCENE ── */
-#proc-wrap{background:#050d18;padding:100px 5vw}
-.proc-tl{margin-top:52px;border:1px solid rgba(255,255,255,.06);border-radius:18px;overflow:hidden;max-width:860px;margin-left:auto;margin-right:auto}
-.p-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:22px;padding:26px 32px;border-bottom:1px solid rgba(255,255,255,.06);position:relative;overflow:hidden;transition:background .3s;opacity:0;transform:translateX(-20px);transition:opacity .6s,transform .6s,background .3s}
+/* ══ PROCESS ══════════════════════════════════════════ */
+#process{background:#050d18;padding:100px 5vw}
+.proc-tl{margin-top:48px;border:1px solid var(--line);border-radius:18px;overflow:hidden;max-width:860px;margin-left:auto;margin-right:auto}
+.p-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:22px;padding:26px 32px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;opacity:0;transform:translateX(-20px);transition:opacity .6s,transform .6s,background .3s}
 .p-row.show{opacity:1;transform:translateX(0)}
 .p-row:last-child{border-bottom:none}
 .p-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--teal);transform:scaleY(0);transition:transform .4s;transform-origin:top}
@@ -145,217 +229,384 @@ nav.on{background:rgba(4,9,15,.88);backdrop-filter:blur(28px) saturate(1.8);bord
 .p-row:hover::before{transform:scaleY(1)}
 .p-num{font-size:1.8rem;font-weight:900;color:rgba(0,194,203,.1);letter-spacing:-2px;transition:color .3s}
 .p-row:hover .p-num{color:rgba(0,194,203,.3)}
-.p-title{font-size:.9rem;font-weight:700;margin-bottom:4px}
+.p-row h3{font-size:.9rem;font-weight:700;margin-bottom:4px;color:var(--white)}
 .p-desc{font-size:.78rem;color:rgba(255,255,255,.36);line-height:1.6;font-weight:300;max-width:440px}
 .p-tag{font-size:.6rem;font-weight:700;color:var(--teal);background:rgba(0,194,203,.07);border:1px solid rgba(0,194,203,.13);padding:3px 10px;border-radius:100px;white-space:nowrap}
 
-/* ── CLOSER ── */
-#close-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5vw;position:relative;overflow:hidden;background:var(--navy)}
-.close-glow{position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(0,194,203,.075) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
-.close-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.02) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
-.close-inner{position:relative;z-index:2;max-width:700px;opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}
-.close-inner.show{opacity:1;transform:translateY(0)}
-.close-h{font-size:clamp(2.6rem,6vw,4.8rem);font-weight:800;line-height:1.06;letter-spacing:-2px;margin-bottom:18px}
-.close-h .ghost-t{-webkit-text-stroke:1px rgba(255,255,255,.18);color:transparent}
-.close-p{font-size:1rem;color:rgba(255,255,255,.4);line-height:1.8;font-weight:300;margin-bottom:36px}
-.close-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
+/* ══ CTA ══════════════════════════════════════════════ */
+#cta{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5vw;position:relative;overflow:hidden;background:var(--navy)}
+.cta-glow{position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(0,194,203,.075) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+.cta-bg-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.02) 1px,transparent 1px);background-size:48px 48px;pointer-events:none}
+.cta-inner{position:relative;z-index:2;max-width:720px;opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}
+.cta-inner.show{opacity:1;transform:translateY(0)}
+.cta-h2{font-size:clamp(2.4rem,6vw,4.8rem);font-weight:800;line-height:1.06;letter-spacing:-2px;margin-bottom:18px;color:var(--white)}
+.cta-h2 .ghost{-webkit-text-stroke:1px rgba(255,255,255,.18);color:transparent}
+.cta-p{font-size:1rem;color:rgba(255,255,255,.4);line-height:1.8;font-weight:300;margin-bottom:36px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:22px}
 .btn-wa{background:#25D366;color:#fff;padding:13px 26px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
 .btn-wa:hover{transform:scale(1.04);box-shadow:0 0 30px rgba(37,211,102,.35)}
-.close-contact{font-size:.75rem;color:rgba(255,255,255,.18)}
-.close-contact a{color:rgba(0,194,203,.55);text-decoration:none;transition:color .2s}
-.close-contact a:hover{color:var(--teal)}
+.cta-contact{font-size:.75rem;color:rgba(255,255,255,.18)}
+.cta-contact a{color:rgba(0,194,203,.55);text-decoration:none;transition:color .2s}
+.cta-contact a:hover{color:var(--teal)}
 
 /* FOOTER */
 footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.f-l{display:flex;align-items:center;gap:8px}
-.f-l img{height:22px}
-.f-n{font-size:.8rem;font-weight:700}
-.f-n em{color:var(--teal);font-style:normal}
-.f-tag{font-size:.6rem;color:rgba(255,255,255,.18);font-weight:300;font-style:italic;margin-top:1px}
-.f-links{display:flex;gap:16px}
+.f-brand{display:flex;align-items:center;gap:8px}
+.f-brand img{height:22px;width:auto}
+.f-name{font-size:.8rem;font-weight:700;color:var(--white)}
+.f-name em{color:var(--teal);font-style:normal}
+.f-tagline{font-size:.6rem;color:rgba(255,255,255,.18);font-style:italic;margin-top:1px}
+.f-links{display:flex;gap:16px;flex-wrap:wrap}
 .f-links a{font-size:.68rem;color:rgba(255,255,255,.22);text-decoration:none;transition:color .2s}
 .f-links a:hover{color:var(--teal)}
 .f-copy{font-size:.6rem;color:rgba(255,255,255,.1)}
 
-/* reveal util */
 .rv{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
 .rv.on{opacity:1;transform:translateY(0)}
 
+/* ══ RESPONSIVE ═══════════════════════════════════════ */
 @media(max-width:860px){
-  .srv-grid-c{grid-template-columns:1fr 1fr}
-  .n-links{display:none}
-  .p-row{grid-template-columns:44px 1fr}.p-tag{display:none}
-  .hero-title{letter-spacing:-1.5px}
+  .n-links{display:none !important}
+  .n-cta{display:none !important}
+  .ham{display:flex !important}
+  .results-grid{grid-template-columns:1fr 1fr}
+  .p-row{grid-template-columns:44px 1fr}
+  .p-tag{display:none}
+  .srv-scene{grid-template-columns:1fr;gap:24px;text-align:center;padding:0 6vw}
+  .srv-left{order:2}
+  .srv-right{order:1}
+  .srv-num{font-size:4rem}
+  .srv-scene h2{font-size:clamp(1.6rem,5vw,2.4rem)}
 }
-@media(max-width:560px){.srv-grid-c{grid-template-columns:1fr}.stats-row{flex-direction:column;align-items:center}.close-h{letter-spacing:-1px}}
+@media(max-width:560px){
+  .results-grid{grid-template-columns:1fr}
+  .stats-row{flex-direction:column;align-items:center}
+  .cta-h2{letter-spacing:-1px}
+  h1.hero-h1{letter-spacing:-1px}
+}
 </style>
 </head>
 <body>
 <div id="c1"></div><div id="c2"></div>
 
 <!-- LOADER -->
-<div id="loader">
-  <img class="ld-logo" src="sdlogo.webp" alt="SimpliDigital" id="ldimg"/>
+<div id="loader" role="status" aria-label="Loading SimpliDigital">
+  <img src="sdlogo.webp" alt="SimpliDigital" id="ldimg" width="120" height="52"/>
   <div class="ld-bar"><div class="ld-prog" id="ldprog"></div></div>
-  <div class="ld-n" id="ldpct">0%</div>
+  <div class="ld-pct" id="ldpct" aria-live="polite">0%</div>
+</div>
+
+<!-- MOBILE MENU -->
+<div id="mmenu" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <a href="services.html" onclick="closeMM()">Services</a>
+  <a href="#why" onclick="closeMM()">Why Us</a>
+  <a href="#process" onclick="closeMM()">Process</a>
+  <a href="#cta" class="mm-cta" onclick="closeMM()">Free Consultation</a>
 </div>
 
 <!-- NAV -->
-<nav id="nav">
-  <a class="n-logo" href="#"><img src="sdlogo.webp" alt="SD"/><span>Simpli<em>Digital</em></span></a>
+<nav id="nav" role="navigation" aria-label="Main navigation">
+  <a class="n-logo" href="/" aria-label="SimpliDigital homepage">
+    <img src="sdlogo.webp" alt="SimpliDigital logo" width="56" height="28"/>
+    <span class="n-brand">Simpli<em>Digital</em></span>
+  </a>
   <ul class="n-links">
-    <li><a href="#srv-wrap">Services</a></li>
-    <li><a href="#why-wrap">Why Us</a></li>
-    <li><a href="#proc-wrap">Process</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#process">Process</a></li>
   </ul>
-  <a class="n-cta" href="#close-wrap">Free Audit</a>
+  <div class="n-right">
+    <a class="n-cta" href="#cta">Free Consultation</a>
+    <button class="ham" id="hambtn" onclick="toggleMM()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
-<!-- HERO -->
-<div class="panel" id="p0">
-  <div class="hero-bg">
-    <div class="hero-glow"></div>
-    <div class="hero-grid"></div>
-  </div>
+<!-- ══ HERO ══════════════════════════════════════════ -->
+<section id="hero" aria-labelledby="hero-h1">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-grid" aria-hidden="true"></div>
   <div class="hero-c">
-    <div class="hero-eyebrow" id="he">Digital Marketing Agency &middot; Hyderabad, India</div>
-    <h1 class="hero-title">
-      <span class="line"><span id="hw0">Your business</span></span>
-      <span class="line"><span id="hw1">deserves to be</span></span>
-      <span class="line"><span class="tc" id="hw2">found.</span></span>
+    <p class="hero-eyebrow" id="he">SEO &nbsp;·&nbsp; Social Media &nbsp;·&nbsp; Websites &nbsp;·&nbsp; Branding &nbsp;·&nbsp; Paid Ads</p>
+    <h1 class="hero-h1" id="hero-h1">
+      <span class="line"><span id="hw0">Your business deserves</span></span>
+      <span class="line"><span id="hw1">more customers.</span></span>
+      <span class="line tc" id="hw2">We make that happen.</span>
     </h1>
-    <p class="hero-sub" id="hp">Not buried on page 4 while your competitor collects every customer that should have been yours.</p>
+    <p class="hero-sub" id="hp">From your logo to your website to your Google ranking to your social media, SimpliDigital handles your entire digital presence so your business grows while you focus on running it.</p>
     <div class="hero-btns" id="hb">
-      <a href="#close-wrap" class="btn-a">Get Free Audit <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      <a href="#srv-wrap" class="btn-b">See Services</a>
+      <a href="#cta" class="btn-p">Get Free Consultation <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="services.html" class="btn-s">See All Services</a>
     </div>
   </div>
-  <div class="hero-arrow" id="har" onclick="document.querySelector('.ticker').scrollIntoView({behavior:'smooth'})">
-    <span>Scroll</span><div class="ha-line"></div>
+  <div class="hero-arrow" id="har" onclick="document.querySelector('.ticker').scrollIntoView({behavior:'smooth'})" role="button" aria-label="Scroll down" tabindex="0">
+    <span aria-hidden="true">Scroll</span>
+    <div class="ha-line" aria-hidden="true"></div>
   </div>
-</div>
+</section>
 
 <!-- TICKER -->
-<div class="ticker">
+<div class="ticker" aria-hidden="true">
   <div class="t-inner">
-    <span class="t-item">Get Found on Google</span><span class="t-item">Backlink Building</span><span class="t-item">Local SEO Hyderabad</span><span class="t-item">Google My Business</span><span class="t-item">Content Strategy</span><span class="t-item">Rank Higher</span><span class="t-item">Grow Faster</span><span class="t-item">No Jargon</span>
-    <span class="t-item">Get Found on Google</span><span class="t-item">Backlink Building</span><span class="t-item">Local SEO Hyderabad</span><span class="t-item">Google My Business</span><span class="t-item">Content Strategy</span><span class="t-item">Rank Higher</span><span class="t-item">Grow Faster</span><span class="t-item">No Jargon</span>
+    <span class="t-item">SEO</span><span class="t-item">Social Media Marketing</span><span class="t-item">Website Design</span><span class="t-item">Logo Design</span><span class="t-item">Google Ads</span><span class="t-item">Content Marketing</span><span class="t-item">Google My Business</span><span class="t-item">Branding</span>
+    <span class="t-item">SEO</span><span class="t-item">Social Media Marketing</span><span class="t-item">Website Design</span><span class="t-item">Logo Design</span><span class="t-item">Google Ads</span><span class="t-item">Content Marketing</span><span class="t-item">Google My Business</span><span class="t-item">Branding</span>
   </div>
 </div>
 
-<!-- PROBLEM — STICKY SCROLL SCENE -->
-<div id="prob-wrap" class="sticky-wrap">
-  <div class="sticky-stage prob-stage">
-    <div class="prob-ghost">?</div>
-    <!-- text 1 -->
+<!-- ══ RESULTS ═══════════════════════════════════════ -->
+<section id="results" aria-labelledby="results-h2">
+  <div class="sec-label c rv">What We Have Delivered</div>
+  <h2 id="results-h2" style="font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-1px;line-height:1.15;text-align:center;margin-bottom:48px" class="rv">Real results for real businesses.</h2>
+  <div class="results-grid rv" role="list">
+    <article class="r-card" role="listitem"><p class="r-big">+340%</p><h3>Organic Traffic Growth</h3><p class="r-who">E-commerce store · 4 months</p></article>
+    <article class="r-card" role="listitem"><p class="r-big">#1</p><h3>Google Ranking Achieved</h3><p class="r-who">Law firm · 11 weeks from page 4</p></article>
+    <article class="r-card" role="listitem"><p class="r-big">+14x</p><h3>Monthly Inbound Enquiries</h3><p class="r-who">Service business · 90 days</p></article>
+  </div>
+</section>
+
+<!-- ══ PROBLEM STICKY ════════════════════════════════ -->
+<div id="prob-wrap" class="sticky-wrap" style="height:300vh;background:linear-gradient(180deg,var(--navy) 0%,#050d18 100%)">
+  <div class="sticky-stage" style="background:linear-gradient(180deg,var(--navy),#050d18)">
+    <div class="ghost-bg" aria-hidden="true">?</div>
     <div class="scene-text" id="pb1">
-      <div class="scene-lbl">The Reality</div>
-      <h2 class="scene-h">97% of all clicks<br/>go to <em>page 1.</em></h2>
-      <p class="scene-p">Three digits that explain why your phone isn&rsquo;t ringing as much as it should be.</p>
+      <div class="sec-label c">The Reality</div>
+      <h2 class="sec-h2">Your customers are online.<br/><em>Is your business visible to them?</em></h2>
+      <p class="scene-p">Every day thousands of people search for exactly what you sell. The businesses they find are not always the best ones. They are simply the ones that showed up.</p>
     </div>
-    <!-- text 2 -->
     <div class="scene-text" id="pb2">
-      <div class="scene-lbl">The Problem</div>
-      <h2 class="scene-h">Your customers<br/><em>are</em> searching.<br/>They just can&rsquo;t find you.</h2>
-      <p class="scene-p">A brilliant furniture shop in Kukatpally. A trusted clinic in Banjara Hills. <strong>Both invisible online.</strong> Not because they&rsquo;re not good enough &mdash; because nobody told them what to fix.</p>
+      <div class="sec-label c">The Problem</div>
+      <h2 class="sec-h2">A weak digital presence<br/>is costing your business<br/><em>real money every month.</em></h2>
+      <p class="scene-p">A great product and a strong team count for nothing if buyers cannot find you online. <strong>That is not a business problem. That is a digital marketing problem.</strong> And every problem like that has a solution.</p>
     </div>
-    <!-- text 3 with stats -->
     <div class="scene-text" id="pb3">
-      <div class="scene-lbl">The Numbers</div>
-      <h2 class="scene-h">The gap between<br/>you and your competitor.</h2>
+      <div class="sec-label c">The Numbers</div>
+      <h2 class="sec-h2">The gap your competitor<br/>is quietly widening<br/><em>every single month.</em></h2>
       <div class="stats-row">
-        <div class="st-item"><div class="st-big">97%</div><div class="st-lbl">of clicks go to page 1</div></div>
-        <div class="st-item"><div class="st-big">75%</div><div class="st-lbl">never scroll past page 1</div></div>
-        <div class="st-item"><div class="st-big">46%</div><div class="st-lbl">of searches are local</div></div>
+        <div class="st-item"><p class="st-num">97%</p><h3>of clicks go to page 1 results</h3></div>
+        <div class="st-item"><p class="st-num">4.9B</p><h3>people active on social media right now</h3></div>
+        <div class="st-item"><p class="st-num">88%</p><h3>of consumers research online before buying</h3></div>
       </div>
     </div>
   </div>
 </div>
 
-<!-- SERVICES — STICKY SCROLL SCENE -->
-<div id="srv-wrap" class="sticky-wrap">
-  <div class="sticky-stage srv-stage" style="background:#050d18">
-    <div class="prob-ghost" style="right:-5vw">6</div>
-    <!-- intro text -->
-    <div class="scene-text" id="sv1">
-      <div class="scene-lbl">What We Do</div>
-      <h2 class="scene-h">Six moves.<br/><em>One outcome.</em><br/>You get found.</h2>
+<!-- ══ SERVICES STICKY SCROLL ═══════════════════════
+     8 scenes, each reveals like a problem scene
+     Left side: big number + service name
+     Right side: icon + description + mini stat
+════════════════════════════════════════════════════ -->
+<div id="services" aria-label="Our digital marketing services">
+  <div class="srv-sticky">
+    <!-- ghost background number -->
+    <div class="srv-ghost-num" id="srvGhost" aria-hidden="true">1</div>
+    <!-- progress dots -->
+    <div class="srv-dots" id="srvDots" aria-hidden="true">
+      <div class="srv-dot active"></div>
+      <div class="srv-dot"></div>
+      <div class="srv-dot"></div>
+      <div class="srv-dot"></div>
+      <div class="srv-dot"></div>
+      <div class="srv-dot"></div>
+      <div class="srv-dot"></div>
+      <div class="srv-dot"></div>
     </div>
-    <!-- grid -->
-    <div class="scene-text" id="sv2" style="max-width:920px;width:95vw">
-      <div class="scene-lbl">Our Services</div>
-      <div class="srv-grid-c">
-        <div class="srv-card" id="sc0"><div class="srv-n">01</div><span class="srv-icon">&#128269;</span><div class="srv-title">Search Engine Optimisation</div><p class="srv-desc">We find the exact words your customers type before buying and make your name the first result they see.</p></div>
-        <div class="srv-card" id="sc1"><div class="srv-n">02</div><span class="srv-icon">&#128205;</span><div class="srv-title">Google My Business</div><p class="srv-desc">When someone searches &ldquo;near me&rdquo;, that should be you at the top. We make it happen and keep it there.</p></div>
-        <div class="srv-card" id="sc2"><div class="srv-n">03</div><span class="srv-icon">&#128279;</span><div class="srv-title">Authority &amp; Backlinks</div><p class="srv-desc">Google ranks websites it trusts. We build that trust through real links from sites that matter in your industry.</p></div>
-        <div class="srv-card" id="sc3"><div class="srv-n">04</div><span class="srv-icon">&#9997;&#65039;</span><div class="srv-title">Content &amp; On-Page SEO</div><p class="srv-desc">Every word, heading and image either earns you a visitor or loses one. We make every element count.</p></div>
-        <div class="srv-card" id="sc4"><div class="srv-n">05</div><span class="srv-icon">&#128202;</span><div class="srv-title">Clear Reporting</div><p class="srv-desc">One weekly report. What we did. What moved. What&rsquo;s next. Plain English. No jargon. No hiding.</p></div>
-        <div class="srv-card" id="sc5"><div class="srv-n">06</div><span class="srv-icon">&#128295;</span><div class="srv-title">Proprietary SEO Tools</div><p class="srv-desc">We built our own scraping and audit tools in-house — the same intelligence, sharper than anything off-the-shelf.</p></div>
+
+    <!-- intro scene (scene 0) -->
+    <div class="scene-text active" id="ss0">
+      <div class="sec-label c">What We Do</div>
+      <h2 class="sec-h2">Everything your business needs<br/>to win online.<br/><em>All under one roof.</em></h2>
+      <p class="scene-p">Scroll to explore every service SimpliDigital handles for your business.</p>
+    </div>
+
+    <!-- SEO -->
+    <div class="srv-scene" id="ss1">
+      <div class="srv-left">
+        <span class="srv-num">01</span>
+        <span class="srv-tag">Search</span>
+        <h2>Search Engine<br/>Optimisation</h2>
+      </div>
+      <div class="srv-right">
+        <span class="srv-icon-big" aria-hidden="true">&#128269;</span>
+        <p>We get your website to page 1 of Google for the exact searches your buyers make before they purchase. More organic traffic, more inbound leads, zero ad spend required.</p>
+        <div class="srv-stat"><span class="srv-stat-num">97%</span><span class="srv-stat-lbl">of clicks go to page 1 results</span></div>
       </div>
     </div>
+
+    <!-- SMM -->
+    <div class="srv-scene" id="ss2">
+      <div class="srv-left">
+        <span class="srv-num">02</span>
+        <span class="srv-tag">Social</span>
+        <h2>Social Media<br/>Marketing</h2>
+      </div>
+      <div class="srv-right">
+        <span class="srv-icon-big" aria-hidden="true">&#128241;</span>
+        <p>We build and grow your brand on Instagram, Facebook and LinkedIn with content that drives real engagement, builds trust and turns followers into paying customers.</p>
+        <div class="srv-stat"><span class="srv-stat-num">4.9B</span><span class="srv-stat-lbl">people active on social media daily</span></div>
+      </div>
+    </div>
+
+    <!-- Web -->
+    <div class="srv-scene" id="ss3">
+      <div class="srv-left">
+        <span class="srv-num">03</span>
+        <span class="srv-tag">Web</span>
+        <h2>Website Design<br/>and Development</h2>
+      </div>
+      <div class="srv-right">
+        <span class="srv-icon-big" aria-hidden="true">&#128187;</span>
+        <p>We design fast, conversion focused websites that look exceptional on every device and are built from the ground up to rank on Google and turn visitors into enquiries.</p>
+        <div class="srv-stat"><span class="srv-stat-num">3s</span><span class="srv-stat-lbl">slow load time loses 53% of visitors</span></div>
+      </div>
+    </div>
+
+    <!-- Branding -->
+    <div class="srv-scene" id="ss4">
+      <div class="srv-left">
+        <span class="srv-num">04</span>
+        <span class="srv-tag">Brand</span>
+        <h2>Logo and<br/>Brand Identity</h2>
+      </div>
+      <div class="srv-right">
+        <span class="srv-icon-big" aria-hidden="true">&#127775;</span>
+        <p>We create logos and full brand identity systems that make your business look credible, memorable and professional from the very first impression your customer has of you.</p>
+        <div class="srv-stat"><span class="srv-stat-num">7s</span><span class="srv-stat-lbl">is all it takes to form a first brand impression</span></div>
+      </div>
+    </div>
+
+    <!-- Paid Ads -->
+    <div class="srv-scene" id="ss5">
+      <div class="srv-left">
+        <span class="srv-num">05</span>
+        <span class="srv-tag">Ads</span>
+        <h2>Paid<br/>Advertising</h2>
+      </div>
+      <div class="srv-right">
+        <span class="srv-icon-big" aria-hidden="true">&#127919;</span>
+        <p>Google Ads and Meta Ads campaigns built to generate leads and sales, not just clicks. Every rupee tracked against real business outcomes so you always know your return.</p>
+        <div class="srv-stat"><span class="srv-stat-num">2x</span><span class="srv-stat-lbl">average revenue return on paid search</span></div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="srv-scene" id="ss6">
+      <div class="srv-left">
+        <span class="srv-num">06</span>
+        <span class="srv-tag">Content</span>
+        <h2>Content and<br/>Copywriting</h2>
+      </div>
+      <div class="srv-right">
+        <span class="srv-icon-big" aria-hidden="true">&#9997;&#65039;</span>
+        <p>From website copy to blog posts to ad creatives, we write content that ranks on search engines, resonates with your audience and moves people to take action.</p>
+        <div class="srv-stat"><span class="srv-stat-num">70%</span><span class="srv-stat-lbl">of buyers read content before a purchase decision</span></div>
+      </div>
+    </div>
+
+    <!-- GMB -->
+    <div class="srv-scene" id="ss7">
+      <div class="srv-left">
+        <span class="srv-num">07</span>
+        <span class="srv-tag">Local</span>
+        <h2>Google My<br/>Business</h2>
+      </div>
+      <div class="srv-right">
+        <span class="srv-icon-big" aria-hidden="true">&#128205;</span>
+        <p>When someone searches for a business like yours nearby, we make sure your listing appears in the top three map results and drives calls directly to your phone.</p>
+        <div class="srv-stat"><span class="srv-stat-num">46%</span><span class="srv-stat-lbl">of all Google searches are local intent</span></div>
+      </div>
+    </div>
+
+    <!-- Analytics -->
+    <div class="srv-scene" id="ss8">
+      <div class="srv-left">
+        <span class="srv-num">08</span>
+        <span class="srv-tag">Data</span>
+        <h2>Analytics and<br/>Reporting</h2>
+      </div>
+      <div class="srv-right">
+        <span class="srv-icon-big" aria-hidden="true">&#128202;</span>
+        <p>Every Monday you receive a plain report showing exactly what moved, what grew and what is planned next. Numbers tied to revenue outcomes, not vanity metrics that mean nothing to your business.</p>
+        <div class="srv-stat"><span class="srv-stat-num">100%</span><span class="srv-stat-lbl">transparency on where every rupee goes</span></div>
+      </div>
+    </div>
+
   </div>
 </div>
 
-<!-- WHY US -->
-<div id="why-wrap">
-  <div class="why-inner rv">
-    <div class="scene-lbl" style="justify-content:flex-start">Why SimpliDigital</div>
-    <h2 style="font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1.2px;line-height:1.12;margin-top:8px">Six reasons clients<br/>stay month after month.</h2>
+<!-- ══ WHY US ══════════════════════════════════════════ -->
+<section id="why" aria-labelledby="why-h2">
+  <div class="why-head rv">
+    <div class="sec-label l">Why SimpliDigital</div>
+    <h2 id="why-h2" style="font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1.2px;line-height:1.12;margin-top:8px;color:var(--white)">What makes the results<br/>different here.</h2>
   </div>
-  <div class="drag-row rv" id="dragrow">
-    <div class="d-card"><div class="d-ico">&#128295;</div><div class="d-title">Custom-Built Tools</div><p class="d-text">We built our own scrapers and audit bots. Not Semrush. Not Ahrefs. Ours — built for how we work.</p><span class="d-chip">Proprietary</span></div>
-    <div class="d-card"><div class="d-ico">&#128203;</div><div class="d-title">Plain English Always</div><p class="d-text">No synergies. No ecosystems. Every report and every call in language a business owner actually understands.</p><span class="d-chip">Zero Jargon</span></div>
-    <div class="d-card"><div class="d-ico">&#9889;</div><div class="d-title">Technical + Creative</div><p class="d-text">We fix schema, site speed, and crawl errors — not just write blogs. Both sides. We do both.</p><span class="d-chip">Full Stack SEO</span></div>
-    <div class="d-card"><div class="d-ico">&#128205;</div><div class="d-title">Hyderabad-Native</div><p class="d-text">We know Kukatpally from Kondapur. We know what Hyderabad actually searches. Remote agencies don&rsquo;t.</p><span class="d-chip">Local First</span></div>
-    <div class="d-card"><div class="d-ico">&#129309;</div><div class="d-title">No Lock-In Contracts</div><p class="d-text">Month-to-month. You stay because results keep coming — not because a 12-month contract forces you to.</p><span class="d-chip">Full Freedom</span></div>
-    <div class="d-card"><div class="d-ico">&#127919;</div><div class="d-title">Strategy Before Tactics</div><p class="d-text">Week one is entirely research. Your competitor&rsquo;s weaknesses mapped before we touch your website.</p><span class="d-chip">Research-First</span></div>
+  <div class="drag-track rv" id="dragrow" role="list">
+    <article class="d-card" role="listitem"><div class="d-ico" aria-hidden="true">&#127963;</div><h3>One Agency, Everything Done</h3><p class="d-text">Logo, website, SEO, social media, ads. You deal with one team that sees the full picture instead of briefing four separate agencies that never talk to each other.</p><span class="d-chip">Full Service</span></article>
+    <article class="d-card" role="listitem"><div class="d-ico" aria-hidden="true">&#128200;</div><h3>Results, Not Reports</h3><p class="d-text">We measure success by whether your traffic went up, your enquiries went up and your revenue moved. Everything else is noise.</p><span class="d-chip">Outcome Obsessed</span></article>
+    <article class="d-card" role="listitem"><div class="d-ico" aria-hidden="true">&#128295;</div><h3>Built Our Own Tools</h3><p class="d-text">Our competitor trackers and audit systems were built in house. We extract intelligence that generic tools miss and that advantage goes directly into your campaigns.</p><span class="d-chip">Proprietary Tech</span></article>
+    <article class="d-card" role="listitem"><div class="d-ico" aria-hidden="true">&#127919;</div><h3>Competitor Research First</h3><p class="d-text">Before we touch your accounts we spend an entire week studying your competitors. Your strategy is built entirely around taking the positions they have left open.</p><span class="d-chip">Research Led</span></article>
+    <article class="d-card" role="listitem"><div class="d-ico" aria-hidden="true">&#129309;</div><h3>No Lock In Contracts</h3><p class="d-text">Month to month. You stay because results keep coming, not because a contract says you have to. The pressure to perform never leaves our side of the table.</p><span class="d-chip">Zero Lock In</span></article>
+    <article class="d-card" role="listitem"><div class="d-ico" aria-hidden="true">&#9889;</div><h3>Technical and Creative Both</h3><p class="d-text">Most agencies do creative or technical. We do both because a beautiful campaign that does not convert and a fast website with no visitors both produce the same result: nothing.</p><span class="d-chip">Full Stack</span></article>
   </div>
-  <p style="text-align:center;font-size:.58rem;letter-spacing:2px;color:rgba(255,255,255,.14);text-transform:uppercase;margin-top:6px">&larr; drag &rarr;</p>
-</div>
+  <p style="text-align:center;font-size:.58rem;letter-spacing:2px;color:rgba(255,255,255,.14);text-transform:uppercase;margin-top:6px" aria-hidden="true">drag to explore</p>
+</section>
 
-<!-- PROCESS -->
-<div id="proc-wrap">
-  <div style="text-align:center;max-width:600px;margin:0 auto 52px" class="rv">
-    <div class="scene-lbl" style="justify-content:center">The Journey</div>
-    <h2 style="font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1.2px;line-height:1.12">From invisible<br/>to unmissable.</h2>
+<!-- ══ PROCESS ════════════════════════════════════════ -->
+<section id="process" aria-labelledby="process-h2">
+  <div style="text-align:center;max-width:640px;margin:0 auto 52px" class="rv">
+    <div class="sec-label c">How It Works</div>
+    <h2 id="process-h2" style="font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1.2px;line-height:1.12;color:var(--white)">From first conversation<br/>to measurable growth.</h2>
   </div>
-  <div class="proc-tl">
-    <div class="p-row" id="pr0"><div class="p-num">01</div><div><div class="p-title">The X-Ray</div><p class="p-desc">We dissect your entire digital presence — rankings, backlinks, speed, GMB, competitors. Free. No pitch at the end.</p></div><span class="p-tag">Week 1</span></div>
-    <div class="p-row" id="pr1"><div class="p-num">02</div><div><div class="p-title">The Blueprint</div><p class="p-desc">A roadmap built around your city, your industry, and the exact searches your customers make at 10pm. Your competitor&rsquo;s weakness is already in it.</p></div><span class="p-tag">Week 2</span></div>
-    <div class="p-row" id="pr2"><div class="p-num">03</div><div><div class="p-title">The Build</div><p class="p-desc">On-page fixes, content, backlinks, GMB — we execute while you run your business. You&rsquo;ll just start noticing more calls.</p></div><span class="p-tag">Month 1&ndash;3</span></div>
-    <div class="p-row" id="pr3"><div class="p-num">04</div><div><div class="p-title">The Signal</div><p class="p-desc">Weekly reports. Monthly reviews. Real numbers — rankings, traffic, enquiries. Things you can feel in your business.</p></div><span class="p-tag">Always On</span></div>
+  <div class="proc-tl" role="list">
+    <article class="p-row" id="pr0" role="listitem"><div class="p-num" aria-hidden="true">01</div><div><h3>Full Digital Audit</h3><p class="p-desc">We analyse your entire online presence: website, SEO rankings, social media, Google Business Profile and competitor positioning. You get a clear picture of exactly where you are and what needs to change. Completely free.</p></div><span class="p-tag">Week 1</span></article>
+    <article class="p-row" id="pr1" role="listitem"><div class="p-num" aria-hidden="true">02</div><div><h3>Strategy and Roadmap</h3><p class="p-desc">We build a prioritised growth plan across every channel relevant to your business. SEO, social, ads, content and design all mapped together so each one reinforces the others instead of working in isolation.</p></div><span class="p-tag">Week 2</span></article>
+    <article class="p-row" id="pr2" role="listitem"><div class="p-num" aria-hidden="true">03</div><div><h3>Execution</h3><p class="p-desc">We build and run every campaign while you focus on your business. Website fixes, content, backlinks, ad campaigns and social posts. First measurable movements typically show within 6 to 8 weeks.</p></div><span class="p-tag">Month 1 to 3</span></article>
+    <article class="p-row" id="pr3" role="listitem"><div class="p-num" aria-hidden="true">04</div><div><h3>Weekly Results</h3><p class="p-desc">Every Monday: a plain report showing what moved, what grew and what is planned next. Rankings, traffic and leads tied to revenue numbers. You always know exactly what your investment is producing.</p></div><span class="p-tag">Always On</span></article>
   </div>
-</div>
+</section>
 
-<!-- CLOSER -->
-<div id="close-wrap">
-  <div class="close-glow"></div>
-  <div class="close-grid"></div>
-  <div class="close-inner" id="closein">
-    <div class="scene-lbl" style="justify-content:center">The Last Scene</div>
-    <h2 class="close-h">
-      Your competitor<br/>just read this page<br/><span class="ghost-t">and closed it.</span><br/>
-      <span style="color:var(--teal)">Don&rsquo;t.</span>
+<!-- ══ CTA ════════════════════════════════════════════ -->
+<section id="cta" aria-labelledby="cta-h2">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-bg-grid" aria-hidden="true"></div>
+  <div class="cta-inner" id="ctain">
+    <div class="sec-label c">Start Here</div>
+    <h2 class="cta-h2" id="cta-h2">
+      Your competitors are growing<br/>their digital presence right now.<br/>
+      <span class="ghost">You could wait.</span><br/>
+      <span style="color:var(--teal)">Or we could start today.</span>
     </h2>
-    <p class="close-p">Free audit. No forms. No pitch calls. No obligation.<br/>Just honest answers about what&rsquo;s holding your business back.</p>
-    <div class="close-btns">
-      <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20a%20free%20audit." class="btn-wa">&#128172; WhatsApp Us</a>
-      <a href="mailto:hello@simplidigital.in" class="btn-a">Email Us <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <p class="cta-p">Tell us about your business. We will look at your entire digital presence and show you exactly what is holding you back and what it will take to fix it. No cost. No obligation.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20a%20free%20consultation." class="btn-wa" aria-label="WhatsApp SimpliDigital">&#128172; WhatsApp Us</a>
+      <a href="mailto:hello@simplidigital.in" class="btn-p" aria-label="Email SimpliDigital">Email Us <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
-    <p class="close-contact">Call: <a href="tel:+917382312386">+91 73823 12386</a> &nbsp;&middot;&nbsp; <a href="mailto:hello@simplidigital.in">hello@simplidigital.in</a></p>
+    <p class="cta-contact">Call: <a href="tel:+917382312386">+91 73823 12386</a> &nbsp;·&nbsp; <a href="mailto:hello@simplidigital.in">hello@simplidigital.in</a></p>
   </div>
-</div>
+</section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="f-l"><img src="sdlogo.webp" alt="SD"/><div><div class="f-n">Simpli<em>Digital</em></div><div class="f-tag">Simplifying Digital. Amplifying Growth.</div></div></div>
-  <div class="f-links"><a href="#srv-wrap">Services</a><a href="#why-wrap">Why Us</a><a href="#proc-wrap">Process</a><a href="https://wa.me/917382312386">WhatsApp</a><a href="mailto:hello@simplidigital.in">Email</a></div>
-  <div class="f-copy">&copy; 2026 SimpliDigital &middot; Hyderabad</div>
+<footer role="contentinfo">
+  <div class="f-brand">
+    <img src="sdlogo.webp" alt="SimpliDigital full service digital marketing agency India" width="44" height="22"/>
+    <div>
+      <div class="f-name">Simpli<em>Digital</em></div>
+      <div class="f-tagline">Simplifying Digital. Amplifying Growth.</div>
+    </div>
+  </div>
+  <div class="f-links" role="navigation" aria-label="Footer navigation">
+    <a href="services.html">Services</a>
+    <a href="#why">Why Us</a>
+    <a href="#process">Process</a>
+    <a href="https://wa.me/917382312386" aria-label="WhatsApp">WhatsApp</a>
+    <a href="mailto:hello@simplidigital.in" aria-label="Email">Email</a>
+  </div>
+  <p class="f-copy">&copy; 2026 SimpliDigital · India</p>
 </footer>
 
 <script>
 // ── CURSOR
-var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=0,my=0,fx=0,fy=0;
+var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
 document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
 (function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();
 document.querySelectorAll('a,button').forEach(function(el){
@@ -363,12 +614,36 @@ document.querySelectorAll('a,button').forEach(function(el){
   el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px';c2.style.borderColor='rgba(0,194,203,.3)'});
 });
 
+// ── MOBILE MENU
+function toggleMM(){
+  var mm=document.getElementById('mmenu'),hb=document.getElementById('hambtn');
+  var willOpen=!mm.classList.contains('open');
+  if(willOpen){
+    mm.style.display='flex';
+    requestAnimationFrame(function(){mm.classList.add('open')});
+  } else {
+    mm.classList.remove('open');
+    setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);
+  }
+  hb.classList.toggle('open',willOpen);
+  hb.setAttribute('aria-expanded',String(willOpen));
+  document.body.style.overflow=willOpen?'hidden':'';
+}
+function closeMM(){
+  var mm=document.getElementById('mmenu'),hb=document.getElementById('hambtn');
+  mm.classList.remove('open');
+  setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);
+  hb.classList.remove('open');
+  hb.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+
 // ── LOADER
 var pct=0,prog=document.getElementById('ldprog'),ldpct=document.getElementById('ldpct'),ldimg=document.getElementById('ldimg');
 setTimeout(function(){ldimg.classList.add('in')},100);
-var t=setInterval(function(){
+var lt=setInterval(function(){
   pct+=Math.random()*3.5+1.5;
-  if(pct>=100){pct=100;clearInterval(t);setTimeout(doneLoad,200)}
+  if(pct>=100){pct=100;clearInterval(lt);setTimeout(doneLoad,200)}
   prog.style.width=Math.min(pct,100)+'%';
   ldpct.textContent=Math.round(Math.min(pct,100))+'%';
 },38);
@@ -379,100 +654,102 @@ function doneLoad(){
   setTimeout(function(){ld.style.display='none';heroIn()},720);
 }
 
-// ── HERO ENTRANCE
+// ── HERO
 function heroIn(){
   var he=document.getElementById('he');
   he.style.opacity='1';he.style.transform='translateY(0)';
   ['hw0','hw1','hw2'].forEach(function(id,i){
-    setTimeout(function(){
-      document.getElementById(id).style.transform='translateY(0)';
-    },200+i*180);
+    setTimeout(function(){var el=document.getElementById(id);if(el)el.style.transform='translateY(0)'},200+i*180);
   });
-  setTimeout(function(){var p=document.getElementById('hp');p.style.opacity='1';p.style.transform='translateY(0)'},780);
-  setTimeout(function(){var b=document.getElementById('hb');b.style.opacity='1';b.style.transform='translateY(0)'},980);
-  setTimeout(function(){document.getElementById('har').style.opacity='1'},1400);
+  setTimeout(function(){var p=document.getElementById('hp');if(p){p.style.opacity='1';p.style.transform='translateY(0)'}},780);
+  setTimeout(function(){var b=document.getElementById('hb');if(b){b.style.opacity='1';b.style.transform='translateY(0)'}},980);
+  setTimeout(function(){var a=document.getElementById('har');if(a)a.style.opacity='1'},1400);
   initScroll();
 }
 
 // ── SCROLL ENGINE
 function initScroll(){
-  // nav
-  window.addEventListener('scroll',function(){
-    document.getElementById('nav').classList.toggle('on',window.scrollY>50);
-    handleSticky();
-    handleReveal();
-    handleProcess();
-    handleClose();
-  });
-
-  // General reveal
-  function handleReveal(){
-    document.querySelectorAll('.rv').forEach(function(el){
-      var r=el.getBoundingClientRect();
-      if(r.top<window.innerHeight*.88)el.classList.add('on');
-    });
-  }
-
-  // ── STICKY PROBLEM SCENES
-  function handleSticky(){
-    var pw=document.getElementById('prob-wrap');
-    var pr=pw.getBoundingClientRect();
-    var total=pw.offsetHeight-window.innerHeight;
-    var scrolled=Math.max(0,-pr.top);
-    var pct=Math.min(1,scrolled/total);
-
-    // 3 sub-scenes
-    var scenes=['pb1','pb2','pb3'];
-    var idx=pct<0.33?0:pct<0.66?1:2;
-    scenes.forEach(function(id,i){
-      var el=document.getElementById(id);
-      if(i===idx){el.classList.add('active');el.classList.remove('exit')}
-      else if(i<idx){el.classList.remove('active');el.classList.add('exit')}
-      else{el.classList.remove('active','exit')}
-    });
-
-    // ── STICKY SERVICE SCENES
-    var sw=document.getElementById('srv-wrap');
-    var sr=sw.getBoundingClientRect();
-    var stotal=sw.offsetHeight-window.innerHeight;
-    var sscrolled=Math.max(0,-sr.top);
-    var spct=Math.min(1,sscrolled/stotal);
-
-    var sv1=document.getElementById('sv1'),sv2=document.getElementById('sv2');
-    if(spct<0.35){sv1.classList.add('active');sv1.classList.remove('exit');sv2.classList.remove('active','exit')}
-    else{sv1.classList.remove('active');sv1.classList.add('exit');sv2.classList.add('active');sv2.classList.remove('exit');
-      // stagger cards
-      [0,1,2,3,4,5].forEach(function(i){
-        setTimeout(function(){var c=document.getElementById('sc'+i);if(c)c.classList.add('show')},i*90);
-      });
-    }
-  }
-
-  function handleProcess(){
-    var rows=['pr0','pr1','pr2','pr3'];
-    rows.forEach(function(id,i){
-      var el=document.getElementById(id);
-      if(!el)return;
-      var r=el.getBoundingClientRect();
-      if(r.top<window.innerHeight*.82){
-        setTimeout(function(){el.classList.add('show')},i*100);
-      }
-    });
-  }
-
-  function handleClose(){
-    var el=document.getElementById('closein');
-    if(!el)return;
-    var r=el.getBoundingClientRect();
-    if(r.top<window.innerHeight*.85)el.classList.add('show');
-  }
-
-  handleReveal();handleProcess();handleClose();
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
 }
 
-// ── DRAG ROW
+function onScroll(){
+  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
+  handleReveal();
+  handleProblem();
+  handleServices();
+  handleProcess();
+  handleCTA();
+}
+
+function handleReveal(){
+  document.querySelectorAll('.rv').forEach(function(el){
+    if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on');
+  });
+}
+
+function handleProblem(){
+  var pw=document.getElementById('prob-wrap');
+  var total=pw.offsetHeight-window.innerHeight;
+  var p=total>0?Math.min(1,Math.max(0,-pw.getBoundingClientRect().top)/total):0;
+  var idx=p<0.33?0:p<0.66?1:2;
+  ['pb1','pb2','pb3'].forEach(function(id,i){
+    var el=document.getElementById(id);if(!el)return;
+    if(i===idx){el.classList.add('active');el.classList.remove('exit')}
+    else if(i<idx){el.classList.remove('active');el.classList.add('exit')}
+    else{el.classList.remove('active','exit')}
+  });
+}
+
+// Services: 9 scenes (ss0 intro + ss1..ss8)
+// height:1000vh → 9 scenes × ~111vh each
+function handleServices(){
+  var sw=document.getElementById('services');
+  var total=sw.offsetHeight-window.innerHeight;
+  var sp=total>0?Math.min(1,Math.max(0,-sw.getBoundingClientRect().top)/total):0;
+
+  // 9 scenes: 0..8, each occupies 1/9 of scroll range
+  var sceneCount=9;
+  var rawIdx=sp*sceneCount;
+  var idx=Math.min(sceneCount-1,Math.floor(rawIdx));
+
+  // update scenes
+  for(var i=0;i<sceneCount;i++){
+    var el=document.getElementById('ss'+i);
+    if(!el)continue;
+    if(i===idx){el.classList.add('active');el.classList.remove('exit')}
+    else if(i<idx){el.classList.remove('active');el.classList.add('exit')}
+    else{el.classList.remove('active','exit')}
+  }
+
+  // update dots (dots 0..7 map to scenes 1..8)
+  var dots=document.querySelectorAll('.srv-dot');
+  dots.forEach(function(d,i){
+    d.classList.toggle('active',i===(idx===0?0:idx-1));
+  });
+
+  // update ghost number
+  var ghost=document.getElementById('srvGhost');
+  if(ghost)ghost.textContent=idx===0?'':('0'+idx).slice(-2);
+}
+
+function handleProcess(){
+  ['pr0','pr1','pr2','pr3'].forEach(function(id,i){
+    var el=document.getElementById(id);
+    if(el&&el.getBoundingClientRect().top<window.innerHeight*.82)
+      setTimeout(function(){el.classList.add('show')},i*100);
+  });
+}
+
+function handleCTA(){
+  var el=document.getElementById('ctain');
+  if(el&&el.getBoundingClientRect().top<window.innerHeight*.85)el.classList.add('show');
+}
+
+// ── DRAG
 (function(){
-  var el=document.getElementById('dragrow'),down=false,sx,sl;
+  var el=document.getElementById('dragrow');if(!el)return;
+  var down=false,sx=0,sl=0;
   el.addEventListener('mousedown',function(e){down=true;sx=e.pageX-el.offsetLeft;sl=el.scrollLeft});
   document.addEventListener('mouseup',function(){down=false});
   el.addEventListener('mousemove',function(e){if(!down)return;e.preventDefault();el.scrollLeft=sl-(e.pageX-el.offsetLeft-sx)*1.3});
