@@ -4,901 +4,463 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SimpliDigital — Simplifying Digital. Amplifying Growth.</title>
+  <meta name="description" content="SimpliDigital is a Hyderabad-based digital marketing agency. SEO, backlink building, content strategy — simplified for real businesses." />
   <link rel="icon" type="image/png" href="sdlogo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <style>
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-    :root {
-      --navy: #0A1931;
-      --teal: #00C2CB;
-      --gold: #F4A100;
-      --white: #ffffff;
-      --soft: #f0f4f8;
-      --gray: #6b7280;
-      --dark: #111827;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: var(--white);
-      color: var(--dark);
-      overflow-x: hidden;
-    }
-
-    /* ── NAVBAR ── */
-    nav {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 100;
-      padding: 18px 6vw;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: rgba(10, 25, 49, 0.92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(0,194,203,0.12);
-    }
-
-    .nav-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-    }
-
-    .nav-logo img {
-      height: 38px;
-      width: auto;
-    }
-
-    .nav-logo span {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--white);
-      letter-spacing: -0.3px;
-    }
-
-    .nav-logo span em {
-      color: var(--teal);
-      font-style: normal;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: rgba(255,255,255,0.75);
-      text-decoration: none;
-      font-size: 0.875rem;
-      font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    .nav-links a:hover { color: var(--teal); }
-
-    .nav-cta {
-      background: var(--teal);
-      color: var(--navy) !important;
-      padding: 9px 20px;
-      border-radius: 6px;
-      font-weight: 600 !important;
-      font-size: 0.85rem !important;
-      transition: background 0.2s, transform 0.2s !important;
-    }
-
-    .nav-cta:hover {
-      background: #00d9e3 !important;
-      transform: translateY(-1px);
-      color: var(--navy) !important;
-    }
-
-    /* ── HERO ── */
-    #hero {
-      min-height: 100vh;
-      background: var(--navy);
-      display: flex;
-      align-items: center;
-      padding: 120px 6vw 80px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-bg-glow {
-      position: absolute;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(0,194,203,0.12) 0%, transparent 70%);
-      top: -100px; right: -100px;
-      pointer-events: none;
-    }
-
-    .hero-bg-glow-2 {
-      position: absolute;
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, rgba(244,161,0,0.07) 0%, transparent 70%);
-      bottom: 0; left: 10%;
-      pointer-events: none;
-    }
-
-    .hero-content {
-      max-width: 680px;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: rgba(0,194,203,0.1);
-      border: 1px solid rgba(0,194,203,0.25);
-      color: var(--teal);
-      font-size: 0.78rem;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 100px;
-      margin-bottom: 28px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-    }
-
-    .hero-badge::before {
-      content: '';
-      width: 6px; height: 6px;
-      background: var(--teal);
-      border-radius: 50%;
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50% { opacity: 0.5; transform: scale(1.4); }
-    }
-
-    .hero-title {
-      font-size: clamp(2.4rem, 5vw, 3.8rem);
-      font-weight: 800;
-      color: var(--white);
-      line-height: 1.15;
-      margin-bottom: 24px;
-      letter-spacing: -1px;
-    }
-
-    .hero-title .highlight {
-      color: var(--teal);
-      position: relative;
-    }
-
-    .hero-title .highlight-gold { color: var(--gold); }
-
-    .hero-sub {
-      font-size: 1.05rem;
-      color: rgba(255,255,255,0.6);
-      line-height: 1.75;
-      margin-bottom: 40px;
-      max-width: 520px;
-      font-weight: 300;
-    }
-
-    .hero-actions {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .btn-primary {
-      background: var(--teal);
-      color: var(--navy);
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.25s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-primary:hover {
-      background: #00d9e3;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(0,194,203,0.35);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--white);
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.2);
-      transition: all 0.25s;
-    }
-
-    .btn-secondary:hover {
-      border-color: var(--teal);
-      color: var(--teal);
-    }
-
-    .hero-stats {
-      display: flex;
-      gap: 40px;
-      margin-top: 60px;
-      padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.08);
-      flex-wrap: wrap;
-    }
-
-    .stat-item { text-align: left; }
-
-    .stat-number {
-      font-size: 1.8rem;
-      font-weight: 800;
-      color: var(--white);
-      letter-spacing: -1px;
-    }
-
-    .stat-number span { color: var(--teal); }
-
-    .stat-label {
-      font-size: 0.78rem;
-      color: rgba(255,255,255,0.45);
-      font-weight: 400;
-      margin-top: 2px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    /* ── MARQUEE STRIP ── */
-    .marquee-strip {
-      background: var(--teal);
-      padding: 14px 0;
-      overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .marquee-inner {
-      display: inline-flex;
-      animation: marquee 20s linear infinite;
-      gap: 0;
-    }
-
-    .marquee-item {
-      font-size: 0.82rem;
-      font-weight: 700;
-      color: var(--navy);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      padding: 0 32px;
-    }
-
-    .marquee-item::after {
-      content: '✦';
-      margin-left: 32px;
-    }
-
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    /* ── SECTION BASE ── */
-    section { padding: 100px 6vw; }
-
-    .section-label {
-      font-size: 0.75rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      color: var(--teal);
-      margin-bottom: 14px;
-    }
-
-    .section-title {
-      font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1.2;
-      letter-spacing: -0.5px;
-      margin-bottom: 16px;
-    }
-
-    .section-sub {
-      font-size: 1rem;
-      color: var(--gray);
-      line-height: 1.75;
-      max-width: 540px;
-      font-weight: 300;
-    }
-
-    /* ── SERVICES ── */
-    #services { background: var(--soft); }
-
-    .services-header {
-      text-align: center;
-      margin-bottom: 64px;
-    }
-
-    .services-header .section-sub { margin: 0 auto; }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-
-    .service-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 36px 32px;
-      border: 1px solid rgba(10,25,49,0.07);
-      transition: all 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--teal), var(--gold));
-      transform: scaleX(0);
-      transition: transform 0.3s;
-      transform-origin: left;
-    }
-
-    .service-card:hover::before { transform: scaleX(1); }
-
-    .service-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 20px 48px rgba(10,25,49,0.1);
-    }
-
-    .service-icon {
-      width: 52px; height: 52px;
-      background: rgba(0,194,203,0.1);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 24px;
-    }
-
-    .service-title {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-
-    .service-desc {
-      font-size: 0.9rem;
-      color: var(--gray);
-      line-height: 1.7;
-      font-weight: 300;
-    }
-
-    /* ── WHY US ── */
-    #why {
-      background: var(--navy);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-
-    #why .section-title { color: var(--white); }
-    #why .section-sub { color: rgba(255,255,255,0.5); }
-
-    .why-list { margin-top: 40px; display: flex; flex-direction: column; gap: 24px; }
-
-    .why-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .why-icon {
-      width: 40px; height: 40px;
-      background: rgba(0,194,203,0.12);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.1rem;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .why-text h4 {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--white);
-      margin-bottom: 4px;
-    }
-
-    .why-text p {
-      font-size: 0.85rem;
-      color: rgba(255,255,255,0.45);
-      line-height: 1.6;
-      font-weight: 300;
-    }
-
-    .why-visual {
-      background: rgba(255,255,255,0.03);
-      border: 1px solid rgba(0,194,203,0.12);
-      border-radius: 20px;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-    .metric-row {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-    }
-
-    .metric-label {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.5);
-      font-weight: 500;
-    }
-
-    .metric-label span:last-child { color: var(--teal); font-weight: 700; }
-
-    .metric-bar {
-      height: 6px;
-      background: rgba(255,255,255,0.07);
-      border-radius: 100px;
-      overflow: hidden;
-    }
-
-    .metric-fill {
-      height: 100%;
-      border-radius: 100px;
-      background: linear-gradient(90deg, var(--teal), #00d9e3);
-      transition: width 1.5s ease;
-    }
-
-    /* ── PROCESS ── */
-    #process { background: var(--white); text-align: center; }
-
-    .process-steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 0;
-      margin-top: 64px;
-      position: relative;
-    }
-
-    .process-steps::before {
-      content: '';
-      position: absolute;
-      top: 36px;
-      left: 10%; right: 10%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--teal), transparent);
-    }
-
-    .process-step { padding: 0 20px; position: relative; }
-
-    .step-number {
-      width: 72px; height: 72px;
-      border-radius: 50%;
-      background: var(--navy);
-      color: var(--teal);
-      font-size: 1.4rem;
-      font-weight: 800;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 24px;
-      border: 2px solid rgba(0,194,203,0.2);
-      position: relative;
-      z-index: 1;
-    }
-
-    .step-title {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-
-    .step-desc {
-      font-size: 0.85rem;
-      color: var(--gray);
-      line-height: 1.65;
-      font-weight: 300;
-    }
-
-    /* ── CTA ── */
-    #cta {
-      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 100%);
-      text-align: center;
-      padding: 100px 6vw;
-      position: relative;
-      overflow: hidden;
-    }
-
-    #cta::before {
-      content: '';
-      position: absolute;
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(0,194,203,0.1) 0%, transparent 70%);
-      top: 50%; left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-    }
-
-    #cta .section-title { color: var(--white); margin-bottom: 16px; }
-
-    #cta .section-sub {
-      color: rgba(255,255,255,0.5);
-      margin: 0 auto 40px;
-      text-align: center;
-    }
-
-    .cta-actions {
-      display: flex;
-      gap: 16px;
-      justify-content: center;
-      flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
-    }
-
-    .btn-whatsapp {
-      background: #25D366;
-      color: var(--white);
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.25s;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .btn-whatsapp:hover {
-      background: #1fb855;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(37,211,102,0.35);
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      background: #060e1c;
-      padding: 40px 6vw;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-
-    .footer-logo {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .footer-logo img { height: 30px; }
-
-    .footer-logo span {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--white);
-    }
-
-    .footer-logo span em {
-      color: var(--teal);
-      font-style: normal;
-    }
-
-    .footer-tagline {
-      font-size: 0.8rem;
-      color: rgba(255,255,255,0.3);
-      font-weight: 300;
-    }
-
-    .footer-links {
-      display: flex;
-      gap: 24px;
-    }
-
-    .footer-links a {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.4);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-
-    .footer-links a:hover { color: var(--teal); }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      #why {
-        grid-template-columns: 1fr;
-        gap: 48px;
-      }
-
-      .process-steps::before { display: none; }
-
-      .nav-links { display: none; }
-
-      .hero-stats { gap: 24px; }
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --navy:#0A1931;--deep:#060e1c;--teal:#00C2CB;--teal2:#00e5ef;
+      --gold:#F4A100;--white:#ffffff;--gray:rgba(255,255,255,0.42);
+      --line:rgba(255,255,255,0.06);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'Poppins',sans-serif;background:var(--deep);color:var(--white);overflow-x:hidden;cursor:none}
+
+    /* CURSOR */
+    #cur{position:fixed;width:10px;height:10px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:width .25s,height .25s;mix-blend-mode:difference}
+    #cur2{position:fixed;width:36px;height:36px;border:1px solid rgba(0,194,203,.35);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s,border-color .3s}
+
+    /* LOADER */
+    #loader{position:fixed;inset:0;background:var(--deep);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px}
+    .ld-logo{display:flex;align-items:center;gap:12px;opacity:0;transform:translateY(20px)}
+    .ld-logo img{height:48px}
+    .ld-logo-text{font-size:1.5rem;font-weight:900;letter-spacing:-.5px}
+    .ld-logo-text em{color:var(--teal);font-style:normal}
+    .ld-bar-wrap{width:180px;height:1px;background:rgba(255,255,255,.07);overflow:hidden;border-radius:100px;opacity:0}
+    .ld-bar{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--gold));border-radius:100px}
+    .ld-num{font-size:.7rem;color:rgba(255,255,255,.2);letter-spacing:3px;font-weight:600;opacity:0}
+
+    /* NAV */
+    nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:22px 5vw;display:flex;align-items:center;justify-content:space-between;transition:padding .4s,background .4s}
+    nav.s{padding:14px 5vw;background:rgba(6,14,28,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+    .nl{display:flex;align-items:center;gap:10px;text-decoration:none}
+    .nl img{height:34px}
+    .nl-t{font-size:1.1rem;font-weight:900;letter-spacing:-.3px}
+    .nl-t em{color:var(--teal);font-style:normal}
+    .nc{display:flex;gap:32px;list-style:none;position:absolute;left:50%;transform:translateX(-50%)}
+    .nc a{font-size:.8rem;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;position:relative;padding-bottom:3px}
+    .nc a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:var(--teal);transform:scaleX(0);transition:transform .25s;transform-origin:left}
+    .nc a:hover{color:var(--white)}
+    .nc a:hover::after{transform:scaleX(1)}
+    .nb{border:1px solid rgba(0,194,203,.3);color:var(--teal);padding:8px 20px;border-radius:6px;font-size:.78rem;font-weight:600;text-decoration:none;transition:all .25s;letter-spacing:.2px}
+    .nb:hover{background:var(--teal);color:var(--navy);box-shadow:0 0 24px rgba(0,194,203,.3)}
+
+    /* HERO */
+    #hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:140px 5vw 100px;position:relative;overflow:hidden;background:radial-gradient(ellipse 100% 70% at 50% 0%,rgba(0,194,203,.07) 0%,transparent 70%),var(--deep)}
+    .hg{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.035) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 80% 60% at 50% 40%,black 30%,transparent 100%);pointer-events:none}
+    .particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+    .p{position:absolute;width:2px;height:2px;background:rgba(0,194,203,.5);border-radius:50%;animation:pfloat linear infinite}
+    @keyframes pfloat{0%{transform:translateY(100vh) translateX(0);opacity:0}10%{opacity:1}90%{opacity:1}100%{transform:translateY(-10vh) translateX(40px);opacity:0}}
+    .orb{position:absolute;border-radius:50%;filter:blur(90px);pointer-events:none;animation:ob 10s ease-in-out infinite}
+    .o1{width:600px;height:600px;background:rgba(0,194,203,.07);top:-150px;left:-150px;animation-delay:0s}
+    .o2{width:400px;height:400px;background:rgba(244,161,0,.05);bottom:-100px;right:-100px;animation-delay:-5s}
+    @keyframes ob{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(20px,-20px) scale(1.04)}}
+    .hc{position:relative;z-index:2;max-width:900px}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.68rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--teal);padding:6px 16px;border:1px solid rgba(0,194,203,.18);border-radius:100px;background:rgba(0,194,203,.05);margin-bottom:32px;opacity:0;transform:translateY(16px)}
+    .dot-pulse{width:5px;height:5px;background:var(--teal);border-radius:50%;animation:dp 2s infinite;display:inline-block}
+    @keyframes dp{0%,100%{box-shadow:0 0 0 0 rgba(0,194,203,.5)}50%{box-shadow:0 0 0 6px rgba(0,194,203,0)}}
+    .ht{font-size:clamp(3rem,7vw,5.8rem);font-weight:900;line-height:1.05;letter-spacing:-2.5px;margin-bottom:28px}
+    .ht .word{display:inline-block}
+    .ht .teal{color:var(--teal)}
+    .ht .outline{-webkit-text-stroke:1.5px rgba(255,255,255,.25);color:transparent}
+    .hs-hero{font-size:1rem;color:var(--gray);line-height:1.85;max-width:520px;margin:0 auto 44px;font-weight:300;opacity:0;transform:translateY(16px)}
+    .ha{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;opacity:0;transform:translateY(16px)}
+    .bg{position:relative;background:var(--teal);color:var(--navy);padding:14px 30px;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px;overflow:hidden}
+    .bg::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}
+    .bg:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,194,203,.38)}
+    .bg:hover::before{left:100%}
+    .bgh{background:transparent;color:rgba(255,255,255,.65);padding:14px 30px;border-radius:8px;font-weight:500;font-size:.9rem;text-decoration:none;border:1px solid rgba(255,255,255,.12);transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+    .bgh:hover{border-color:rgba(0,194,203,.4);color:var(--teal);background:rgba(0,194,203,.05)}
+    .scroll-ind{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:6px;opacity:0;cursor:pointer}
+    .scroll-ind span{font-size:.6rem;letter-spacing:2.5px;text-transform:uppercase;color:rgba(255,255,255,.2)}
+    .sl{width:1px;height:52px;background:linear-gradient(to bottom,rgba(0,194,203,.7),transparent);animation:sl 2.2s ease-in-out infinite}
+    @keyframes sl{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:.3;transform:scaleY(.4)}}
+
+    /* TICKER */
+    .ticker{background:var(--teal);padding:11px 0;overflow:hidden;position:relative;z-index:3}
+    .ti{display:inline-flex;animation:tk 28s linear infinite}
+    .ti-item{font-size:.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--navy);padding:0 26px;white-space:nowrap}
+    .ti-item::after{content:' * ';margin-left:26px}
+    @keyframes tk{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+    /* SECTIONS */
+    .sec{padding:110px 5vw;position:relative;z-index:2}
+    .lbl{font-size:.67rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--teal);margin-bottom:16px;display:flex;align-items:center;gap:10px}
+    .lbl::before{content:'';width:20px;height:1px;background:var(--teal)}
+    .h2{font-size:clamp(1.9rem,3.8vw,3rem);font-weight:800;line-height:1.15;letter-spacing:-1px;margin-bottom:18px}
+    .sub{font-size:.95rem;color:var(--gray);line-height:1.8;font-weight:300;max-width:480px}
+
+    /* SERVICES */
+    #services{background:#090f1a}
+    .srv-head{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:56px;flex-wrap:wrap;gap:32px}
+    .srv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .sc{background:#090f1a;padding:38px 34px;transition:background .35s;position:relative;overflow:hidden}
+    .sc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--teal),transparent);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+    .sc:hover{background:rgba(0,194,203,.035)}
+    .sc:hover::after{transform:scaleX(1)}
+    .sn{font-size:.65rem;font-weight:700;color:rgba(0,194,203,.35);letter-spacing:2px;margin-bottom:18px}
+    .si2{font-size:1.7rem;display:block;margin-bottom:18px}
+    .st{font-size:.98rem;font-weight:700;margin-bottom:10px;color:var(--white);letter-spacing:-.2px}
+    .sd{font-size:.83rem;color:rgba(255,255,255,.38);line-height:1.72;font-weight:300}
+
+    /* WHY US — horizontal strip */
+    #hscroll{overflow:hidden;background:#090f1a;padding:80px 0;position:relative;z-index:2}
+    .hs-wrap{display:flex;gap:24px;width:max-content;will-change:transform;padding:0 5vw}
+    .hs-card{flex-shrink:0;width:300px;background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:16px;padding:32px 28px;transition:border-color .3s,background .3s}
+    .hs-card:hover{border-color:rgba(0,194,203,.2);background:rgba(0,194,203,.03)}
+    .hs-icon{font-size:1.5rem;margin-bottom:16px}
+    .hs-title{font-size:.95rem;font-weight:700;margin-bottom:8px;color:var(--white)}
+    .hs-text{font-size:.82rem;color:rgba(255,255,255,.38);line-height:1.7;font-weight:300}
+    #hscroll .lbl{padding:0 5vw;margin-bottom:20px}
+    #hscroll .h2{padding:0 5vw;margin-bottom:40px}
+
+    /* ABOUT */
+    #about{background:var(--deep)}
+    .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:96px;align-items:center}
+    .ab-story{font-size:1rem;line-height:1.92;color:rgba(255,255,255,.48);font-weight:300;margin-top:22px}
+    .ab-story strong{color:var(--white);font-weight:600}
+    .ab-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .ac{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:26px 22px;transition:border-color .3s,background .3s}
+    .ac:hover{border-color:rgba(0,194,203,.2);background:rgba(0,194,203,.03)}
+    .ac.hl{background:var(--teal);border-color:var(--teal)}
+    .ac.hl .an{color:var(--navy)}
+    .ac.hl .al{color:rgba(10,25,49,.65)}
+    .an{font-size:1.9rem;font-weight:900;color:var(--teal);letter-spacing:-1px;line-height:1;margin-bottom:5px}
+    .al{font-size:.75rem;color:rgba(255,255,255,.32);font-weight:400;line-height:1.5}
+
+    /* PROCESS */
+    #process{background:var(--deep)}
+    .pr-list{margin-top:56px;border:1px solid var(--line);border-radius:18px;overflow:hidden}
+    .pi{display:grid;grid-template-columns:72px 1fr auto;align-items:center;gap:28px;padding:30px 36px;border-bottom:1px solid var(--line);transition:background .3s}
+    .pi:last-child{border-bottom:none}
+    .pi:hover{background:rgba(0,194,203,.025)}
+    .pn{font-size:2.2rem;font-weight:900;color:rgba(0,194,203,.12);letter-spacing:-2px;transition:color .3s}
+    .pi:hover .pn{color:rgba(0,194,203,.35)}
+    .pb h3{font-size:.98rem;font-weight:700;margin-bottom:5px;color:var(--white)}
+    .pb p{font-size:.82rem;color:rgba(255,255,255,.38);line-height:1.65;font-weight:300;max-width:460px}
+    .pt{font-size:.68rem;font-weight:700;color:var(--teal);background:rgba(0,194,203,.08);border:1px solid rgba(0,194,203,.15);padding:4px 12px;border-radius:100px;white-space:nowrap;letter-spacing:.5px}
+
+    /* CTA */
+    #cta{background:var(--deep);text-align:center;overflow:hidden;position:relative}
+    #cta::before{content:'';position:absolute;width:600px;height:600px;background:radial-gradient(circle,rgba(0,194,203,.09) 0%,transparent 70%);top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none}
+    .ct-inner{max-width:680px;margin:0 auto;position:relative;z-index:2}
+    .ct-big{font-size:clamp(2.4rem,5.5vw,4.2rem);font-weight:900;letter-spacing:-1.5px;line-height:1.08;margin-bottom:20px}
+    .ct-big .outline{-webkit-text-stroke:1px rgba(255,255,255,.22);color:transparent}
+    .ct-sub{font-size:.97rem;color:var(--gray);line-height:1.8;font-weight:300;margin-bottom:38px}
+    .ct-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+    .bwa{background:#25D366;color:var(--white);padding:14px 28px;border-radius:8px;font-weight:700;font-size:.9rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+    .bwa:hover{background:#1fbd5e;transform:translateY(-3px);box-shadow:0 10px 32px rgba(37,211,102,.3)}
+    .ct-line{font-size:.78rem;color:rgba(255,255,255,.2)}
+    .ct-line a{color:rgba(0,194,203,.65);text-decoration:none;transition:color .2s}
+    .ct-line a:hover{color:var(--teal)}
+
+    /* FOOTER */
+    footer{background:#030810;padding:32px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;position:relative;z-index:2}
+    .fb{display:flex;align-items:center;gap:10px}
+    .fb img{height:26px}
+    .fbn{font-size:.88rem;font-weight:800}
+    .fbn em{color:var(--teal);font-style:normal}
+    .ftag{font-size:.68rem;color:rgba(255,255,255,.22);font-style:italic;font-weight:300;margin-top:2px}
+    .flinks{display:flex;gap:22px}
+    .flinks a{font-size:.75rem;color:rgba(255,255,255,.28);text-decoration:none;transition:color .2s}
+    .flinks a:hover{color:var(--teal)}
+    .fcopy{font-size:.68rem;color:rgba(255,255,255,.13)}
+
+    /* REVEAL */
+    [data-r]{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease}
+    [data-r].on{opacity:1;transform:translateY(0)}
+
+    @media(max-width:900px){
+      .srv-grid{grid-template-columns:1fr 1fr}
+      .ab-grid{grid-template-columns:1fr;gap:48px}
+      .nc{display:none}
+      .pi{grid-template-columns:50px 1fr}
+      .pt{display:none}
+    }
+    @media(max-width:600px){
+      .srv-grid{grid-template-columns:1fr}
+      .ab-cards{grid-template-columns:1fr 1fr}
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <a href="#" class="nav-logo">
-      <img src="sdlogo.webp" alt="SimpliDigital Logo" />
-      <span>Simpli<em>Digital</em></span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#why">Why Us</a></li>
-      <li><a href="#process">Process</a></li>
-      <li><a href="#cta" class="nav-cta">Free Audit</a></li>
-    </ul>
-  </nav>
+<div id="cur"></div>
+<div id="cur2"></div>
 
-  <!-- HERO -->
-  <section id="hero">
-    <div class="hero-bg-glow"></div>
-    <div class="hero-bg-glow-2"></div>
-    <div class="hero-content">
-      <div class="hero-badge">Digital Marketing Agency · Hyderabad</div>
-      <h1 class="hero-title">
-        Your business deserves to be<br />
-        <span class="highlight">found online.</span><br />
-        <span class="highlight-gold">We make that happen.</span>
-      </h1>
-      <p class="hero-sub">
-        Most businesses are invisible online — not because they're not good enough,
-        but because nobody helped them show up. We fix that.
-        No jargon. No fluff. Just real digital growth, simplified.
-      </p>
-      <div class="hero-actions">
-        <a href="#cta" class="btn-primary">
-          Get a Free Audit
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="#services" class="btn-secondary">See What We Do</a>
-      </div>
-      <div class="hero-stats">
-        <div class="stat-item">
-          <div class="stat-number">Page<span>1</span></div>
-          <div class="stat-label">Where your business belongs</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">180<span>d</span></div>
-          <div class="stat-label">Average ranking timeline</div>
-        </div>
-        <div class="stat-item">
-          <div class="stat-number">0<span>%</span></div>
-          <div class="stat-label">Jargon. Zero.</div>
-        </div>
-      </div>
+<!-- LOADER -->
+<div id="loader">
+  <div class="ld-logo">
+    <img src="sdlogo.webp" alt="SimpliDigital"/>
+    <span class="ld-logo-text">Simpli<em>Digital</em></span>
+  </div>
+  <div class="ld-bar-wrap"><div class="ld-bar" id="ldbar"></div></div>
+  <div class="ld-num" id="ldnum">0%</div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nl">
+    <img src="sdlogo.webp" alt="SimpliDigital"/>
+    <span class="nl-t">Simpli<em>Digital</em></span>
+  </a>
+  <ul class="nc">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#process">Process</a></li>
+  </ul>
+  <a href="#cta" class="nb">Free Audit</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hg"></div>
+  <div class="particles" id="particles"></div>
+  <div class="orb o1"></div>
+  <div class="orb o2"></div>
+  <div class="hc">
+    <div class="eyebrow" id="eyebrow">
+      <span class="dot-pulse"></span>
+      Digital Marketing Agency &middot; Hyderabad, India
     </div>
-  </section>
-
-  <!-- MARQUEE -->
-  <div class="marquee-strip">
-    <div class="marquee-inner">
-      <span class="marquee-item">SEO & Search Visibility</span>
-      <span class="marquee-item">Google My Business</span>
-      <span class="marquee-item">Backlink Building</span>
-      <span class="marquee-item">On-Page Optimization</span>
-      <span class="marquee-item">Content Strategy</span>
-      <span class="marquee-item">Local SEO</span>
-      <span class="marquee-item">Digital Presence</span>
-      <span class="marquee-item">Rank Higher. Grow Faster.</span>
-      <span class="marquee-item">SEO & Search Visibility</span>
-      <span class="marquee-item">Google My Business</span>
-      <span class="marquee-item">Backlink Building</span>
-      <span class="marquee-item">On-Page Optimization</span>
-      <span class="marquee-item">Content Strategy</span>
-      <span class="marquee-item">Local SEO</span>
-      <span class="marquee-item">Digital Presence</span>
-      <span class="marquee-item">Rank Higher. Grow Faster.</span>
+    <h1 class="ht" id="htitle">
+      <span class="word">Simplifying&nbsp;</span><span class="word"><span class="teal">Digital.</span>&nbsp;</span><span class="word">Amplifying&nbsp;</span><span class="word"><span class="outline">Growth.</span></span>
+    </h1>
+    <p class="hs-hero" id="hsub">
+      Most businesses are invisible online &mdash; not because they&rsquo;re not good enough,
+      but because nobody showed them how to be found.
+      We fix that. No jargon. No fluff. Just real growth.
+    </p>
+    <div class="ha" id="hact">
+      <a href="#cta" class="bg">
+        Get a Free Audit
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#services" class="bgh">
+        Explore Services
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17l9.2-9.2M17 17V7H7"/></svg>
+      </a>
     </div>
   </div>
+  <div class="scroll-ind" id="scr" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
+    <span>Scroll</span>
+    <div class="sl"></div>
+  </div>
+</section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <div class="services-header">
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Everything your digital presence needs.<br />Nothing it doesn't.</h2>
-      <p class="section-sub">We focus on what actually moves the needle — not what looks good in a report.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card">
-        <div class="service-icon">🔍</div>
-        <div class="service-title">SEO & Search Visibility</div>
-        <p class="service-desc">We get your business to page 1 for the keywords your customers are already searching. Local, national, or niche — we've got the strategy.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📍</div>
-        <div class="service-title">Google My Business</div>
-        <p class="service-desc">The most underused free tool in digital marketing. We optimize, manage, and grow your GMB so local customers find you first — every time.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🔗</div>
-        <div class="service-title">Backlink & Authority Building</div>
-        <p class="service-desc">Google trusts websites that other websites trust. We build real, quality backlinks that raise your domain authority and rankings.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">✍️</div>
-        <div class="service-title">Content & On-Page SEO</div>
-        <p class="service-desc">Every word on your website is either working for you or against you. We audit, rewrite, and optimize so Google — and your customers — understand exactly who you are.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">📊</div>
-        <div class="service-title">Performance Reporting</div>
-        <p class="service-desc">No vanity metrics. No fluff. Weekly reports that show exactly what moved, what's growing, and what we're doing next.</p>
-      </div>
-      <div class="service-card">
-        <div class="service-icon">🚀</div>
-        <div class="service-title">Full Digital Presence Audit</div>
-        <p class="service-desc">A complete X-ray of your online presence — website, search rankings, backlinks, GMB, social. Free for every new inquiry. No strings attached.</p>
-      </div>
-    </div>
-  </section>
+<!-- TICKER -->
+<div class="ticker">
+  <div class="ti">
+    <span class="ti-item">SEO &amp; Rankings</span>
+    <span class="ti-item">Backlink Building</span>
+    <span class="ti-item">Google My Business</span>
+    <span class="ti-item">Content Strategy</span>
+    <span class="ti-item">On-Page Optimisation</span>
+    <span class="ti-item">Local Search</span>
+    <span class="ti-item">Digital Presence</span>
+    <span class="ti-item">Real Results</span>
+    <span class="ti-item">SEO &amp; Rankings</span>
+    <span class="ti-item">Backlink Building</span>
+    <span class="ti-item">Google My Business</span>
+    <span class="ti-item">Content Strategy</span>
+    <span class="ti-item">On-Page Optimisation</span>
+    <span class="ti-item">Local Search</span>
+    <span class="ti-item">Digital Presence</span>
+    <span class="ti-item">Real Results</span>
+  </div>
+</div>
 
-  <!-- WHY US -->
-  <section id="why">
-    <div class="why-left">
-      <div class="section-label">Why SimpliDigital</div>
-      <h2 class="section-title">We don't sell packages.<br />We solve problems.</h2>
-      <p class="section-sub">Agencies love complicated proposals. We love results. Here's what makes us different.</p>
-      <div class="why-list">
-        <div class="why-item">
-          <div class="why-icon">🛠️</div>
-          <div class="why-text">
-            <h4>Custom-Built Tools</h4>
-            <p>We use proprietary scraping and audit tools built in-house — not just off-the-shelf software everyone else uses.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon">📋</div>
-          <div class="why-text">
-            <h4>Radical Transparency</h4>
-            <p>Weekly reports, plain English updates, and honest conversations when something isn't working yet.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon">🎯</div>
-          <div class="why-text">
-            <h4>Niche-Deep Strategy</h4>
-            <p>We go deep into your industry before touching your website. Your competitors' weaknesses are your opportunities.</p>
-          </div>
-        </div>
-        <div class="why-item">
-          <div class="why-icon">🤝</div>
-          <div class="why-text">
-            <h4>No Retainer Traps</h4>
-            <p>Month-to-month. Stay because we're delivering, not because a 12-month contract says you have to.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="why-visual">
-      <div style="font-size:0.8rem; color:rgba(255,255,255,0.4); text-transform:uppercase; letter-spacing:1px; font-weight:600; margin-bottom:8px;">Typical Client Growth Metrics</div>
-      <div class="metric-row">
-        <div class="metric-label"><span>Organic Traffic</span><span>+180%</span></div>
-        <div class="metric-bar"><div class="metric-fill" style="width:80%"></div></div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-label"><span>Keyword Rankings</span><span>+240%</span></div>
-        <div class="metric-bar"><div class="metric-fill" style="width:90%"></div></div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-label"><span>Google My Business Views</span><span>+320%</span></div>
-        <div class="metric-bar"><div class="metric-fill" style="width:95%"></div></div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-label"><span>Backlink Authority</span><span>+95%</span></div>
-        <div class="metric-bar"><div class="metric-fill" style="width:65%"></div></div>
-      </div>
-      <div class="metric-row">
-        <div class="metric-label"><span>Lead Enquiries</span><span>+150%</span></div>
-        <div class="metric-bar"><div class="metric-fill" style="width:75%"></div></div>
-      </div>
-      <div style="margin-top:16px; padding-top:16px; border-top:1px solid rgba(255,255,255,0.06); font-size:0.75rem; color:rgba(255,255,255,0.25); font-weight:300;">
-        Average results across clients · 90–180 day timeframe
-      </div>
-    </div>
-  </section>
-
-  <!-- PROCESS -->
-  <section id="process">
-    <div class="section-label" style="text-align:center">How It Works</div>
-    <h2 class="section-title" style="text-align:center">From audit to growth<br />in four clear steps.</h2>
-    <div class="process-steps">
-      <div class="process-step">
-        <div class="step-number">01</div>
-        <div class="step-title">Free Audit</div>
-        <p class="step-desc">We analyse your entire digital presence — website, rankings, competitors, backlinks — and tell you exactly what's holding you back.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-number">02</div>
-        <div class="step-title">Strategy</div>
-        <p class="step-desc">No generic plans. We build a custom roadmap based on your industry, your city, and the specific keywords your customers use.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-number">03</div>
-        <div class="step-title">Execution</div>
-        <p class="step-desc">We get to work — on-page fixes, content, backlinks, GMB — while you focus on running your business.</p>
-      </div>
-      <div class="process-step">
-        <div class="step-number">04</div>
-        <div class="step-title">Grow & Report</div>
-        <p class="step-desc">Weekly updates, monthly reviews, and transparent reporting. You always know what's happening and why.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section id="cta">
-    <div class="section-label" style="text-align:center; position:relative; z-index:1;">Let's Talk</div>
-    <h2 class="section-title" style="text-align:center; color:var(--white); position:relative; z-index:1;">
-      Your competitor is on Page 1.<br />You could be too.
-    </h2>
-    <p class="section-sub" style="text-align:center; color:rgba(255,255,255,0.5); position:relative; z-index:1;">
-      Get a free, no-obligation audit of your digital presence.<br />
-      We'll show you exactly what's wrong and how to fix it.
-    </p>
-    <div class="cta-actions">
-      <a href="mailto:hello@simplidigital.in" class="btn-primary">
-        Email Us
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="https://wa.me/917382312386" class="btn-whatsapp">
-        💬 WhatsApp Us
-      </a>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
+<!-- SERVICES -->
+<section id="services" class="sec">
+  <div class="srv-head" data-r>
     <div>
-      <div class="footer-logo">
-        <img src="sdlogo.webp" alt="SimpliDigital" />
-        <span>Simpli<em>Digital</em></span>
-      </div>
-      <div class="footer-tagline" style="margin-top:6px; margin-left:40px;">Simplifying Digital. Amplifying Growth.</div>
+      <div class="lbl">What We Do</div>
+      <h2 class="h2">Everything your digital<br/>presence needs.</h2>
     </div>
-    <div class="footer-links">
-      <a href="#services">Services</a>
-      <a href="#why">Why Us</a>
-      <a href="#process">Process</a>
-      <a href="mailto:hello@simplidigital.in">hello@simplidigital.in</a>
-    </div>
-    <div style="font-size:0.78rem; color:rgba(255,255,255,0.2); font-weight:300;">
-      © 2026 SimpliDigital. All rights reserved.
-    </div>
-  </footer>
+    <p class="sub" style="text-align:right">We focus on what moves the needle &mdash; not what looks good on a report.</p>
+  </div>
+  <div class="srv-grid" data-r data-delay=".1">
+    <div class="sc"><div class="sn">01</div><span class="si2">&#128269;</span><div class="st">SEO &amp; Search Visibility</div><p class="sd">We get your business to page 1 for the keywords your customers are already searching &mdash; local, niche, or national.</p></div>
+    <div class="sc"><div class="sn">02</div><span class="si2">&#128205;</span><div class="st">Google My Business</div><p class="sd">The most underused free tool in digital marketing. We optimize and grow your GMB so locals find you first &mdash; every time.</p></div>
+    <div class="sc"><div class="sn">03</div><span class="si2">&#128279;</span><div class="st">Backlink &amp; Authority</div><p class="sd">Google trusts websites that other websites trust. We build real, quality backlinks that raise your domain authority and rankings.</p></div>
+    <div class="sc"><div class="sn">04</div><span class="si2">&#9997;&#65039;</span><div class="st">Content &amp; On-Page SEO</div><p class="sd">Every word on your website is either working for you or against you. We audit and optimize so Google understands who you are.</p></div>
+    <div class="sc"><div class="sn">05</div><span class="si2">&#128202;</span><div class="st">Performance Reporting</div><p class="sd">No vanity metrics. Weekly reports in plain English &mdash; what moved, what grew, and what we&rsquo;re doing next.</p></div>
+    <div class="sc"><div class="sn">06</div><span class="si2">&#128295;</span><div class="st">Custom SEO Tools</div><p class="sd">We use proprietary in-house scraping and audit tools &mdash; not just what every freelancer on Fiverr already uses.</p></div>
+  </div>
+</section>
 
+<!-- WHY US HORIZONTAL SCROLL -->
+<section id="hscroll">
+  <div class="lbl" data-r>Why SimpliDigital</div>
+  <h2 class="h2" data-r data-delay=".05">We don&rsquo;t sell packages.<br/>We solve problems.</h2>
+  <div class="hs-wrap" id="hsw">
+    <div class="hs-card"><div class="hs-icon">&#128295;</div><div class="hs-title">Custom-Built Tools</div><p class="hs-text">Proprietary scraping and audit tools built in-house. Not just off-the-shelf software everyone else uses.</p></div>
+    <div class="hs-card"><div class="hs-icon">&#128203;</div><div class="hs-title">Radical Transparency</div><p class="hs-text">Weekly reports in plain English. Honest conversations when something isn&rsquo;t working yet &mdash; no hiding behind jargon.</p></div>
+    <div class="hs-card"><div class="hs-icon">&#129309;</div><div class="hs-title">No Lock-In Contracts</div><p class="hs-text">Month-to-month. Stay because we&rsquo;re delivering results, not because a 12-month contract says you have to.</p></div>
+    <div class="hs-card"><div class="hs-icon">&#127919;</div><div class="hs-title">Niche-Deep Strategy</div><p class="hs-text">We go deep into your industry before touching your website. Your competitors&rsquo; weaknesses are your opportunities.</p></div>
+    <div class="hs-card"><div class="hs-icon">&#128205;</div><div class="hs-title">Hyderabad-First</div><p class="hs-text">We know local search behaviour, local keywords, local competitors. No remote agency can replicate that intelligence.</p></div>
+    <div class="hs-card"><div class="hs-icon">&#9889;</div><div class="hs-title">Technical + Creative</div><p class="hs-text">We fix schema, page speed, and site architecture &mdash; not just write content. Most agencies can&rsquo;t do both.</p></div>
+    <div class="hs-card"><div class="hs-icon">&#128295;</div><div class="hs-title">Custom-Built Tools</div><p class="hs-text">Proprietary scraping and audit tools built in-house. Not just off-the-shelf software everyone else uses.</p></div>
+    <div class="hs-card"><div class="hs-icon">&#128203;</div><div class="hs-title">Radical Transparency</div><p class="hs-text">Weekly reports in plain English. Honest conversations when something isn&rsquo;t working yet &mdash; no hiding behind jargon.</p></div>
+    <div class="hs-card"><div class="hs-icon">&#129309;</div><div class="hs-title">No Lock-In Contracts</div><p class="hs-text">Month-to-month. Stay because we&rsquo;re delivering results, not because a 12-month contract says you have to.</p></div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="sec">
+  <div class="ab-grid">
+    <div data-r>
+      <div class="lbl">Our Story</div>
+      <h2 class="h2">We don&rsquo;t sell packages.<br/>We solve problems.</h2>
+      <p class="ab-story">
+        We started SimpliDigital because we kept seeing the same thing &mdash;
+        <strong>good businesses, terrible online presence.</strong> Not because they didn&rsquo;t try,
+        but because digital marketing had become an overcomplicated, jargon-heavy world
+        designed to confuse people rather than help them.
+        <br/><br/>
+        So we decided to do it differently. <strong>Plain language. Real strategy.
+        Month-to-month &mdash; stay because we&rsquo;re delivering, not because a contract says you have to.</strong>
+        <br/><br/>
+        Based in Hyderabad. Built for India. Just getting started.
+      </p>
+    </div>
+    <div class="ab-cards" data-r data-delay=".12">
+      <div class="ac"><div class="an">Page 1</div><div class="al">Where your business belongs on Google</div></div>
+      <div class="ac hl"><div class="an">0%</div><div class="al">Jargon. Ever.</div></div>
+      <div class="ac"><div class="an">90d</div><div class="al">Average time to first ranking movement</div></div>
+      <div class="ac"><div class="an">M&ndash;M</div><div class="al">Month-to-month. No lock-in contracts.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process" class="sec">
+  <div style="text-align:center" data-r>
+    <div class="lbl" style="justify-content:center">How It Works</div>
+    <h2 class="h2" style="text-align:center">From audit to growth<br/>in four clear steps.</h2>
+  </div>
+  <div class="pr-list" data-r data-delay=".1">
+    <div class="pi"><div class="pn">01</div><div class="pb"><h3>Free Digital Audit</h3><p>We analyse your entire online presence &mdash; website, rankings, competitors, backlinks, GMB &mdash; and tell you exactly what&rsquo;s holding you back. No charge. No obligation.</p></div><span class="pt">Week 1</span></div>
+    <div class="pi"><div class="pn">02</div><div class="pb"><h3>Custom Strategy</h3><p>No generic plans. A roadmap built for your industry, your city, and the keywords your customers actually type. Your competitors&rsquo; weaknesses become your opportunities.</p></div><span class="pt">Week 2</span></div>
+    <div class="pi"><div class="pn">03</div><div class="pb"><h3>Execution</h3><p>We handle everything &mdash; on-page fixes, content, backlinks, GMB &mdash; while you focus on running your business. No hand-holding needed from your side.</p></div><span class="pt">Month 1&ndash;3</span></div>
+    <div class="pi"><div class="pn">04</div><div class="pb"><h3>Report &amp; Grow</h3><p>Weekly updates, monthly reviews, full transparency. You always know exactly what&rsquo;s happening, what&rsquo;s working, and what&rsquo;s next.</p></div><span class="pt">Ongoing</span></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="sec">
+  <div class="ct-inner" data-r>
+    <div class="lbl" style="justify-content:center">Let&rsquo;s Talk</div>
+    <h2 class="ct-big">
+      Your competitor is<br/>on <span style="color:var(--teal)">Page 1.</span><br/>
+      <span class="outline">You could be too.</span>
+    </h2>
+    <p class="ct-sub">Get a free, no-obligation audit of your digital presence.<br/>We&rsquo;ll show you exactly what&rsquo;s wrong &mdash; before you spend a rupee.</p>
+    <div class="ct-btns">
+      <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20a%20free%20SEO%20audit%20for%20my%20business." class="bwa">&#128172; WhatsApp Us</a>
+      <a href="mailto:hello@simplidigital.in" class="bg">Email Us <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+    <p class="ct-line">
+      Call: <a href="tel:+917382312386">+91 73823 12386</a>
+      &nbsp;&middot;&nbsp;
+      <a href="mailto:hello@simplidigital.in">hello@simplidigital.in</a>
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="fb"><img src="sdlogo.webp" alt="SimpliDigital"/><div><div class="fbn">Simpli<em>Digital</em></div><div class="ftag">Simplifying Digital. Amplifying Growth.</div></div></div>
+  </div>
+  <div class="flinks">
+    <a href="#services">Services</a><a href="#about">About</a><a href="#process">Process</a>
+    <a href="https://wa.me/917382312386">WhatsApp</a><a href="mailto:hello@simplidigital.in">Email</a>
+  </div>
+  <div class="fcopy">&copy; 2026 SimpliDigital &middot; Hyderabad, India</div>
+</footer>
+
+<script>
+gsap.registerPlugin(ScrollTrigger);
+
+// CURSOR
+const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
+let mx=0,my=0,fx=0,fy=0;
+document.addEventListener('mousemove',e=>{
+  mx=e.clientX;my=e.clientY;
+  cur.style.left=mx+'px';cur.style.top=my+'px';
+});
+(function loop(){
+  fx+=(mx-fx)*.11;fy+=(my-fy)*.11;
+  cur2.style.left=fx+'px';cur2.style.top=fy+'px';
+  requestAnimationFrame(loop);
+})();
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{cur.style.width='5px';cur.style.height='5px';cur2.style.width='56px';cur2.style.height='56px';cur2.style.borderColor='rgba(0,194,203,.6)'});
+  el.addEventListener('mouseleave',()=>{cur.style.width='10px';cur.style.height='10px';cur2.style.width='36px';cur2.style.height='36px';cur2.style.borderColor='rgba(0,194,203,.35)'});
+});
+
+// PARTICLES
+const pc=document.getElementById('particles');
+for(let i=0;i<18;i++){
+  const p=document.createElement('div');
+  p.className='p';
+  p.style.cssText='left:'+Math.random()*100+'%;animation-duration:'+(8+Math.random()*14)+'s;animation-delay:'+(-Math.random()*20)+'s;opacity:'+(Math.random()*.5+.2);
+  pc.appendChild(p);
+}
+
+// LOADER
+window.addEventListener('load',()=>{
+  const tl=gsap.timeline();
+  tl.to('.ld-logo',{opacity:1,y:0,duration:.7,ease:'power3.out'})
+    .to('.ld-bar-wrap',{opacity:1,duration:.4},'-=.3')
+    .to('#ldbar',{width:'100%',duration:1.6,ease:'power2.inOut',
+      onUpdate:function(){document.getElementById('ldnum').textContent=Math.round(this.progress()*100)+'%'}})
+    .to('.ld-num',{opacity:1,duration:.3},'-=1.6')
+    .to('#loader',{opacity:0,duration:.6,ease:'power2.in',
+      onComplete:()=>{document.getElementById('loader').style.display='none';startHero();}});
+});
+
+function startHero(){
+  // eyebrow
+  gsap.to('#eyebrow',{opacity:1,y:0,duration:.7,ease:'power3.out',delay:.1});
+
+  // title — word by word with clip
+  document.querySelectorAll('.ht .word').forEach((w,i)=>{
+    gsap.from(w,{y:'100%',opacity:0,duration:.75,ease:'power4.out',delay:.3+i*.12,
+      clipPath:'inset(0 0 100% 0)',
+      onStart:()=>{w.style.clipPath='inset(0 0 0% 0)'}
+    });
+  });
+
+  gsap.to('#hsub',{opacity:1,y:0,duration:.8,ease:'power3.out',delay:.9});
+  gsap.to('#hact',{opacity:1,y:0,duration:.7,ease:'power3.out',delay:1.1});
+  gsap.to('#scr',{opacity:1,duration:.6,delay:1.5});
+
+  // SCROLL REVEAL
+  document.querySelectorAll('[data-r]').forEach(el=>{
+    const d=parseFloat(el.getAttribute('data-delay')||0);
+    gsap.to(el,{opacity:1,y:0,duration:.8,ease:'power3.out',delay:d,
+      scrollTrigger:{trigger:el,start:'top 88%',toggleActions:'play none none none'}
+    });
+  });
+
+  // HORIZONTAL SCROLL scrub
+  gsap.to('#hsw',{
+    x:function(){return -(document.getElementById('hsw').scrollWidth/3)},
+    ease:'none',
+    scrollTrigger:{trigger:'#hscroll',start:'top bottom',end:'bottom top',scrub:1.2}
+  });
+
+  // NAV
+  window.addEventListener('scroll',()=>{
+    document.getElementById('nav').classList.toggle('s',window.scrollY>60);
+  });
+}
+</script>
 </body>
 </html>
