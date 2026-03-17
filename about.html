@@ -82,15 +82,139 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding
 .story-side ul{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.78rem;color:rgba(255,255,255,.45)}
 .story-side li::before{content:"→ ";color:var(--teal)}
 
-/* TIMELINE */
-#timeline{padding:100px 5vw;background:var(--navy)}
-.time-grid{max-width:900px;margin:50px auto 0;display:grid;grid-template-columns:1fr 3fr;gap:18px;border-left:1px solid rgba(255,255,255,.08);padding-left:6px}
-.time-item{display:grid;grid-template-columns:1fr 3fr;gap:18px;align-items:flex-start}
-.time-year{font-size:.74rem;font-weight:700;color:rgba(255,255,255,.35);padding-top:6px}
-.time-dot{width:12px;height:12px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 4px rgba(0,194,203,.2);margin-top:4px}
-.time-card{background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.07);padding:16px 18px}
-.time-card h3{font-size:.86rem;font-weight:700;margin-bottom:4px}
-.time-card p{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.6;font-weight:300}
+/* TIMELINE *//* APPLE‑STYLE HORIZONTAL TIMELINE */
+#timeline{
+  padding:120px 5vw 100px;
+  background:var(--navy);
+}
+
+.tl-shell{
+  position:relative;
+  max-width:1100px;
+  margin:70px auto 0;
+  padding:40px 0 0;
+}
+
+.tl-track{
+  position:absolute;
+  left:0;
+  right:0;
+  top:40px;
+  height:2px;
+  background:linear-gradient(90deg,rgba(0,194,203,.7),rgba(0,194,203,.15));
+  pointer-events:none;
+}
+
+.tl-node{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:0 10px;
+}
+
+.tl-shell{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+
+/* Dot + year */
+.tl-dot-wrap{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  margin-bottom:26px;
+}
+
+.tl-dot{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--teal);
+  box-shadow:0 0 0 5px rgba(0,194,203,.18);
+}
+
+.tl-year{
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+}
+
+/* Card */
+.tl-card{
+  background:rgba(255,255,255,.02);
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.07);
+  padding:18px 20px 20px;
+  max-width:240px;
+}
+
+.tl-card h3{
+  font-size:.9rem;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:6px;
+}
+
+.tl-card p{
+  font-size:.78rem;
+  color:rgba(255,255,255,.4);
+  line-height:1.6;
+  font-weight:300;
+}
+
+/* Hover micro‑interaction */
+.tl-node:hover .tl-dot{
+  transform:scale(1.08);
+  box-shadow:0 0 0 7px rgba(0,194,203,.24);
+  transition:all .25s ease;
+}
+.tl-node:hover .tl-card{
+  border-color:rgba(0,194,203,.25);
+  transform:translateY(-4px);
+  transition:all .25s ease;
+}
+
+/* Responsive timeline */
+@media(max-width:860px){
+  .tl-shell{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    padding-top:10px;
+  }
+  .tl-track{
+    left:24px;
+    right:auto;
+    top:0;
+    bottom:0;
+    height:auto;
+    width:2px;
+    background:linear-gradient(to bottom,rgba(0,194,203,.7),rgba(0,194,203,.15));
+  }
+  .tl-node{
+    flex-direction:row;
+    align-items:flex-start;
+    text-align:left;
+    padding-left:46px;
+  }
+  .tl-dot-wrap{
+    position:absolute;
+    left:0;
+    top:2px;
+    margin-bottom:0;
+  }
+  .tl-card{
+    max-width:none;
+  }
+}
+
 
 /* PRINCIPLES */
 #principles{padding:100px 5vw;background:#050d18}
@@ -256,41 +380,60 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
     <div class="sec-label c">Timeline</div>
     <h2 class="sec-h2">How SimpliDigital<br/>came together.</h2>
   </div>
-  <div class="time-grid rv">
-    <div class="time-item">
-      <div class="time-year">2022</div>
-      <div class="time-dot"></div>
-      <div class="time-card">
+
+  <div class="tl-shell rv">
+    <div class="tl-track"></div>
+
+    <!-- 2022 -->
+    <article class="tl-node">
+      <div class="tl-dot-wrap">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2022</div>
+      </div>
+      <div class="tl-card">
         <h3>First freelance projects</h3>
         <p>Started taking on logo and website work for local businesses in Hyderabad — Farm Mutton, yoga studios, interior designers and more.</p>
       </div>
-    </div>
-    <div class="time-item">
-      <div class="time-year">2023</div>
-      <div class="time-dot"></div>
-      <div class="time-card">
+    </article>
+
+    <!-- 2023 -->
+    <article class="tl-node">
+      <div class="tl-dot-wrap">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2023</div>
+      </div>
+      <div class="tl-card">
         <h3>From design to performance</h3>
-        <p>Realised design alone was not enough. Began studying SEO, analytics and conversion-focused copy so every pixel had a job.</p>
+        <p>Realised design alone was not enough. Began studying SEO, analytics and conversion‑focused copy so every pixel had a job.</p>
       </div>
-    </div>
-    <div class="time-item">
-      <div class="time-year">2024</div>
-      <div class="time-dot"></div>
-      <div class="time-card">
+    </article>
+
+    <!-- 2024 -->
+    <article class="tl-node">
+      <div class="tl-dot-wrap">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2024</div>
+      </div>
+      <div class="tl-card">
         <h3>SimpliDigital takes shape</h3>
-        <p>Branded the studio, built proprietary layouts and processes, and moved from “designer for hire” to a compact, full service digital partner.</p>
+        <p>Branded the studio, built proprietary layouts and processes, and moved from “designer for hire” to a compact, full‑service digital partner.</p>
       </div>
-    </div>
-    <div class="time-item">
-      <div class="time-year">2025 – now</div>
-      <div class="time-dot"></div>
-      <div class="time-card">
+    </article>
+
+    <!-- 2025 – now -->
+    <article class="tl-node">
+      <div class="tl-dot-wrap">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2025 – now</div>
+      </div>
+      <div class="tl-card">
         <h3>Deep focus on a few clients</h3>
-        <p>Chose to stay intentionally small and hands-on, taking on fewer projects at a time so each one can aim to be the best work in its niche.</p>
+        <p>Chose to stay intentionally small and hands‑on, taking on fewer projects at a time so each one can aim to be the best work in its niche.</p>
       </div>
-    </div>
+    </article>
   </div>
 </section>
+
 
 <!-- PRINCIPLES -->
 <section id="principles">
