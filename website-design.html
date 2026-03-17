@@ -4,9 +4,9 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Website Design & Development — SimpliDigital</title>
-<meta name="description" content="Cinematic, conversion-focused websites for Indian businesses. SimpliDigital designs and builds fast, SEO-ready sites for brands like Zapwash, Farm Mutton and Thanu Yoga Studio."/>
-"/>
-//fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+<meta name="description" content="Cinematic, conversion‑focused websites for Indian businesses. SimpliDigital designs and builds fast, SEO‑ready sites for brands like Zapwash, Farm Mutton and Thanu Yoga Studio."/>
+<link rel="icon" href="sdlogo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
 
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -72,14 +72,6 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding
 .hero-right p{font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300;margin-bottom:10px}
 .hero-right ul{list-style:none;font-size:.76rem;color:rgba(255,255,255,.4);display:flex;flex-direction:column;gap:4px}
 
-/* PROBLEMS */
-#problem{padding:90px 5vw 70px;background:#050d18}
-.problem-wrap{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1.6fr 2fr;gap:40px;align-items:flex-start}
-.problem-list{display:flex;flex-direction:column;gap:10px}
-.problem-item{background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);padding:14px 16px}
-.problem-item h3{font-size:.86rem;font-weight:600;margin-bottom:4px}
-.problem-item p{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
-
 /* PROJECTS */
 #projects{padding:80px 5vw 90px;background:var(--navy)}
 .projects-head{max-width:720px;margin:0 auto 40px;text-align:center}
@@ -91,47 +83,13 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding
 .proj-name{font-size:.9rem;font-weight:700}
 .proj-desc{font-size:.78rem;color:rgba(255,255,255,.45);line-height:1.7;font-weight:300}
 .proj-meta{font-size:.7rem;color:rgba(255,255,255,.3);margin-top:4px}
-.proj-actions{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.proj-actions{margin-top:auto}
 .proj-btn{background:var(--teal);color:var(--navy);padding:8px 16px;border-radius:999px;font-size:.78rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all .25s}
 .proj-btn:hover{transform:translateY(-1px);box-shadow:0 0 20px rgba(0,194,203,.45)}
-.proj-note{font-size:.68rem;color:rgba(255,255,255,.35)}
 .proj-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 0 0,rgba(0,194,203,.12),transparent 55%);opacity:0;transition:opacity .3s}
 .proj-card:hover::before{opacity:1}
 
-/* INCLUDES */
-#includes{padding:80px 5vw 80px;background:#050d18}
-.includes-wrap{max-width:1050px;margin:0 auto;display:grid;grid-template-columns:2fr 3fr;gap:40px;align-items:flex-start}
-.includes-list{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
-.inc-item{background:rgba(255,255,255,.02);border-radius:16px;border:1px solid rgba(255,255,255,.06);padding:14px 14px}
-.inc-item h3{font-size:.84rem;font-weight:600;margin-bottom:4px}
-.inc-item p{font-size:.76rem;color:rgba(255,255,255,.4);line-height:1.6;font-weight:300}
-.includes-note{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.7}
-
-/* PROCESS STRIP (reuse style) */
-#process{padding:90px 5vw;background:var(--navy)}
-.proc-head{max-width:720px;margin:0 auto;text-align:center}
-.proc-track{display:flex;gap:0;max-width:1100px;margin:50px auto 0;position:relative}
-.proc-track::before{content:'';position:absolute;top:28px;left:28px;right:28px;height:1px;background:linear-gradient(90deg,var(--teal),rgba(0,194,203,.1));z-index:0}
-.proc-step{flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:0 16px;position:relative;z-index:1}
-.proc-dot{width:56px;height:56px;border-radius:50%;background:var(--navy);border:2px solid rgba(0,194,203,.3);display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:var(--teal);margin-bottom:20px;transition:all .3s}
-.proc-step:hover .proc-dot{background:var(--teal);color:var(--navy);border-color:var(--teal);transform:scale(1.08)}
-.proc-step h3{font-size:.82rem;font-weight:700;color:var(--white);margin-bottom:8px}
-.proc-step p{font-size:.73rem;color:rgba(255,255,255,.32);line-height:1.6;font-weight:300}
-
-/* FAQ mini */
-#faq{padding:70px 5vw 90px;background:#050d18;border-top:1px solid var(--line)}
-.faq-wrap{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1.4fr 2fr;gap:40px;align-items:flex-start}
-.faq-list{display:flex;flex-direction:column;border-radius:18px;border:1px solid rgba(255,255,255,.08);overflow:hidden}
-.faq-item{border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.01)}
-.faq-q{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;cursor:pointer;gap:16px}
-.faq-q h3{font-size:.82rem;font-weight:600;color:var(--white)}
-.faq-toggle{width:20px;height:20px;border-radius:50%;border:1px solid rgba(0,194,203,.4);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--teal);flex-shrink:0;transition:all .25s}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s}
-.faq-a p{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300;padding:0 18px 14px}
-.faq-item.open .faq-a{max-height:200px;padding-top:0}
-.faq-item.open .faq-toggle{background:var(--teal);color:var(--navy);transform:rotate(45deg)}
-
-/* CTA */
+/* CTA ONLY (short, to keep code light) */
 #cta{padding:90px 5vw 100px;background:var(--navy);text-align:center;position:relative;overflow:hidden}
 .cta-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%)}
 .cta-inner{position:relative;z-index:2;max-width:640px;margin:0 auto}
@@ -163,18 +121,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
   .ham{display:flex !important}
   .hero-inner{grid-template-columns:1fr;gap:26px;padding-top:80px}
   .hero-right{justify-self:stretch;width:100%}
-  .problem-wrap{grid-template-columns:1fr;gap:26px}
   .projects-grid{grid-template-columns:1fr;gap:16px}
-  .includes-wrap{grid-template-columns:1fr;gap:26px}
-  .includes-list{grid-template-columns:1fr 1fr}
-  .proc-track{flex-direction:column;gap:24px}
-  .proc-track::before{display:none}
-  .proc-step{flex-direction:row;align-items:flex-start;text-align:left}
-  .proc-dot{flex-shrink:0;margin-bottom:0;margin-right:12px}
-  .faq-wrap{grid-template-columns:1fr;gap:26px}
-}
-@media(max-width:560px){
-  .includes-list{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -185,6 +132,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 <div id="mmenu" role="dialog" aria-modal="true" aria-label="Site navigation">
   <a href="index.html" onclick="closeMM()">Home</a>
   <a href="services.html" onclick="closeMM()">Services</a>
+  <a href="website-design.html" onclick="closeMM()">Website Design</a>
   <a href="why-us.html" onclick="closeMM()">Why Us</a>
   <a href="about.html" onclick="closeMM()">About</a>
   <a href="contact.html" onclick="closeMM()">Contact</a>
@@ -197,12 +145,12 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
     <span class="n-brand">Simpli<em>Digital</em></span>
   </a>
   <ul class="n-links">
-    ><a href="index.html">Home</a></li>
-    ><a href="services.html">Services</a></li>
-    ><a href="website-design.html" class="active">Website Design</a></li>
-    ><a href="why-us.html">Why Us</a></li>
-    ><a href="about.html">About</a></li>
-    ><a href="contact.html">Contact</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="website-design.html" class="active">Website Design</a></li>
+    <li><a href="why-us.html">Why Us</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
   </ul>
   <div class="n-right">
     <a class="n-cta" href="#cta">Start a Project</a>
@@ -241,39 +189,11 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
       <h3>Perfect for businesses that...</h3>
       <p>Know their product is strong but feel their current website is holding them back.</p>
       <ul>
-        >Launching a new brand and need a proper first impression</li>
-        >Have an old site that looks dated on mobile</li>
-        >Want SEO foundations and tracking set up correctly</li>
+        <li>Launching a new brand and need a proper first impression</li>
+        <li>Have an old site that looks dated on mobile</li>
+        <li>Want SEO foundations and tracking set up correctly</li>
       </ul>
     </aside>
-  </div>
-</section>
-
-<!-- PROBLEM -->
-<section id="problem">
-  <div class="problem-wrap rv">
-    <div>
-      <div class="sec-label">The real problem</div>
-      <h2 class="sec-h2">Most websites look okay.<br/>They just quietly leak money.</h2>
-    </div>
-    <div class="problem-list">
-      <div class="problem-item">
-        <h3>Slow, heavy and built on drag‑and‑drop templates</h3>
-        <p>So people bounce before the page even loads fully, especially on 4G connections.</p>
-      </div>
-      <div class="problem-item">
-        <h3>No clear funnel from visitor to enquiry</h3>
-        <p>Pretty sections but no obvious path to contact you, book or buy.</p>
-      </div>
-      <div class="problem-item">
-        <h3>Zero SEO thinking in the structure</h3>
-        <p>Random headings, no internal linking and no content hierarchy, so Google has no idea what the site is about.</p>
-      </div>
-      <div class="problem-item">
-        <h3>Handed off to a dev who changes the design</h3>
-        <p>What you see in Figma is not what you get in code. We avoid that by designing and building in the same place.</p>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -286,191 +206,52 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 
   <div class="projects-grid rv">
     <!-- Zapwash -->
-  <article class="proj-card">
-  <div class="proj-top">
-    <img src="zapwash.png" alt="Zapwash logo" class="proj-logo"/>
-    <span class="proj-tag">Laundry · Hyperlocal</span>
-  </div>
-  <div class="proj-name">Zapwash</div>
-  <p class="proj-desc">
-    Instant laundry service in Hyderabad with 20‑minute pickup promise, location pages for every key area and clear calls to WhatsApp for bookings.
-  </p>
-  <div class="proj-meta">Design · Development · Copy · Local SEO layout</div>
-  <div class="proj-actions">
-    <a href="https://thezapwash.com" class="proj-btn">
-      View live site
-    </a>
-  </div>
-</article>
-
+    <article class="proj-card">
+      <div class="proj-top">
+        <img src="zapwash.png" alt="Zapwash logo" class="proj-logo"/>
+        <span class="proj-tag">Laundry · Hyperlocal</span>
+      </div>
+      <div class="proj-name">Zapwash</div>
+      <p class="proj-desc">
+        Instant laundry service in Hyderabad with 20‑minute pickup promise, location pages for every key area and clear calls to WhatsApp for bookings.
+      </p>
+      <div class="proj-meta">Design · Development · Copy · Local SEO layout</div>
+      <div class="proj-actions">
+        <a href="https://thezapwash.com" class="proj-btn">View live site</a>
+      </div>
+    </article>
 
     <!-- Farm Mutton -->
     <article class="proj-card">
-  <div class="proj-top">
-    <img src="fm_logo.png" alt="Farm Mutton logo" class="proj-logo"/>
-    <span class="proj-tag">E‑commerce · Food</span>
-  </div>
-  <div class="proj-name">Farm Mutton</div>
-  <p class="proj-desc">
-    Grass‑fed mutton brand with product‑first storytelling, bold pricing sections and clear delivery information for trust‑building.
-  </p>
-  <div class="proj-meta">Design · Development · Product storytelling</div>
-  <div class="proj-actions">
-    <a href="https://stseenuri.github.io/Timber-B2B/" class="proj-btn">
-      View live site
-    </a>
-  </div>
-</article>
-
+      <div class="proj-top">
+        <img src="fm_logo.png" alt="Farm Mutton logo" class="proj-logo"/>
+        <span class="proj-tag">E‑commerce · Food</span>
+      </div>
+      <div class="proj-name">Farm Mutton</div>
+      <p class="proj-desc">
+        Grass‑fed mutton brand with product‑first storytelling, bold pricing sections and clear delivery information for trust‑building.
+      </p>
+      <div class="proj-meta">Design · Development · Product storytelling</div>
+      <div class="proj-actions">
+        <a href="https://stseenuri.github.io/Timber-B2B/" class="proj-btn">View live site</a>
+      </div>
+    </article>
 
     <!-- Thanu Yoga Studio -->
     <article class="proj-card">
-  <div class="proj-top">
-    <img src="tys.jpeg" alt="Thanu Yoga Studio logo" class="proj-logo"/>
-    <span class="proj-tag">Yoga · Local studio</span>
-  </div>
-  <div class="proj-name">Thanu Yoga Studio</div>
-  <p class="proj-desc">
-    Calm, airy layout with class schedules, instructor story and WhatsApp‑first enquiry funnel for faster bookings.
-  </p>
-  <div class="proj-meta">Design · Development · Lead funnel</div>
-  <div class="proj-actions">
-    <a href="https://stseenuri.github.io/YTS/" class="proj-btn">
-      View live site
-    </a>
-  </div>
-</article>
-
-
-<!-- INCLUDES -->
-<section id="includes">
-  <div class="includes-wrap rv">
-    <div>
-      <div class="sec-label">What you get</div>
-      <h2 class="sec-h2">Every SimpliDigital website<br/>comes with this by default.</h2>
-      <p class="includes-note" style="margin-top:12px">
-        No upsell for basics. You get design, build and performance foundations in one place so you don’t have to coordinate three different teams.
+      <div class="proj-top">
+        <img src="tys.jpeg" alt="Thanu Yoga Studio logo" class="proj-logo"/>
+        <span class="proj-tag">Yoga · Local studio</span>
+      </div>
+      <div class="proj-name">Thanu Yoga Studio</div>
+      <p class="proj-desc">
+        Calm, airy layout with class schedules, instructor story and WhatsApp‑first enquiry funnel for faster bookings.
       </p>
-    </div>
-    <div class="includes-list">
-      <div class="inc-item">
-        <h3>Custom design</h3>
-        <p>Layouts tailored to your brand, not a generic template. We design around your content and goals.</p>
+      <div class="proj-meta">Design · Development · Lead funnel</div>
+      <div class="proj-actions">
+        <a href="https://stseenuri.github.io/YTS/" class="proj-btn">View live site</a>
       </div>
-      <div class="inc-item">
-        <h3>Responsive & fast</h3>
-        <p>Mobile‑first builds with clean HTML/CSS and image optimisation so the site feels instant.</p>
-      </div>
-      <div class="inc-item">
-        <h3>SEO‑ready structure</h3>
-        <p>Proper heading hierarchy, internal links and metadata so you can start ranking faster.</p>
-      </div>
-      <div class="inc-item">
-        <h3>Analytics & events</h3>
-        <p>Google Analytics and basic conversion tracking wired up so you know what is working.</p>
-      </div>
-      <div class="inc-item">
-        <h3>Copy & messaging help</h3>
-        <p>We help you say what matters in words your customers actually use.</p>
-      </div>
-      <div class="inc-item">
-        <h3>Support after launch</h3>
-        <p>30 days of support post‑launch for small tweaks and fixes as you go live.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process">
-  <div class="proc-head rv">
-    <div class="sec-label c">Process</div>
-    <h2 class="sec-h2">How a website project<br/>works with us.</h2>
-  </div>
-  <div class="proc-track rv">
-    <div class="proc-step">
-      <div class="proc-dot">01</div>
-      <div>
-        <h3>Discovery call</h3>
-        <p>We understand your business, audience and what “success” means for this website.</p>
-      </div>
-    </div>
-    <div class="proc-step">
-      <div class="proc-dot">02</div>
-      <div>
-        <h3>Site map & wireframe</h3>
-        <p>We map the pages and rough layout so the structure is clear before designing screens.</p>
-      </div>
-    </div>
-    <div class="proc-step">
-      <div class="proc-dot">03</div>
-      <div>
-        <h3>Visual design</h3>
-        <p>We translate the wireframe into full‑fledged designs with your branding and content.</p>
-      </div>
-    </div>
-    <div class="proc-step">
-      <div class="proc-dot">04</div>
-      <div>
-        <h3>Development</h3>
-        <p>We build the site, wire analytics, set up basic SEO and test across devices.</p>
-      </div>
-    </div>
-    <div class="proc-step">
-      <div class="proc-dot">05</div>
-      <div>
-        <h3>Launch & support</h3>
-        <p>We deploy to your hosting, fix any real‑world issues and guide you on next steps.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="faq-wrap rv">
-    <div>
-      <div class="sec-label c">Questions</div>
-      <h2 class="sec-h2">A few things clients<br/>ask before starting.</h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h3>How long does a website project take?</h3>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <p>Most small business sites take 3–5 weeks from kick‑off to launch, depending on content readiness and feedback speed.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h3>Do you also provide hosting and domain?</h3>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <p>You keep ownership of your domain and hosting. We’ll help you choose and set things up, but everything stays in your name.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h3>Can you redesign an existing site instead of starting fresh?</h3>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <p>Yes. We audit what you have, keep what’s working and redesign what isn’t, with a clear plan so you know why each change exists.</p>
-        </div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q" onclick="toggleFaq(this)">
-          <h3>What about ongoing SEO and marketing?</h3>
-          <div class="faq-toggle">+</div>
-        </div>
-        <div class="faq-a">
-          <p>We can continue as your SEO and marketing partner after launch, or hand over cleanly to your in‑house team with documentation.</p>
-        </div>
-      </div>
-    </div>
+    </article>
   </div>
 </section>
 
@@ -491,7 +272,6 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer role="contentinfo">
   <div class="f-brand">
     <img src="sdlogo.webp" alt="SimpliDigital" width="44" height="22"/>
@@ -570,14 +350,6 @@ function reveal(){
 }
 window.addEventListener('scroll',reveal,{passive:true});
 reveal();
-
-// FAQ toggle
-function toggleFaq(el){
-  var item=el.parentElement;
-  var open=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
-  if(!open)item.classList.add('open');
-}
 </script>
 </body>
 </html>
