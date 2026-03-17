@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact SimpliDigital — Digital Marketing Agency in India</title>
+<meta name="description" content="Contact SimpliDigital for websites, SEO, branding and digital marketing. Based in Hyderabad, working with businesses across India. WhatsApp, email or send a quick message."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.simplidigital.in/contact"/>
+<link rel="icon" href="sdlogo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--teal:#00C2CB;--gold:#F4A100;--navy:#04090f;--white:#f5f5f7;--line:rgba(255,255,255,.07);--nh:64px}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
+
+/* cursor */
+#c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
+#c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+
+/* nav */
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(4,9,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.n-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
+.n-logo img{height:28px;width:auto}
+.n-brand{font-size:.95rem;font-weight:700;color:var(--white)}
+.n-brand em{color:var(--teal);font-style:normal}
+.n-links{display:flex;gap:28px;list-style:none;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
+.n-links a{font-size:.75rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;font-weight:500;white-space:nowrap}
+.n-links a:hover,.n-links a.active{color:var(--white)}
+.n-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.n-cta{font-size:.74rem;font-weight:600;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:7px 18px;border-radius:980px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.n-cta:hover{background:var(--teal);color:var(--navy)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .35s;transform-origin:center}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* mobile menu */
+#mmenu{position:fixed;inset:0;background:rgba(4,9,15,.97);backdrop-filter:blur(28px);z-index:590;display:none;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;pointer-events:none;transition:opacity .4s}
+#mmenu.open{display:flex;opacity:1;pointer-events:auto}
+#mmenu a{font-size:1.8rem;font-weight:700;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
+#mmenu a:hover{color:var(--white)}
+#mmenu .mm-cta{font-size:1.1rem;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:14px 36px;border-radius:980px}
+
+/* shared */
+.sec-label{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sec-label::before,.sec-label::after{content:'';width:20px;height:1px;background:var(--teal)}
+.sec-label.c{justify-content:center}
+.sec-h2{font-size:clamp(2rem,4vw,3.4rem);font-weight:800;letter-spacing:-1.4px;line-height:1.12;color:var(--white)}
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.rv.on{opacity:1;transform:translateY(0)}
+
+/* hero */
+#hero{position:relative;min-height:65vh;padding-top:var(--nh);display:flex;align-items:center;justify-content:center;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 10%,transparent 100%)}
+.hero-glow{position:absolute;width:650px;height:650px;background:radial-gradient(circle,rgba(0,194,203,.08) 0%,transparent 65%);top:45%;left:50%;transform:translate(-50%,-50%)}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:3fr 2fr;gap:60px;align-items:center;padding:80px 6vw}
+.hero-title{font-size:clamp(2.6rem,5vw,4.4rem);font-weight:900;line-height:1.05;letter-spacing:-2px;margin-bottom:18px}
+.hero-title em{color:var(--teal);font-style:normal}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.42);line-height:1.9;font-weight:300;max-width:520px;margin-bottom:18px}
+.hero-note{font-size:.8rem;color:rgba(255,255,255,.28)}
+.hero-note span{color:rgba(0,194,203,.7)}
+.hero-right{justify-self:end;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:24px 22px;width:280px;backdrop-filter:blur(16px)}
+.hero-right h3{font-size:.84rem;font-weight:700;margin-bottom:6px}
+.hero-right p{font-size:.78rem;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300;margin-bottom:12px}
+.hero-right div{font-size:.76rem;color:rgba(255,255,255,.4);line-height:1.7}
+.hero-right a{color:rgba(0,194,203,.78);text-decoration:none}
+.hero-right a:hover{color:var(--teal)}
+
+/* layout */
+#contact-main{padding:80px 5vw 100px;background:#050d18}
+.contact-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:3fr 2fr;gap:60px;align-items:flex-start}
+
+/* form */
+.contact-form{background:rgba(255,255,255,.02);border-radius:22px;border:1px solid rgba(255,255,255,.08);padding:28px 26px}
+.contact-form h2{font-size:1.2rem;font-weight:700;margin-bottom:6px}
+.contact-form p{font-size:.8rem;color:rgba(255,255,255,.4);line-height:1.6;margin-bottom:16px}
+.form-row{display:flex;gap:12px;margin-bottom:14px}
+.form-field{flex:1;display:flex;flex-direction:column;gap:4px}
+.form-label{font-size:.74rem;color:rgba(255,255,255,.6);font-weight:500}
+.form-input,.form-textarea,.form-select{
+  background:rgba(0,0,0,.4);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:10px;
+  padding:9px 10px;
+  font-size:.8rem;
+  color:var(--white);
+  outline:none;
+}
+.form-textarea{min-height:110px;resize:vertical}
+.form-input:focus,.form-textarea:focus,.form-select:focus{
+  border-color:rgba(0,194,203,.65);
+  box-shadow:0 0 0 1px rgba(0,194,203,.25);
+}
+.form-hint{font-size:.7rem;color:rgba(255,255,255,.28)}
+.form-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:10px;flex-wrap:wrap}
+.btn-send{background:var(--teal);color:var(--navy);padding:11px 24px;border-radius:980px;font-weight:700;font-size:.82rem;border:none;cursor:pointer;display:inline-flex;align-items:center;gap:7px;transition:all .25s}
+.btn-send:hover{transform:scale(1.03);box-shadow:0 0 26px rgba(0,194,203,.5)}
+.form-note{font-size:.7rem;color:rgba(255,255,255,.26)}
+
+/* right column */
+.contact-side{display:flex;flex-direction:column;gap:18px}
+.side-card{background:rgba(255,255,255,.02);border-radius:18px;border:1px solid rgba(255,255,255,.08);padding:20px 18px}
+.side-card h3{font-size:.86rem;font-weight:700;margin-bottom:6px}
+.side-card p{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
+.side-list{list-style:none;margin-top:8px;display:flex;flex-direction:column;gap:6px;font-size:.78rem;color:rgba(255,255,255,.5)}
+.side-list li span{color:rgba(255,255,255,.3);font-size:.72rem;text-transform:uppercase;letter-spacing:1px;margin-right:6px}
+.side-list a{color:rgba(0,194,203,.78);text-decoration:none}
+.side-list a:hover{color:var(--teal)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-size:.7rem;color:rgba(255,255,255,.4);margin-top:8px}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:#25D366;box-shadow:0 0 0 4px rgba(37,211,102,.25)}
+
+/* FAQ */
+#contact-faq{padding:60px 5vw 90px;background:var(--navy);border-top:1px solid var(--line)}
+.faq-wrap{max-width:900px;margin:0 auto;display:grid;grid-template-columns:1.4fr 2fr;gap:40px;align-items:flex-start}
+.faq-list{display:flex;flex-direction:column;border-radius:18px;border:1px solid rgba(255,255,255,.08);overflow:hidden}
+.faq-item{border-bottom:1px solid rgba(255,255,255,.05);background:rgba(255,255,255,.01)}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:16px 18px;cursor:pointer;gap:16px}
+.faq-q h3{font-size:.82rem;font-weight:600;color:var(--white)}
+.faq-toggle{width:20px;height:20px;border-radius:50%;border:1px solid rgba(0,194,203,.4);display:flex;align-items:center;justify-content:center;font-size:.9rem;color:var(--teal);flex-shrink:0;transition:all .25s}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s}
+.faq-a p{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300;padding:0 18px 14px}
+.faq-item.open .faq-a{max-height:160px;padding-top:0}
+.faq-item.open .faq-toggle{background:var(--teal);color:var(--navy);transform:rotate(45deg)}
+
+/* footer */
+footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.f-brand{display:flex;align-items:center;gap:8px}
+.f-brand img{height:22px;width:auto}
+.f-name{font-size:.8rem;font-weight:700;color:var(--white)}
+.f-name em{color:var(--teal);font-style:normal}
+.f-tagline{font-size:.6rem;color:rgba(255,255,255,.18);font-style:italic;margin-top:1px}
+.f-links{display:flex;gap:16px;flex-wrap:wrap}
+.f-links a{font-size:.68rem;color:rgba(255,255,255,.22);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:var(--teal)}
+.f-copy{font-size:.6rem;color:rgba(255,255,255,.1)}
+
+/* responsive */
+@media(max-width:860px){
+  .n-links{display:none !important}
+  .n-cta{display:none !important}
+  .ham{display:flex !important}
+  .hero-inner{grid-template-columns:1fr;gap:26px;padding-top:80px}
+  .hero-right{justify-self:stretch;width:100%}
+  .contact-grid{grid-template-columns:1fr;gap:40px}
+  .faq-wrap{grid-template-columns:1fr;gap:26px}
+}
+</style>
+</head>
+<body>
+<div id="c1"></div><div id="c2"></div>
+
+<!-- MOBILE MENU -->
+<div id="mmenu" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <a href="index.html" onclick="closeMM()">Home</a>
+  <a href="services.html" onclick="closeMM()">Services</a>
+  <a href="why-us.html" onclick="closeMM()">Why Us</a>
+  <a href="about.html" onclick="closeMM()">About</a>
+  <a href="contact.html" onclick="closeMM()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Main navigation">
+  <a class="n-logo" href="index.html" aria-label="SimpliDigital homepage">
+    <img src="sdlogo.webp" alt="SimpliDigital logo" width="56" height="28"/>
+    <span class="n-brand">Simpli<em>Digital</em></span>
+  </a>
+  <ul class="n-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="why-us.html">Why Us</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html" class="active">Contact</a></li>
+  </ul>
+  <div class="n-right">
+    <a class="n-cta" href="#contact-main">Start a Project</a>
+    <button class="ham" id="hambtn" onclick="toggleMM()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="sec-label">Contact</div>
+      <h1 class="hero-title">Tell us what<br/>you’re building.<br/><em>We’ll show you how to grow it.</em></h1>
+      <p class="hero-sub">
+        Share a few details about your business and what you need help with — website, SEO, branding or full digital growth.
+        We’ll reply with a clear point of view and next steps.
+      </p>
+      <div class="hero-note">Average response time: <span>within 24 hours, Monday to Saturday.</span></div>
+    </div>
+    <aside class="hero-right">
+      <h3>Prefer talking first?</h3>
+      <p>You can skip the form and contact us directly.</p>
+      <div>
+        WhatsApp: <a href="https://wa.me/917382312386">+91 73823 12386</a><br/>
+        Email: <a href="mailto:hello@simplidigital.in">hello@simplidigital.in</a><br/>
+        Location: Hyderabad · working with clients across India
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- MAIN CONTACT -->
+<section id="contact-main">
+  <div class="contact-grid rv">
+    <!-- form -->
+    <div class="contact-form">
+      <h2>Start a conversation</h2>
+      <p>Fill this form and we’ll get back with a short audit, ideas and a suggested next step. No pressure, no hard sell.</p>
+
+      <form action="https://formspree.io/f/your-id" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-input" id="name" name="name" type="text" placeholder="Your name" required>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="business">Business / Brand</label>
+            <input class="form-input" id="business" name="business" type="text" placeholder="Company or project name">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-label" for="email">Email</label>
+            <input class="form-input" id="email" name="email" type="email" placeholder="you@example.com" required>
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="phone">Phone / WhatsApp</label>
+            <input class="form-input" id="phone" name="phone" type="tel" placeholder="+91…">
+          </div>
+        </div>
+
+        <div class="form-field" style="margin-bottom:14px">
+          <label class="form-label" for="service">What do you need help with?</label>
+          <select class="form-select" id="service" name="service">
+            <option value="">Select one option</option>
+            <option value="Website Design">Website Design</option>
+            <option value="SEO">SEO / Google rankings</option>
+            <option value="Logo and Branding">Logo and Branding</option>
+            <option value="Social Media">Social Media Marketing</option>
+            <option value="Google / Meta Ads">Google / Meta Ads</option>
+            <option value="Full Digital Growth">Full digital growth plan</option>
+            <option value="Other">Something else</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="message">Tell us a bit more</label>
+          <textarea class="form-textarea" id="message" name="message" placeholder="Share where you are right now and what “good” looks like for you." required></textarea>
+          <div class="form-hint">Example: “We run a yoga studio in Hyderabad and need a website and local SEO to bring consistent leads.”</div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn-send">
+            Send message
+          </button>
+          <div class="form-note">We’ll never share your details with anyone. Ever.</div>
+        </div>
+      </form>
+    </div>
+
+    <!-- side info -->
+    <div class="contact-side">
+      <div class="side-card">
+        <h3>Direct contact</h3>
+        <ul class="side-list">
+          <li><span>Email</span><a href="mailto:hello@simplidigital.in">hello@simplidigital.in</a></li>
+          <li><span>WhatsApp</span><a href="https://wa.me/917382312386">+91 73823 12386</a></li>
+          <li><span>Location</span>Hyderabad, Telangana · India</li>
+          <li><span>Hours</span>Mon – Sat · 10:00 AM – 7:00 PM IST</li>
+        </ul>
+        <div class="badge">
+          <span class="badge-dot"></span>
+          <span>Usually replying within a few hours.</span>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <h3>Is SimpliDigital a fit?</h3>
+        <p>If you care about thoughtful design, measurable results and honest communication, we’ll probably work well together.</p>
+        <ul class="side-list">
+          <li>We take on a limited number of projects at a time.</li>
+          <li>Month‑to‑month retainers, no long contracts.</li>
+          <li>Weekly updates with what moved and what’s next.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="contact-faq">
+  <div class="faq-wrap rv">
+    <div>
+      <div class="sec-label c">Questions</div>
+      <h2 class="sec-h2">Before you reach out.</h2>
+      <p style="font-size:.86rem;color:rgba(255,255,255,.4);line-height:1.8;margin-top:10px">
+        These are the most common questions businesses ask before starting a project with us.
+      </p>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h3>How soon will you reply?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>We usually respond within a few hours during working days, and always within 24 hours. If it’s urgent, WhatsApp us directly and mention the word “urgent” in your message.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h3>Do you work with clients outside Hyderabad?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Yes. We work with businesses across India. Most projects are handled fully remotely via WhatsApp, email and occasional video calls.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h3>What is the minimum budget to start?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Budgets vary by project, but as a rule of thumb, website projects usually start from a few tens of thousands, and monthly retainers for SEO or marketing start from a reasonable monthly commitment. We’ll give you a clear range once we understand what you need.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          <h3>Can we start small and grow later?</h3>
+          <div class="faq-toggle">+</div>
+        </div>
+        <div class="faq-a"><p>Absolutely. Many clients start with just a website or just SEO, then expand into social media, branding or ads as they see results.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="f-brand">
+    <img src="sdlogo.webp" alt="SimpliDigital" width="44" height="22"/>
+    <div>
+      <div class="f-name">Simpli<em>Digital</em></div>
+      <div class="f-tagline">Simplifying Digital. Amplifying Growth.</div>
+    </div>
+  </div>
+  <div class="f-links" role="navigation" aria-label="Footer navigation">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="why-us.html">Why Us</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </div>
+  <p class="f-copy">© 2026 SimpliDigital · India</p>
+</footer>
+
+<script>
+// cursor
+var c1=document.getElementById('c1'),c2=document.getElementById('c2'),
+    mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
+document.addEventListener('mousemove',function(e){
+  mx=e.clientX;my=e.clientY;
+  c1.style.left=mx+'px';c1.style.top=my+'px';
+});
+(function lp(){
+  fx+=(mx-fx)*.1;fy+=(my-fy)*.1;
+  c2.style.left=fx+'px';c2.style.top=fy+'px';
+  requestAnimationFrame(lp);
+})();
+
+document.querySelectorAll('a,button').forEach(function(el){
+  el.addEventListener('mouseenter',function(){
+    c1.style.width='4px';c1.style.height='4px';
+    c2.style.width='48px';c2.style.height='48px';
+  });
+  el.addEventListener('mouseleave',function(){
+    c1.style.width='7px';c1.style.height='7px';
+    c2.style.width='30px';c2.style.height='30px';
+  });
+});
+
+// mobile menu
+function toggleMM(){
+  var mm=document.getElementById('mmenu'),
+      hb=document.getElementById('hambtn');
+  var willOpen=!mm.classList.contains('open');
+  if(willOpen){
+    mm.style.display='flex';
+    requestAnimationFrame(function(){mm.classList.add('open')});
+  }else{
+    mm.classList.remove('open');
+    setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);
+  }
+  hb.classList.toggle('open',willOpen);
+  hb.setAttribute('aria-expanded',String(willOpen));
+  document.body.style.overflow=willOpen?'hidden':'';
+}
+function closeMM(){
+  var mm=document.getElementById('mmenu'),
+      hb=document.getElementById('hambtn');
+  mm.classList.remove('open');
+  setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);
+  hb.classList.remove('open');
+  hb.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+
+// reveal
+function reveal(){
+  document.querySelectorAll('.rv').forEach(function(el){
+    if(el.getBoundingClientRect().top<window.innerHeight*.88) el.classList.add('on');
+  });
+}
+window.addEventListener('scroll',reveal,{passive:true});
+reveal();
+
+// FAQ
+function toggleFaq(el){
+  var item=el.parentElement;
+  var open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
+  if(!open)item.classList.add('open');
+}
+</script>
+</body>
+</html>
