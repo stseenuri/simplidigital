@@ -83,13 +83,14 @@ nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding
 .proj-name{font-size:.9rem;font-weight:700}
 .proj-desc{font-size:.78rem;color:rgba(255,255,255,.45);line-height:1.7;font-weight:300}
 .proj-meta{font-size:.7rem;color:rgba(255,255,255,.3);margin-top:4px}
-.proj-actions{margin-top:auto}
-.proj-btn{background:var(--teal);color:var(--navy);padding:8px 16px;border-radius:999px;font-size:.78rem;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:6px;transition:all .25s}
-.proj-btn:hover{transform:translateY(-1px);box-shadow:0 0 20px rgba(0,194,203,.45)}
+
+/* make whole card a link */
+.proj-link{text-decoration:none;color:inherit;display:flex;flex-direction:column}
+.proj-link:hover{cursor:pointer}
 .proj-card::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 0 0,rgba(0,194,203,.12),transparent 55%);opacity:0;transition:opacity .3s}
 .proj-card:hover::before{opacity:1}
 
-/* CTA ONLY (short, to keep code light) */
+/* CTA */
 #cta{padding:90px 5vw 100px;background:var(--navy);text-align:center;position:relative;overflow:hidden}
 .cta-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%)}
 .cta-inner{position:relative;z-index:2;max-width:640px;margin:0 auto}
@@ -206,7 +207,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 
   <div class="projects-grid rv">
     <!-- Zapwash -->
-    <article class="proj-card">
+    <a class="proj-card proj-link" href="https://thezapwash.com">
       <div class="proj-top">
         <img src="zapwash.png" alt="Zapwash logo" class="proj-logo"/>
         <span class="proj-tag">Laundry · Hyperlocal</span>
@@ -216,13 +217,10 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
         Instant laundry service in Hyderabad with 20‑minute pickup promise, location pages for every key area and clear calls to WhatsApp for bookings.
       </p>
       <div class="proj-meta">Design · Development · Copy · Local SEO layout</div>
-      <div class="proj-actions">
-        <a href="https://thezapwash.com" class="proj-btn">View live site</a>
-      </div>
-    </article>
+    </a>
 
     <!-- Farm Mutton -->
-    <article class="proj-card">
+    <a class="proj-card proj-link" href="https://stseenuri.github.io/Timber-B2B/">
       <div class="proj-top">
         <img src="fm_logo.png" alt="Farm Mutton logo" class="proj-logo"/>
         <span class="proj-tag">E‑commerce · Food</span>
@@ -232,13 +230,10 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
         Grass‑fed mutton brand with product‑first storytelling, bold pricing sections and clear delivery information for trust‑building.
       </p>
       <div class="proj-meta">Design · Development · Product storytelling</div>
-      <div class="proj-actions">
-        <a href="https://stseenuri.github.io/Timber-B2B/" class="proj-btn">View live site</a>
-      </div>
-    </article>
+    </a>
 
     <!-- Thanu Yoga Studio -->
-    <article class="proj-card">
+    <a class="proj-card proj-link" href="https://stseenuri.github.io/YTS/">
       <div class="proj-top">
         <img src="tys.jpeg" alt="Thanu Yoga Studio logo" class="proj-logo"/>
         <span class="proj-tag">Yoga · Local studio</span>
@@ -248,10 +243,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
         Calm, airy layout with class schedules, instructor story and WhatsApp‑first enquiry funnel for faster bookings.
       </p>
       <div class="proj-meta">Design · Development · Lead funnel</div>
-      <div class="proj-actions">
-        <a href="https://stseenuri.github.io/YTS/" class="proj-btn">View live site</a>
-      </div>
-    </article>
+    </a>
   </div>
 </section>
 
