@@ -1,663 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Paid Ads & PPC Services — SimpliDigital · Hyderabad</title>
-<meta name="description" content="Paid ads and PPC management by SimpliDigital. Google Ads, Meta Ads and YouTube campaigns built for businesses that want leads and sales, not just clicks. Based in Hyderabad."/>
-<meta name="robots" content="index, follow"/>
-//www.simplidigital.in/paid-ads"/>
-"/>
-//fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Paid Ads & PPC Services — SimpliDigital · Hyderabad</title>
+  <meta name="description" content="Paid ads and PPC management by SimpliDigital. Google Ads, Meta Ads and YouTube campaigns built for businesses that want leads and sales, not just clicks. Based in Hyderabad."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://www.simplidigital.in/paid-ads"/>
+  <link rel="icon" href="sdlogo.png"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --teal:#00C2CB;
+      --gold:#F4A100;
+      --navy:#04090f;
+      --white:#f5f5f7;
+      --line:rgba(255,255,255,.07);
+      --nh:64px;
+    }
+    html{scroll-behavior:smooth}
+    body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
+    
+    /* CURSOR */
+    #c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
+    #c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+    
+    /* NAV */
+    nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(4,9,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);transition:background .4s}
+    nav.scrolled{background:rgba(4,9,15,.98)}
+    .n-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
+    .n-logo img{height:28px;width:auto}
+    .n-brand{font-size:.95rem;font-weight:700;color:var(--white)}
+    .n-brand em{color:var(--teal);font-style:normal}
+    .n-links{display:flex;gap:28px;list-style:none;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
+    .n-links a{font-size:.75rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;font-weight:500;white-space:nowrap}
+    .n-links a:hover,.n-links a.active{color:var(--white)}
+    .n-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+    .n-cta{font-size:.74rem;font-weight:600;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:7px 18px;border-radius:980px;text-decoration:none;transition:all .25s;white-space:nowrap}
+    .n-cta:hover{background:var(--teal);color:var(--navy)}
+    
+    /* MOBILE NAV */
+    .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+    .ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .35s;transform-origin:center}
+    .ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    #mmenu{position:fixed;inset:0;background:rgba(4,9,15,.97);backdrop-filter:blur(28px);z-index:590;display:none;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;transition:opacity .4s}
+    #mmenu.open{display:flex;opacity:1}
+    #mmenu a{font-size:1.8rem;font-weight:700;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
+    #mmenu a:hover{color:var(--white)}
+    
+    /* SHARED */
+    .sec-label{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .sec-label::before,.sec-label::after{content:'';width:20px;height:1px;background:var(--teal)}
+    .sec-label.c{justify-content:center}
+    .sec-h2{font-size:clamp(2rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px;color:var(--white)}
+    .sec-h2 em{color:var(--teal);font-style:normal}
+    .rv{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
+    .rv.on{opacity:1;transform:translateY(0)}
 
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{--teal:#00C2CB;--gold:#F4A100;--navy:#04090f;--white:#f5f5f7;--line:rgba(255,255,255,.07);--nh:64px}
-html{scroll-behavior:smooth}
-body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
+    /* HERO */
+    #hero{position:relative;min-height:90vh;padding-top:var(--nh);display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 10%,transparent 100%)}
+    .hero-glow{position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%)}
+    .hero-c{position:relative;z-index:2;text-align:center;padding:0 6vw;max-width:1000px}
+    .hero-h1{font-size:clamp(2.6rem,7vw,6.5rem);font-weight:800;line-height:1.04;letter-spacing:-2.5px;margin-bottom:24px}
+    .hero-h1 em{color:var(--teal);font-style:normal}
+    .hero-sub{font-size:1.1rem;color:rgba(255,255,255,.45);line-height:1.8;font-weight:300;max-width:620px;margin:0 auto 36px}
+    .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn-p{background:var(--teal);color:var(--navy);padding:13px 28px;border-radius:980px;font-weight:700;font-size:.86rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+    .btn-p:hover{transform:scale(1.04);box-shadow:0 0 40px rgba(0,194,203,.4)}
+    .btn-s{background:rgba(255,255,255,.06);color:rgba(255,255,255,.65);padding:13px 28px;border-radius:980px;font-weight:500;font-size:.86rem;text-decoration:none;transition:all .3s;border:1px solid rgba(255,255,255,.1)}
+    .btn-s:hover{background:rgba(255,255,255,.1);color:var(--white)}
 
-#c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
-#c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+    /* AD TYPES */
+    #ad-types{background:#050d18;padding:100px 5vw}
+    .ad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:48px auto 0}
+    .ad-card{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:24px;padding:40px 32px;transition:all .3s}
+    .ad-card:hover{border-color:rgba(0,194,203,.3);background:rgba(255,255,255,.03)}
+    .ad-ico{font-size:2.5rem;margin-bottom:24px;display:block}
+    .ad-card h3{font-size:1.2rem;font-weight:700;margin-bottom:12px;color:var(--white)}
+    .ad-card p{font-size:.9rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
+    
+    /* PROCESS */
+    #process{background:var(--navy);padding:100px 5vw}
+    .proc-tl{margin-top:48px;border:1px solid var(--line);border-radius:18px;overflow:hidden;max-width:860px;margin-left:auto;margin-right:auto}
+    .p-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:22px;padding:26px 32px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;opacity:0;transform:translateX(-20px);transition:opacity .6s,transform .6s,background .3s}
+    .p-row.show{opacity:1;transform:translateX(0)}
+    .p-row:last-child{border-bottom:none}
+    .p-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--teal);transform:scaleY(0);transition:transform .4s;transform-origin:top}
+    .p-row:hover{background:rgba(0,194,203,.025)}
+    .p-row:hover::before{transform:scaleY(1)}
+    .p-num{font-size:1.8rem;font-weight:900;color:rgba(0,194,203,.1);letter-spacing:-2px;transition:color .3s}
+    .p-row:hover .p-num{color:rgba(0,194,203,.3)}
+    .p-row h3{font-size:.9rem;font-weight:700;margin-bottom:4px;color:var(--white)}
+    .p-desc{font-size:.78rem;color:rgba(255,255,255,.36);line-height:1.6;font-weight:300;max-width:440px}
+    .p-tag{font-size:.6rem;font-weight:700;color:var(--teal);background:rgba(0,194,203,.07);border:1px solid rgba(0,194,203,.13);padding:3px 10px;border-radius:100px}
 
-nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(4,9,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
-.n-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
-.n-logo img{height:28px;width:auto}
-.n-brand{font-size:.95rem;font-weight:700;color:var(--white)}
-.n-brand em{color:var(--teal);font-style:normal}
-.n-links{display:flex;gap:28px;list-style:none;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
-.n-links a{font-size:.75rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;font-weight:500;white-space:nowrap}
-.n-links a:hover,.n-links a.active{color:var(--white)}
-.n-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
-.n-cta{font-size:.74rem;font-weight:600;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:7px 18px;border-radius:980px;text-decoration:none;transition:all .25s;white-space:nowrap}
-.n-cta:hover{background:var(--teal);color:var(--navy)}
-.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .35s;transform-origin:center}
-.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
-.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
-.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    /* RESULTS */
+    #results{background:#050d18;padding:100px 5vw}
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;max-width:900px;margin:0 auto}
+    .r-card{background:#050d18;padding:40px 32px}
+    .r-big{font-size:3rem;font-weight:900;color:var(--teal);letter-spacing:-2px;line-height:1;margin-bottom:8px}
+    .r-card h3{font-size:.85rem;font-weight:700;color:var(--white);margin-bottom:6px}
+    .r-who{font-size:.72rem;color:rgba(255,255,255,.3);font-weight:300}
 
-#mmenu{position:fixed;inset:0;background:rgba(4,9,15,.97);backdrop-filter:blur(28px);z-index:590;display:none;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;pointer-events:none;transition:opacity .4s}
-#mmenu.open{display:flex;opacity:1;pointer-events:auto}
-#mmenu a{font-size:1.8rem;font-weight:700;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
-#mmenu a:hover{color:var(--white)}
-#mmenu .mm-cta{font-size:1.1rem;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:14px 36px;border-radius:980px}
+    /* PRICING */
+    #pricing{background:var(--navy);padding:100px 5vw}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:48px auto 0}
+    .price-card{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:24px;padding:48px 36px;text-align:center;transition:all .4s;display:flex;flex-direction:column}
+    .price-card:hover{transform:translateY(-8px);border-color:rgba(0,194,203,.4)}
+    .price-card.pop{border-color:rgba(0,194,203,.4);background:rgba(0,194,203,.02);position:relative}
+    .pop-tag{position:absolute;top:20px;left:50%;transform:translateX(-50%);font-size:.6rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--navy);background:var(--teal);padding:4px 12px;border-radius:100px}
+    .price-card h3{font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:12px}
+    .price-card p{font-size:.85rem;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:32px;flex-grow:1}
+    .price-card ul{list-style:none;text-align:left;margin-bottom:40px}
+    .price-card li{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .price-card li::before{content:'✓';color:var(--teal);font-weight:900}
 
-.sec-label{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.sec-label::before,.sec-label::after{content:'';width:20px;height:1px;background:var(--teal)}
-.sec-label.c{justify-content:center}
-.sec-h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1.2px;line-height:1.12;color:var(--white)}
-.rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
-.rv.on{opacity:1;transform:translateY(0)}
+    /* CTA */
+    #cta{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5vw;position:relative;background:#050d18;overflow:hidden}
+    .cta-inner{position:relative;z-index:2;max-width:720px;opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}
+    .cta-inner.show{opacity:1;transform:translateY(0)}
+    .btn-wa{background:#25D366;color:#fff;padding:13px 26px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+    .btn-wa:hover{transform:scale(1.04);box-shadow:0 0 30px rgba(37,211,102,.35)}
 
-#hero{position:relative;min-height:80vh;padding-top:var(--nh);display:flex;align-items:center;justify-content:center;overflow:hidden}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 10%,transparent 100%)}
-.hero-glow{position:absolute;width:650px;height:650px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:45%;left:50%;transform:translate(-50%,-50%)}
-.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:3fr 2fr;gap:60px;align-items:center;padding:80px 6vw}
-.hero-tag{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:16px}
-.hero-tag::before,.hero-tag::after{content:'';width:20px;height:1px;background:var(--teal)}
-.hero-title{font-size:clamp(2.6rem,5vw,4.8rem);font-weight:900;line-height:1.06;letter-spacing:-2px;margin-bottom:18px}
-.hero-title em{color:var(--teal);font-style:normal}
-.hero-sub{font-size:1rem;color:rgba(255,255,255,.45);line-height:1.9;font-weight:300;max-width:520px;margin-bottom:16px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
-.btn-p{background:var(--teal);color:var(--navy);padding:11px 22px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
-.btn-p:hover{transform:scale(1.04);box-shadow:0 0 36px rgba(0,194,203,.4)}
-.btn-g{background:transparent;color:rgba(255,255,255,.7);padding:11px 20px;border-radius:980px;font-weight:600;font-size:.8rem;text-decoration:none;border:1px solid rgba(255,255,255,.16);transition:all .3s;display:inline-flex;align-items:center;gap:7px}
-.btn-g:hover{border-color:rgba(0,194,203,.4);color:var(--white)}
-.hero-right{justify-self:end;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:26px 24px;width:280px;backdrop-filter:blur(16px)}
-.hero-right h3{font-size:.82rem;font-weight:700;margin-bottom:4px}
-.hero-right p{font-size:.76rem;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300;margin-bottom:14px}
-.hero-right ul{list-style:none;font-size:.72rem;color:rgba(255,255,255,.3);display:flex;flex-direction:column;gap:4px}
-.hero-right li::before{content:"• ";color:var(--teal)}
-
-#problems{padding:100px 5vw;background:#050d18;border-top:1px solid var(--line)}
-.problems-grid{max-width:1100px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.problem-card{background:rgba(255,255,255,.02);border-radius:18px;border:1px solid rgba(255,255,255,.06);padding:22px 18px}
-.problem-card h3{font-size:.9rem;font-weight:700;margin-bottom:6px}
-.problem-card p{font-size:.8rem;color:rgba(255,255,255,.42);line-height:1.7;font-weight:300}
-
-#ad-types{padding:100px 5vw;background:var(--navy)}
-.ad-grid{max-width:1100px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.ad-card{background:rgba(255,255,255,.02);border-radius:20px;border:1px solid rgba(255,255,255,.06);padding:22px 18px;display:flex;flex-direction:column;gap:8px;transition:all .3s}
-.ad-card:hover{border-color:rgba(0,194,203,.24);transform:translateY(-3px)}
-.ad-ico{font-size:1.6rem;margin-bottom:4px}
-.ad-card h3{font-size:.92rem;font-weight:700}
-.ad-card p{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.7;font-weight:300}
-.ad-card ul{list-style:none;font-size:.76rem;color:rgba(255,255,255,.4);display:flex;flex-direction:column;gap:4px;margin-top:4px}
-.ad-card li::before{content:"→ ";color:var(--teal)}
-
-#what-we-do{padding:100px 5vw;background:#050d18}
-.service-block{max-width:1100px;margin:40px auto 0;border-radius:22px;border:1px solid rgba(255,255,255,.08);background:rgba(4,9,15,.96);padding:24px 22px}
-.service-block+.service-block{margin-top:22px}
-.service-block h3{font-size:1rem;font-weight:700;margin-bottom:6px}
-.service-block>p{font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.7;font-weight:300;margin-bottom:16px}
-.service-block-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.service-block h4{font-size:.82rem;font-weight:700;margin-bottom:6px}
-.service-block ul{list-style:none;font-size:.78rem;color:rgba(255,255,255,.42);line-height:1.6;font-weight:300;display:flex;flex-direction:column;gap:6px}
-.service-block li::before{content:"• ";color:var(--teal)}
-
-#process{padding:100px 5vw;background:var(--navy)}
-.process-list{max-width:900px;margin:40px auto 0;border-left:1px solid rgba(255,255,255,.08);padding-left:10px;display:flex;flex-direction:column;gap:18px}
-.proc-item{display:grid;grid-template-columns:60px 1fr;gap:18px;align-items:flex-start}
-.proc-step{width:24px;height:24px;border-radius:50%;border:1px solid rgba(0,194,203,.4);display:flex;align-items:center;justify-content:center;font-size:.72rem;color:var(--teal);background:rgba(0,194,203,.08);box-shadow:0 0 0 4px rgba(0,194,203,.12);margin-top:4px}
-.proc-body h3{font-size:.9rem;font-weight:700;margin-bottom:4px}
-.proc-body p{font-size:.8rem;color:rgba(255,255,255,.42);line-height:1.7;font-weight:300;margin-bottom:6px}
-.proc-body ul{list-style:none;font-size:.76rem;color:rgba(255,255,255,.4);display:flex;flex-direction:column;gap:4px}
-.proc-body li::before{content:"– ";color:rgba(255,255,255,.35)}
-
-#results{padding:100px 5vw;background:#050d18}
-.results-grid{max-width:1100px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.result-card{background:rgba(255,255,255,.02);border-radius:20px;border:1px solid rgba(255,255,255,.07);padding:22px 18px}
-.result-card h3{font-size:.9rem;font-weight:700;margin-bottom:6px}
-.result-card p{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.7;font-weight:300;margin-bottom:8px}
-.result-card ul{list-style:none;font-size:.76rem;color:rgba(255,255,255,.4);display:flex;flex-direction:column;gap:4px}
-.result-card li::before{content:"→ ";color:var(--teal)}
-.results-strip{max-width:900px;margin:24px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border-radius:18px;border:1px solid var(--line);overflow:hidden}
-.res-item{background:#050d18;padding:18px 16px;text-align:center}
-.res-label{font-size:.72rem;color:rgba(255,255,255,.38);font-weight:300;margin-bottom:3px}
-.res-value{font-size:.9rem;font-weight:700;color:var(--teal)}
-
-#pricing{padding:100px 5vw;background:var(--navy)}
-.pricing-grid{max-width:1100px;margin:40px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.price-card{background:rgba(255,255,255,.02);border-radius:20px;border:1px solid rgba(255,255,255,.06);padding:24px 20px;display:flex;flex-direction:column;gap:10px}
-.price-card.highlight{border-color:rgba(0,194,203,.4);box-shadow:0 0 36px rgba(0,194,203,.16)}
-.price-card h3{font-size:.98rem;font-weight:700}
-.price-tagline{font-size:.78rem;color:rgba(255,255,255,.45)}
-.price-amount{font-size:.96rem;font-weight:700;color:var(--teal)}
-.price-note{font-size:.76rem;color:rgba(255,255,255,.4);line-height:1.7}
-.price-list{list-style:none;font-size:.76rem;color:rgba(255,255,255,.42);display:flex;flex-direction:column;gap:5px;margin-top:4px}
-.price-list li::before{content:"• ";color:var(--teal)}
-.price-cta{margin-top:auto}
-.btn-outline{background:transparent;border:1px solid rgba(0,194,203,.4);color:var(--teal);padding:9px 18px;border-radius:980px;font-size:.8rem;font-weight:600;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
-.btn-outline:hover{background:rgba(0,194,203,.08)}
-
-#faq{padding:100px 5vw;background:#050d18}
-.faq-wrap{max-width:900px;margin:40px auto 0;display:flex;flex-direction:column;gap:10px}
-.faq-item{border-radius:16px;border:1px solid rgba(255,255,255,.06);background:rgba(4,9,15,.95);overflow:hidden}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--white);padding:14px 16px;font-size:.82rem;font-weight:600;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
-.faq-q span{flex:1;text-align:left}
-.faq-q b{font-size:1rem;color:rgba(255,255,255,.4);margin-left:10px}
-.faq-a{padding:0 16px;max-height:0;overflow:hidden;transition:max-height .3s ease}
-.faq-a p{font-size:.78rem;color:rgba(255,255,255,.42);line-height:1.7;font-weight:300;margin-bottom:10px}
-.faq-item.open .faq-a{padding-bottom:14px}
-
-#why-us-strip{padding:90px 5vw;background:var(--navy)}
-.why-grid{max-width:1000px;margin:40px auto 0;display:grid;grid-template-columns:2fr 3fr;gap:40px;align-items:flex-start}
-.why-left p{font-size:.86rem;color:rgba(255,255,255,.42);line-height:1.8;font-weight:300;margin-bottom:14px}
-.why-list{list-style:none;font-size:.78rem;color:rgba(255,255,255,.45);display:flex;flex-direction:column;gap:7px}
-.why-list li::before{content:"✔ ";color:var(--teal)}
-.why-right{border-radius:22px;border:1px solid rgba(255,255,255,.08);padding:20px 18px;background:#050d18}
-.why-right h3{font-size:.86rem;font-weight:700;margin-bottom:8px}
-.why-right p{font-size:.78rem;color:rgba(255,255,255,.42);line-height:1.7;font-weight:300}
-
-#cta{padding:100px 5vw;background:var(--navy);text-align:center;position:relative;overflow:hidden;border-top:1px solid var(--line)}
-.cta-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%)}
-.cta-inner{position:relative;z-index:2;max-width:640px;margin:0 auto}
-.cta-h2{font-size:clamp(2.2rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px}
-.cta-h2 em{color:var(--teal);font-style:normal}
-.cta-p{font-size:1rem;color:rgba(255,255,255,.42);line-height:1.8;font-weight:300;margin-bottom:26px}
-.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
-.btn-wa{background:#25D366;color:#fff;padding:12px 24px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
-.btn-wa:hover{transform:scale(1.04);box-shadow:0 0 28px rgba(37,211,102,.35)}
-.cta-note{font-size:.74rem;color:rgba(255,255,255,.26)}
-.cta-note a{color:rgba(0,194,203,.6);text-decoration:none}
-
-footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
-.f-brand{display:flex;align-items:center;gap:8px}
-.f-brand img{height:22px;width:auto}
-.f-name{font-size:.8rem;font-weight:700;color:var(--white)}
-.f-name em{color:var(--teal);font-style:normal}
-.f-tagline{font-size:.6rem;color:rgba(255,255,255,.18);font-style:italic;margin-top:1px}
-.f-links{display:flex;gap:16px;flex-wrap:wrap}
-.f-links a{font-size:.68rem;color:rgba(255,255,255,.22);text-decoration:none;transition:color .2s}
-.f-links a:hover{color:var(--teal)}
-.f-copy{font-size:.6rem;color:rgba(255,255,255,.1)}
-
-@media(max-width:860px){
- .n-links{display:none !important}
- .n-cta{display:none !important}
- .ham{display:flex !important}
- .hero-inner{grid-template-columns:1fr;gap:26px;padding-top:80px}
- .hero-right{justify-self:stretch;width:100%}
- .problems-grid{grid-template-columns:1fr 1fr}
- .ad-grid{grid-template-columns:1fr 1fr}
- .service-block-grid{grid-template-columns:1fr}
- .results-grid{grid-template-columns:1fr 1fr}
- .pricing-grid{grid-template-columns:1fr}
- .why-grid{grid-template-columns:1fr}
-}
-@media(max-width:560px){
- .problems-grid{grid-template-columns:1fr}
- .ad-grid{grid-template-columns:1fr}
- .results-grid{grid-template-columns:1fr}
- .results-strip{grid-template-columns:1fr 1fr}
-}
-</style>
+    /* FOOTER */
+    footer{background:#020609;padding:40px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+    .f-brand{display:flex;align-items:center;gap:12px}
+    .f-brand img{height:28px;width:auto}
+    .f-copy{font-size:.7rem;color:rgba(255,255,255,.2)}
+    
+    @media(max-width:900px){
+      .ad-grid,.pricing-grid,.results-grid{grid-template-columns:1fr}
+      .p-row{grid-template-columns:44px 1fr}
+      .p-tag{display:none}
+      .hero-h1{font-size:3.5rem}
+    }
+  </style>
 </head>
 <body>
-<div id="c1"></div><div id="c2"></div>
+  <div id="c1"></div><div id="c2"></div>
 
-<div id="mmenu" role="dialog" aria-modal="true" aria-label="Site navigation">
-  <a href="index.html" onclick="closeMM()">Home</a>
-  <a href="services.html" onclick="closeMM()">Services</a>
-  <a href="why-us.html" onclick="closeMM()">Why Us</a>
-  <a href="about.html" onclick="closeMM()">About</a>
-  <a href="#cta" class="mm-cta" onclick="closeMM()">Free Consultation</a>
-</div>
+  <!-- NAV -->
+  <nav id="nav">
+    <a class="n-logo" href="index.html">
+      <img src="sdlogo.webp" alt="SimpliDigital logo"/>
+      <span class="n-brand">Simpli<em>Digital</em></span>
+    </a>
+    <ul class="n-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="#process">Process</a></li>
+    </ul>
+    <div class="n-right">
+      <a class="n-cta" href="#cta">Free Audit</a>
+      <button class="ham" onclick="toggleMM()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-<nav id="nav" aria-label="Main navigation">
-  <a class="n-logo" href="index.html" aria-label="SimpliDigital homepage">
-    <img src="sdlogo.webp" alt="SimpliDigital logo" width="56" height="28"/>
-    <span class="n-brand">Simpli<em>Digital</em></span>
-  </a>
-  <ul class="n-links">
-    ><a href="index.html">Home</a></li>
-    ><a href="services.html" class="active">Services</a></li>
-    ><a href="why-us.html">Why Us</a></li>
-    ><a href="about.html">About</a></li>
-  </ul>
-  <div class="n-right">
-    <a class="n-cta" href="#cta">Free Consultation</a>
-    <button class="ham" id="hambtn" onclick="toggleMM()" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section id="hero">
-  <div class="hero-grid" aria-hidden="true"></div>
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="hero-inner">
-    <div>
-      <div class="hero-tag">Paid Ads & PPC</div>
-      <h1 class="hero-title">Ads that bring<br/>customers, not just <em>clicks.</em></h1>
-      <p class="hero-sub">
-        SimpliDigital builds and manages Google, Meta and YouTube ad campaigns
-        for businesses that want real leads, bookings and sales from every rupee
-        they spend.
-      </p>
-      <div class="hero-actions">
-        <a href="#cta" class="btn-p">Get a free audit</a>
-        <a href="#process" class="btn-g">See how we run ads</a>
-      </div>
-    </div>
-    <aside class="hero-right">
-      <h3>What makes us different</h3>
-      <p>We don't just set up campaigns and disappear. We track what actually converts and keep improving until your cost per lead drops.</p>
-      <ul>
-        >Google, Meta and YouTube ads under one roof</li>
-        >Conversion tracking set up from day one</li>
-        >Plain English reporting, no vanity metrics</li>
-        >Month to month, no long lock-in contracts</li>
-      </ul>
-    </aside>
-  </div>
-</section>
-
-<!-- PROBLEMS -->
-<section id="problems">
-  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
-    <div class="sec-label c">Why paid ads fail</div>
-    <h2 class="sec-h2">Where most ad budgets<br/>quietly go to waste.</h2>
-  </div>
-  <div class="problems-grid rv">
-    <div class="problem-card">
-      <h3>Clicks without conversions</h3>
-      <p>The campaign looks healthy in the dashboard. Impressions are up, CTR is decent. But the phone isn't ringing and the form isn't filling.</p>
-    </div>
-    <div class="problem-card">
-      <h3>Wrong audience targeting</h3>
-      <p>Broad targeting burns through budget on people who would never buy. No negative keywords, no exclusions, no ICP thinking behind the setup.</p>
-    </div>
-    <div class="problem-card">
-      <h3>Landing pages that leak</h3>
-      <p>Ads send traffic to a generic homepage instead of a focused page built to convert. The click was paid for. The conversion never had a chance.</p>
-    </div>
-    <div class="problem-card">
-      <h3>No tracking, no truth</h3>
-      <p>Without proper conversion tracking, you have no idea which campaigns, keywords or creatives are actually driving results. Everything is a guess.</p>
-    </div>
-    <div class="problem-card">
-      <h3>Set and forget campaigns</h3>
-      <p>Campaigns are launched and then checked once a month. Budgets drain into underperforming ad groups nobody is watching or optimising.</p>
-    </div>
-    <div class="problem-card">
-      <h3>Reporting that hides reality</h3>
-      <p>Agencies show you impressions and reach because those numbers always look good. The actual cost per lead or cost per sale stays buried.</p>
-    </div>
-  </div>
-</section>
-
-<!-- AD TYPES -->
-<section id="ad-types">
-  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
-    <div class="sec-label c">Platforms</div>
-    <h2 class="sec-h2">Three platforms, one strategy,<br/>one team accountable for <em>all of it.</em></h2>
-  </div>
-  <div class="ad-grid rv">
-    <article class="ad-card">
-      <div class="ad-ico">🔍</div>
-      <h3>Google Ads</h3>
-      <p>Capture people who are already searching for what you offer. The highest intent traffic you can buy.</p>
-      <ul>
-        >Search campaigns for high intent keywords</li>
-        >Performance Max for broader reach</li>
-        >Shopping ads for ecommerce products</li>
-        >Remarketing to warm audiences</li>
-        >Local service ads for nearby searches</li>
-      </ul>
-    </article>
-    <article class="ad-card">
-      <div class="ad-ico">📱</div>
-      <h3>Meta Ads</h3>
-      <p>Reach the right people on Instagram and Facebook with creative that stops the scroll and drives action.</p>
-      <ul>
-        <li>Lead generation for service businesses</li>
-        <li>Awareness campaigns for brand building</li>
-        <li>Dynamic retargeting for store visitors</li>
-        <li>Video ads across Meta network</li>
-        <li>A/B testing of creatives and copy</li>
-      </ul>
-    </article>
-    <article class="ad-card">
-      <div class="ad-ico">🎥</div>
-      <h3>YouTube Ads</h3>
-      <p>Place your brand in front of the world's largest video audience with high-impact video ads.</p>
-      <ul>
-        <li>Skippable in-stream ads (TrueView)</li>
-        <li>Non-skippable bumper ads</li>
-        <li>In-feed video ads</li>
-        <li>Retargeting based on video views</li>
-        <li>Audience targeting by interests</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- WHAT WE DO -->
-<section id="what-we-do">
-  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
-    <div class="sec-label c">Services</div>
-    <h2 class="sec-h2">The full PPC lifecycle,<br>managed end-to-end.</h2>
-  </div>
-  
-  <div class="service-block rv">
-    <h3>Strategy & Research</h3>
-    <p>Before spending a single rupee, we build a foundation based on data, not guesses.</p>
-    <div class="service-block-grid">
-      <div>
-        <h4>Competitor Analysis</h4>
-        <ul>
-          <li>Reverse engineer competitor budgets</li>
-          <li>Identify their top-performing keywords</li>
-          <li>Analyse their landing page strategy</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Keyword Strategy</h4>
-        <ul>
-          <li>High intent search term identification</li>
-          <li>Negative keyword list building</li>
-          <li>Long-tail opportunity research</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="service-block rv">
-    <h3>Setup & Creative</h3>
-    <p>We build campaigns that are structured for scale and creatives that demand attention.</p>
-    <div class="service-block-grid">
-      <div>
-        <h4>Ad Copy & Creative</h4>
-        <ul>
-          <li>Conversion-focused ad headlines</li>
-          <li>Scroll-stopping image/video assets</li>
-          <li>Multiple variations for A/B testing</li>
-        </ul>
-      </div>
-      <div>
-        <h4>Technical Setup</h4>
-        <ul>
-          <li>Server-side conversion tracking</li>
-          <li>GA4 & GTM integration</li>
-          <li>Custom audience segment building</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section id="process">
-  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
-    <div class="sec-label c">Process</div>
-    <h2 class="sec-h2">How we scale your<br>revenue with paid ads.</h2>
-  </div>
-
-  <div class="process-list">
-    <div class="proc-item rv" id="pr0">
-      <div class="proc-step">1</div>
-      <div class="proc-body">
-        <h3>Audit & Strategy</h3>
-        <p>We review your current accounts or market opportunity to find the low hanging fruit.</p>
-        <ul>
-          <li>Tracking health check</li>
-          <li>Account structure review</li>
-          <li>Competitor benchmark</li>
-        </ul>
-      </div>
-    </div>
-    <div class="proc-item rv" id="pr1">
-      <div class="proc-step">2</div>
-      <div class="proc-body">
-        <h3>Building & Launch</h3>
-        <p>We structure your campaigns using industry best practices for the best quality scores.</p>
-        <ul>
-          <li>Campaign architecture</li>
-          <li>Creative production</li>
-          <li>Final tracking validation</li>
-        </ul>
-      </div>
-    </div>
-    <div class="proc-item rv" id="pr2">
-      <div class="proc-step">3</div>
-      <div class="proc-body">
-        <h3>Optimisation</h3>
-        <p>We manage your bids, test your ads, and prune what doesn't work every single week.</p>
-        <ul>
-          <li>Bid management</li>
-          <li>A/B split testing</li>
-          <li>Budget reallocation</li>
-        </ul>
-      </div>
-    </div>
-    <div class="proc-item rv" id="pr3">
-      <div class="proc-body">
-        <h3>Scale & Repeat</h3>
-        <p>Once we find the winning combinations, we scale the budget to drive more revenue.</p>
-        <ul>
-          <li>Audience expansion</li>
-          <li>Platform diversification</li>
-          <li>Creative refresh</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESULTS -->
-<section id="results">
-  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
-    <div class="sec-label c">Results</div>
-    <h2 class="sec-h2">Proof that our<br>approach works.</h2>
-  </div>
-
-  <div class="results-grid rv">
-    <div class="result-card">
-      <h3>E-commerce Scale</h3>
-      <p>Took a niche apparel brand from ₹2L to ₹12L monthly revenue in 5 months.</p>
-      <ul>
-        <li>4.2x Average ROAS</li>
-        <li>65% Drop in CPA</li>
-      </ul>
-    </div>
-    <div class="result-card">
-      <h3>B2B Lead Gen</h3>
-      <p>Generated 450+ qualified enquiries for a SaaS platform within 90 days.</p>
-      <ul>
-        <li>₹140 Cost per Lead</li>
-        <li>22% Conversion Rate</li>
-      </ul>
-    </div>
-    <div class="result-card">
-      <h3>Local Services</h3>
-      <p>Doubled the booking volume for a dental clinic group in Hyderabad.</p>
-      <ul>
-        <li>Top 3 Map Positions</li>
-        <li>310% Increase in Calls</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="results-strip rv">
-    <div class="res-item">
-      <div class="res-label">Ad Spend Managed</div>
-      <div class="res-value">₹2Cr+</div>
-    </div>
-    <div class="res-item">
-      <div class="res-label">Leads Generated</div>
-      <div class="res-value">45,000+</div>
-    </div>
-    <div class="res-item">
-      <div class="res-label">Avg ROAS</div>
-      <div class="res-value">3.8x</div>
-    </div>
-  </div>
-</section>
-
-<!-- PRICING -->
-<section id="pricing">
-  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
-    <div class="sec-label c">Pricing</div>
-    <h2 class="sec-h2">Transparent pricing for<br>every stage of growth.</h2>
-  </div>
-
-  <div class="pricing-grid rv">
-    <div class="price-card">
-      <h3>Starter</h3>
-      <div class="price-tagline">For new accounts</div>
-      <div class="price-amount">₹25,000 /mo</div>
-      <p class="price-note">Ideal for businesses starting with a monthly ad spend up to ₹1L.</p>
-      <ul class="price-list">
-        <li>1 Platform (Google or Meta)</li>
-        <li>Up to 3 Campaigns</li>
-        <li>Weekly Reporting</li>
-        <li>Email Support</li>
-      </ul>
-      <div class="price-cta">
-        <a href="#cta" class="btn-outline">Choose Starter</a>
-      </div>
-    </div>
-    <div class="price-card highlight">
-      <h3>Growth</h3>
-      <div class="price-tagline">Most popular</div>
-      <div class="price-amount">₹45,000 /mo</div>
-      <p class="price-note">For businesses spending ₹1L to ₹5L monthly across platforms.</p>
-      <ul class="price-list">
-        <li>2 Platforms (Google & Meta)</li>
-        <li>Unlimited Campaigns</li>
-        <li>Performance Dashboard</li>
-        <li>Bi-weekly Strategy Calls</li>
-      </ul>
-      <div class="price-cta">
-        <a href="#cta" class="btn-p">Choose Growth</a>
-      </div>
-    </div>
-    <div class="price-card">
-      <h3>Scale</h3>
-      <div class="price-tagline">For high volume</div>
-      <div class="price-amount">Custom</div>
-      <p class="price-note">For spend above ₹5L or enterprise level requirements.</p>
-      <ul class="price-list">
-        <li>Multi-platform Strategy</li>
-        <li>Creative Asset Production</li>
-        <li>Dedicated Account Manager</li>
-        <li>Priority 24/7 Support</li>
-      </ul>
-      <div class="price-cta">
-        <a href="#cta" class="btn-outline">Contact Us</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section id="why-us-strip">
-  <div class="why-grid rv">
-    <div class="why-left">
-      <div class="sec-label l">Why SimpliDigital</div>
-      <h2 class="sec-h2">We treat your budget<br>like our own money.</h2>
-      <p>Most agencies focus on spend because they charge a percentage of it. We focus on profit because that's why you're in business.</p>
-      <ul class="why-list">
-        <li>No long-term lock-in contracts</li>
-        <li>Full ownership of all accounts</li>
-        <li>Zero hidden commission markups</li>
-        <li>Expertise in local Hyderabad market</li>
-      </ul>
-    </div>
-    <div class="why-right">
-      <h3>The "Anti-Agency" Approach</h3>
-      <p>We don't hide behind vanity metrics like impressions and reach. If the campaign didn't result in a phone call, a lead, or a sale, it didn't work. We optimise for the "bottom of the funnel" results that actually pay for the ads.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section id="cta">
-  <div class="cta-glow"></div>
-  <div class="cta-inner" id="ctain">
-    <div class="sec-label c">Free Audit</div>
-    <h2 class="cta-h2">Stop wasting budget.<br><em>Start winning customers.</em></h2>
-    <p class="cta-p">Get a free, no-obligation audit of your existing ad accounts. We'll show you exactly where you're leaking money and how to fix it.</p>
-    <div class="cta-btns">
-      <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20a%20free%20PPC%20audit." class="btn-wa">💬 WhatsApp Audit Request</a>
-      <a href="mailto:hello@simplidigital.in" class="btn-g">Email Us</a>
-    </div>
-    <div class="cta-note">Or call us directly at <a href="tel:+917382312386">+91 73823 12386</a></div>
-  </div>
-</section>
-
-<footer>
-  <div class="f-brand">
-    <img src="sdlogo.png" alt="SimpliDigital logo">
-    <div>
-      <div class="f-name">Simpli<em>Digital</em></div>
-      <div class="f-tagline">Simplifying Digital. Amplifying Growth.</div>
-    </div>
-  </div>
-  <div class="f-links">
+  <div id="mmenu">
     <a href="index.html">Home</a>
-    <a href="services.html">Services</a>
-    <a href="why-us.html">Why Us</a>
-    <a href="about.html">About</a>
+    <a href="index.html#services">Services</a>
+    <a href="#process">Process</a>
+    <a href="#cta">Free Audit</a>
   </div>
-  <div class="f-copy">© 2026 SimpliDigital · Hyderabad, India</div>
-</footer>
 
-<div id="c1"></div>
-<div id="c2"></div>
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-c">
+      <div class="sec-label c">Paid Advertising</div>
+      <h1 class="hero-h1">Stop buying clicks.<br/><em>Start winning customers.</em></h1>
+      <p class="hero-sub">We build and manage high-performance Google, Meta and YouTube ad campaigns designed to generate measurable revenue, not just vanity metrics.</p>
+      <div class="hero-btns">
+        <a href="#cta" class="btn-p">Get a Free Ad Audit</a>
+        <a href="#process" class="btn-s">Our Ad Process</a>
+      </div>
+    </div>
+  </section>
 
-<script>
-// ── CURSOR
-var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
-document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
-(function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();
-document.querySelectorAll('a,button').forEach(function(el){
-  el.addEventListener('mouseenter',function(){c1.style.width='4px';c1.style.height='4px';c2.style.width='48px';c2.style.height='48px';c2.style.borderColor='rgba(0,194,203,.5)'});
-  el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px';c2.style.borderColor='rgba(0,194,203,.3)'});
-});
+  <!-- AD TYPES -->
+  <section id="ad-types">
+    <div class="sec-label c rv">Platforms We Dominate</div>
+    <h2 class="sec-h2" style="text-align:center;margin-top:12px">Precision targeting on the<br/>platforms that matter.</h2>
+    <div class="ad-grid">
+      <article class="ad-card rv">
+        <span class="ad-ico">🔍</span>
+        <h3>Google Ads</h3>
+        <p>Capture high-intent buyers exactly when they are searching for what you offer on the world's most powerful search engine.</p>
+      </article>
+      <article class="ad-card rv">
+        <span class="ad-ico">📱</span>
+        <h3>Meta Ads</h3>
+        <p>Interrupt the scroll with compelling creatives on Instagram and Facebook that turn passive scrollers into active leads.</p>
+      </article>
+      <article class="ad-card rv">
+        <span class="ad-ico">🎥</span>
+        <h3>YouTube Ads</h3>
+        <p>Build massive brand authority and recall by placing your message in front of your ideal audience through video.</p>
+      </article>
+    </div>
+  </section>
 
-// ── MOBILE MENU
-function toggleMM(){
-  var mm=document.getElementById('mmenu'),hb=document.getElementById('hambtn');
-  var willOpen=!mm.classList.contains('open');
-  if(willOpen){
-    mm.style.display='flex';
-    requestAnimationFrame(function(){mm.classList.add('open')});
-  } else {
-    mm.classList.remove('open');
-    setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);
-  }
-}
+  <!-- PROCESS -->
+  <section id="process">
+    <div style="text-align:center;max-width:640px;margin:0 auto 52px" class="rv">
+      <div class="sec-label c">Our Method</div>
+      <h2 class="sec-h2">The roadmap to scaling<br/>your ad performance.</h2>
+    </div>
+    <div class="proc-tl" role="list">
+      <article class="p-row" id="pr0" role="listitem">
+        <div class="p-num">01</div>
+        <div>
+          <h3>Full Ad Audit</h3>
+          <p class="p-desc">We analyse your existing accounts to find wasted budget and missed opportunities. If you are starting fresh, we build the perfect foundation.</p>
+        </div>
+        <span class="p-tag">Phase 1</span>
+      </article>
+      <article class="p-row" id="pr1" role="listitem">
+        <div class="p-num">02</div>
+        <div>
+          <h3>Building & Launch</h3>
+          <p class="p-desc">We produce the creatives, write the copy, and structure the campaigns for maximum Quality Score and lower acquisition costs.</p>
+        </div>
+        <span class="p-tag">Phase 2</span>
+      </article>
+      <article class="p-row" id="pr2" role="listitem">
+        <div class="p-num">03</div>
+        <div>
+          <h3>Performance Optimisation</h3>
+          <p class="p-desc">We don't set and forget. We monitor bids, test ad variations, and prune underperforming assets every single week.</p>
+        </div>
+        <span class="p-tag">Ongoing</span>
+      </article>
+      <article class="p-row" id="pr3" role="listitem">
+        <div class="p-num">04</div>
+        <div>
+          <h3>Scaling Revenue</h3>
+          <p class="p-desc">Once we find the winning combinations, we scale the budget aggressively to maximize your return on ad spend (ROAS).</p>
+        </div>
+        <span class="p-tag">Scale</span>
+      </article>
+    </div>
+  </section>
 
-// ── SCROLL ENGINE
-window.addEventListener('scroll',onScroll,{passive:true});
-onScroll();
-function onScroll(){
-  document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
-  handleReveal();
-  handleProcess();
-  handleCTA();
-}
-function handleReveal(){
-  document.querySelectorAll('.rv').forEach(function(el){
-    if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on');
-  });
-}
-function handleProcess(){
-  ['pr0','pr1','pr2','pr3'].forEach(function(id,i){
-    var el=document.getElementById(id);
-    if(el&&el.getBoundingClientRect().top<window.innerHeight*.82)
-      setTimeout(function(){el.classList.add('show')},i*100);
-  });
-}
-function handleCTA(){
-  var el=document.getElementById('ctain');
-  if(el&&el.getBoundingClientRect().top<window.innerHeight*.85)el.classList.add('show');
-}
-</script>
+  <!-- RESULTS -->
+  <section id="results">
+    <div class="sec-label c rv">Real Outcomes</div>
+    <h2 class="sec-h2" style="text-align:center;margin-top:12px">Results that pay for the ads.</h2>
+    <div class="results-grid rv">
+      <article class="r-card">
+        <p class="r-big">4.2x</p>
+        <h3>Average ROAS</h3>
+        <p class="r-who">E-commerce Client</p>
+      </article>
+      <article class="r-card">
+        <p class="r-big">₹140</p>
+        <h3>Cost Per Lead</h3>
+        <p class="r-who">SaaS Startup</p>
+      </article>
+      <article class="r-card">
+        <p class="r-big">+310%</p>
+        <h3>Booking Volume</h3>
+        <p class="r-who">Local Dental Group</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="pricing">
+    <div class="sec-label c rv">Service Packs</div>
+    <h2 class="sec-h2" style="text-align:center;margin-top:12px">Choose your stage of growth.</h2>
+    <div class="pricing-grid">
+      <article class="price-card rv">
+        <h3>Starter Pack</h3>
+        <p>Perfect for small businesses looking to establish their presence on one primary platform.</p>
+        <ul>
+          <li>1 Ad Platform</li>
+          <li>Campaign Setup</li>
+          <li>Monthly Reporting</li>
+          <li>Basic Creative Support</li>
+        </ul>
+        <a href="#cta" class="btn-s">Enquire for Pack</a>
+      </article>
+      <article class="price-card pop rv">
+        <span class="pop-tag">Recommended</span>
+        <h3>Growth Pack</h3>
+        <p>Our most popular pack for businesses ready to scale across Google and Meta simultaneously.</p>
+        <ul>
+          <li>Multi-Platform Strategy</li>
+          <li>Unlimited Campaigns</li>
+          <li>Bi-Weekly Calls</li>
+          <li>Advanced Retargeting</li>
+        </ul>
+        <a href="#cta" class="btn-p">Enquire for Pack</a>
+      </article>
+      <article class="price-card rv">
+        <h3>Scale Pack</h3>
+        <p>Custom solutions for enterprise level spend and high-volume lead generation requirements.</p>
+        <ul>
+          <li>Omni-channel Strategy</li>
+          <li>Dedicated Account Manager</li>
+          <li>24/7 Priority Support</li>
+          <li>Full Creative Production</li>
+        </ul>
+        <a href="#cta" class="btn-s">Enquire for Pack</a>
+      </article>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="cta-inner" id="ctain">
+      <div class="sec-label c">Free Opportunity Audit</div>
+      <h2 class="sec-h2">Stop leaking budget.<br/>Start winning today.</h2>
+      <p class="hero-sub">Get a free, no-obligation audit of your current ad accounts. We will show you exactly what is holding you back and what it will take to fix it.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20a%20free%20ad%20audit." class="btn-wa">💬 WhatsApp Audit Request</a>
+        <a href="mailto:hello@simplidigital.in" class="btn-p">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="f-brand">
+      <img src="sdlogo.webp" alt="SimpliDigital"/>
+      <span class="n-brand">Simpli<em>Digital</em></span>
+    </div>
+    <p class="f-copy">© 2026 SimpliDigital · Hyderabad, India</p>
+  </footer>
+
+  <script>
+    // CURSOR
+    var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
+    (function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();
+    document.querySelectorAll('a,button').forEach(function(el){
+      el.addEventListener('mouseenter',function(){c1.style.width='4px';c1.style.height='4px';c2.style.width='48px';c2.style.height='48px';c2.style.borderColor='rgba(0,194,203,.5)'});
+      el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px';c2.style.borderColor='rgba(0,194,203,.3)'});
+    });
+
+    // MOBILE MENU
+    function toggleMM(){
+      var mm=document.getElementById('mmenu');
+      var open=mm.classList.toggle('open');
+      mm.style.display=open?'flex':'none';
+      document.body.style.overflow=open?'hidden':'';
+    }
+
+    // SCROLL
+    window.addEventListener('scroll',onScroll,{passive:true});
+    onScroll();
+    function onScroll(){
+      document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
+      handleReveal();
+      handleProcess();
+      handleCTA();
+    }
+    function handleReveal(){
+      document.querySelectorAll('.rv').forEach(function(el){
+        if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on');
+      });
+    }
+    function handleProcess(){
+      ['pr0','pr1','pr2','pr3'].forEach(function(id,i){
+        var el=document.getElementById(id);
+        if(el&&el.getBoundingClientRect().top<window.innerHeight*.82)
+          setTimeout(function(){el.classList.add('show')},i*100);
+      });
+    }
+    function handleCTA(){
+      var el=document.getElementById('ctain');
+      if(el&&el.getBoundingClientRect().top<window.innerHeight*.85)el.classList.add('show');
+    }
+  </script>
 </body>
 </html>
-      
-
