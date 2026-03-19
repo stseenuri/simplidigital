@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Analytics & Reporting Services — SimpliDigital · Hyderabad</title>
+  <meta name="description" content="Analytics and reporting by SimpliDigital. GA4, Search Console, and custom dashboards that turn data into decisions. Stop guessing, start growing. Based in Hyderabad."/>
+  <meta name="robots" content="index, follow"/>
+  //www.simplidigital.in/analytics-reporting"/>
+  "/>
+  //fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <style>
+    *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+    :root{--teal:#00C2CB;--gold:#F4A100;--navy:#04090f;--white:#f5f5f7;--line:rgba(255,255,255,.07);--nh:64px}
+    html{scroll-behavior:smooth}
+    body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
+    #c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
+    #c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+    nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(4,9,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);transition:background .4s}
+    nav.scrolled{background:rgba(4,9,15,.98)}
+    .n-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
+    .n-logo img{height:28px;width:auto}
+    .n-brand{font-size:.95rem;font-weight:700;color:var(--white)}
+    .n-brand em{color:var(--teal);font-style:normal}
+    .n-links{display:flex;gap:28px;list-style:none;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
+    .n-links a{font-size:.75rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;font-weight:500;white-space:nowrap}
+    .n-links a:hover{color:var(--white)}
+    .n-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+    .n-cta{font-size:.74rem;font-weight:600;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:7px 18px;border-radius:980px;text-decoration:none;transition:all .25s;white-space:nowrap}
+    .n-cta:hover{background:var(--teal);color:var(--navy)}
+    .ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+    .ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .35s;transform-origin:center}
+    .ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+    .ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+    .ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+    #mmenu{position:fixed;inset:0;background:rgba(4,9,15,.97);backdrop-filter:blur(28px);z-index:590;display:none;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;transition:opacity .4s}
+    #mmenu.open{display:flex;opacity:1}
+    #mmenu a{font-size:1.8rem;font-weight:700;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
+    #mmenu a:hover{color:var(--white)}
+    .sec-label{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .sec-label::before,.sec-label::after{content:'';width:20px;height:1px;background:var(--teal)}
+    .sec-label.c{justify-content:center}
+    .sec-h2{font-size:clamp(2rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:20px;color:var(--white)}
+    .sec-h2 em{color:var(--teal);font-style:normal}
+    .rv{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
+    .rv.on{opacity:1;transform:translateY(0)}
+    #hero{position:relative;min-height:90vh;padding-top:var(--nh);display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 10%,transparent 100%)}
+    .hero-glow{position:absolute;width:800px;height:800px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%)}
+    .hero-c{position:relative;z-index:2;text-align:center;padding:0 6vw;max-width:1000px}
+    .hero-h1{font-size:clamp(2.6rem,7vw,6.5rem);font-weight:800;line-height:1.04;letter-spacing:-2.5px;margin-bottom:24px}
+    .hero-h1 em{color:var(--teal);font-style:normal}
+    .hero-sub{font-size:1.1rem;color:rgba(255,255,255,.45);line-height:1.8;font-weight:300;max-width:620px;margin:0 auto 36px}
+    .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .btn-p{background:var(--teal);color:var(--navy);padding:13px 28px;border-radius:980px;font-weight:700;font-size:.86rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+    .btn-p:hover{transform:scale(1.04);box-shadow:0 0 40px rgba(0,194,203,.4)}
+    .btn-s{background:rgba(255,255,255,.06);color:rgba(255,255,255,.65);padding:13px 28px;border-radius:980px;font-weight:500;font-size:.86rem;text-decoration:none;transition:all .3s;border:1px solid rgba(255,255,255,.1)}
+    .btn-s:hover{background:rgba(255,255,255,.1);color:var(--white)}
+    #tools{background:#050d18;padding:100px 5vw}
+    .tools-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:1100px;margin:48px auto 0}
+    .tool-card{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:24px;padding:40px 32px;transition:all .3s}
+    .tool-card:hover{border-color:rgba(0,194,203,.3);background:rgba(255,255,255,.03)}
+    .tool-ico{font-size:2.5rem;margin-bottom:24px;display:block}
+    .tool-card h3{font-size:1.2rem;font-weight:700;margin-bottom:12px;color:var(--white)}
+    .tool-card p{font-size:.9rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
+    #what{background:var(--navy);padding:100px 5vw}
+    .what-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:1000px;margin:48px auto 0}
+    .w-card{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:20px;padding:36px 32px;display:flex;gap:20px;align-items:flex-start;transition:all .3s}
+    .w-card:hover{border-color:rgba(0,194,203,.25);background:rgba(255,255,255,.03)}
+    .w-ico{font-size:1.8rem;flex-shrink:0;margin-top:2px}
+    .w-card h3{font-size:.95rem;font-weight:700;margin-bottom:8px;color:var(--white)}
+    .w-card p{font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
+    #process{background:#050d18;padding:100px 5vw}
+    .proc-tl{margin-top:48px;border:1px solid var(--line);border-radius:18px;overflow:hidden;max-width:860px;margin-left:auto;margin-right:auto}
+    .p-row{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:22px;padding:26px 32px;border-bottom:1px solid var(--line);position:relative;overflow:hidden;opacity:0;transform:translateX(-20px);transition:opacity .6s,transform .6s,background .3s}
+    .p-row.show{opacity:1;transform:translateX(0)}
+    .p-row:last-child{border-bottom:none}
+    .p-row::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--teal);transform:scaleY(0);transition:transform .4s;transform-origin:top}
+    .p-row:hover{background:rgba(0,194,203,.025)}
+    .p-row:hover::before{transform:scaleY(1)}
+    .p-num{font-size:1.8rem;font-weight:900;color:rgba(0,194,203,.1);letter-spacing:-2px;transition:color .3s}
+    .p-row:hover .p-num{color:rgba(0,194,203,.3)}
+    .p-row h3{font-size:.9rem;font-weight:700;margin-bottom:4px;color:var(--white)}
+    .p-desc{font-size:.78rem;color:rgba(255,255,255,.36);line-height:1.6;font-weight:300;max-width:440px}
+    .p-tag{font-size:.6rem;font-weight:700;color:var(--teal);background:rgba(0,194,203,.07);border:1px solid rgba(0,194,203,.13);padding:3px 10px;border-radius:100px}
+    #results{background:var(--navy);padding:100px 5vw}
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:20px;overflow:hidden;max-width:900px;margin:48px auto 0}
+    .r-card{background:var(--navy);padding:40px 32px}
+    .r-big{font-size:3rem;font-weight:900;color:var(--teal);letter-spacing:-2px;line-height:1;margin-bottom:8px}
+    .r-card h3{font-size:.85rem;font-weight:700;color:var(--white);margin-bottom:6px}
+    .r-who{font-size:.72rem;color:rgba(255,255,255,.3);font-weight:300}
+    #pricing{background:#050d18;padding:100px 5vw}
+    .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:1100px;margin:48px auto 0}
+    .price-card{background:rgba(255,255,255,.02);border:1px solid var(--line);border-radius:24px;padding:48px 36px;text-align:center;transition:all .4s;display:flex;flex-direction:column}
+    .price-card:hover{transform:translateY(-8px);border-color:rgba(0,194,203,.4)}
+    .price-card.pop{border-color:rgba(0,194,203,.4);background:rgba(0,194,203,.02);position:relative}
+    .pop-tag{position:absolute;top:20px;left:50%;transform:translateX(-50%);font-size:.6rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--navy);background:var(--teal);padding:4px 12px;border-radius:100px}
+    .price-card h3{font-size:1.5rem;font-weight:800;color:var(--white);margin-bottom:12px}
+    .price-card p{font-size:.85rem;color:rgba(255,255,255,.4);line-height:1.7;margin-bottom:32px;flex-grow:1}
+    .price-card ul{list-style:none;text-align:left;margin-bottom:40px}
+    .price-card li{font-size:.8rem;color:rgba(255,255,255,.6);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+    .price-card li::before{content:'✓';color:var(--teal);font-weight:900}
+    #cta{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5vw;position:relative;background:var(--navy);overflow:hidden}
+    .cta-inner{position:relative;z-index:2;max-width:720px;opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}
+    .cta-inner.show{opacity:1;transform:translateY(0)}
+    .btn-wa{background:#25D366;color:#fff;padding:13px 26px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+    .btn-wa:hover{transform:scale(1.04);box-shadow:0 0 30px rgba(37,211,102,.35)}
+    footer{background:#020609;padding:40px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+    .f-brand{display:flex;align-items:center;gap:12px}
+    .f-brand img{height:28px;width:auto}
+    .f-copy{font-size:.7rem;color:rgba(255,255,255,.2)}
+    @media(max-width:900px){
+      .tools-grid,.pricing-grid,.what-grid{grid-template-columns:1fr}
+      .results-grid{grid-template-columns:1fr}
+      .p-row{grid-template-columns:44px 1fr}
+      .p-tag{display:none}
+      .hero-h1{font-size:3.5rem}
+      .ham{display:flex}
+      .n-links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div id="c1"></div><div id="c2"></div>
+
+  <nav id="nav">
+    <a class="n-logo" href="index.html">
+      <img src="sdlogo.webp" alt="SimpliDigital logo"/>
+      <span class="n-brand">Simpli<em>Digital</em></span>
+    </a>
+    <ul class="n-links">
+      ><a href="index.html">Home</a></li>
+      ><a href="index.html#services">Services</a></li>
+      ><a href="#process">Process</a></li>
+    </ul>
+    <div class="n-right">
+      <a class="n-cta" href="#cta">Free Audit</a>
+      <button class="ham" onclick="toggleMM()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mmenu">
+    <a href="index.html" onclick="toggleMM()">Home</a>
+    <a href="index.html#services" onclick="toggleMM()">Services</a>
+    <a href="#process" onclick="toggleMM()">Process</a>
+    <a href="#cta" onclick="toggleMM()">Free Audit</a>
+  </div>
+
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-c">
+      <div class="sec-label c">Analytics & Reporting</div>
+      <h1 class="hero-h1">Stop guessing.<br/><em>Start deciding with data.</em></h1>
+      <p class="hero-sub">We set up, manage, and interpret your analytics so you always know exactly what is working, what is wasting budget, and where your next growth opportunity is hiding.</p>
+      <div class="hero-btns">
+        <a href="#cta" class="btn-p">Get a Free Analytics Audit</a>
+        <a href="#process" class="btn-s">Our Reporting Process</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="tools">
+    <div class="sec-label c rv">Tools We Master</div>
+    <h2 class="sec-h2" style="text-align:center;margin-top:12px">Every data source unified<br/>into <em>one clear picture.</em></h2>
+    <div class="tools-grid">
+      <article class="tool-card rv">
+        <span class="tool-ico">📊</span>
+        <h3>Google Analytics 4</h3>
+        <p>Full GA4 setup, event tracking, conversion configuration, and funnel analysis so you understand exactly how users behave on your website.</p>
+      </article>
+      <article class="tool-card rv">
+        <span class="tool-ico">🔍</span>
+        <h3>Google Search Console</h3>
+        <p>Deep keyword, impressions, CTR, and crawl data analysis to show you how Google sees your site and where organic search opportunities lie.</p>
+      </article>
+      <article class="tool-card rv">
+        <span class="tool-ico">📈</span>
+        <h3>Looker Studio Dashboards</h3>
+        <p>Beautiful, real-time custom dashboards that pull all your data into one place — GA4, GSC, Meta Ads, and more — always live and always clear.</p>
+      </article>
+      <article class="tool-card rv">
+        <span class="tool-ico">📱</span>
+        <h3>Meta & Google Ads Reports</h3>
+        <p>Cross-platform ad performance reporting with ROAS, CPC, CPL, and conversion data so you know exactly which rupee is working hardest.</p>
+      </article>
+      <article class="tool-card rv">
+        <span class="tool-ico">🗺️</span>
+        <h3>Heatmaps & Session Recording</h3>
+        <p>Visual tools like Hotjar and Microsoft Clarity reveal exactly where users click, scroll, and drop off — so you can fix what's killing conversions.</p>
+      </article>
+      <article class="tool-card rv">
+        <span class="tool-ico">🎯</span>
+        <h3>Conversion Rate Optimisation</h3>
+        <p>We use data to identify friction points in your funnels and run structured tests that incrementally improve how many visitors become customers.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="what">
+    <div style="text-align:center;max-width:640px;margin:0 auto" class="rv">
+      <div class="sec-label c">What's Included</div>
+      <h2 class="sec-h2">Not just numbers —<br/><em>answers and actions.</em></h2>
+    </div>
+    <div class="what-grid">
+      <article class="w-card rv">
+        <span class="w-ico">⚙️</span>
+        <div>
+          <h3>Full Analytics Setup & Audit</h3>
+          <p>We audit your existing tracking setup for gaps and errors, then rebuild it correctly — ensuring every click, form, and purchase is tracked accurately.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">🏷️</span>
+        <div>
+          <h3>Google Tag Manager Configuration</h3>
+          <p>Clean, structured GTM setup with all events, goals, and pixels firing correctly — no messy code, no missing data, no duplicate tracking.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">🖥️</span>
+        <div>
+          <h3>Custom Live Dashboards</h3>
+          <p>Personalised Looker Studio dashboards built for your business metrics — updated in real time so you always have a pulse on performance.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">📋</span>
+        <div>
+          <h3>Monthly Plain-English Reports</h3>
+          <p>No jargon, no vanity metrics. Clear monthly reports that explain what happened, why it happened, and exactly what we are doing about it.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">🔔</span>
+        <div>
+          <h3>Anomaly Alerts & Monitoring</h3>
+          <p>Automated alerts notify us the moment traffic drops, conversions spike, or something breaks — so issues are caught and fixed before they cost you.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">💡</span>
+        <div>
+          <h3>Actionable Growth Insights</h3>
+          <p>Every report ends with a prioritised list of specific actions to take next month — so data always leads to decisions, never just a pile of charts.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="process">
+    <div style="text-align:center;max-width:640px;margin:0 auto 52px" class="rv">
+      <div class="sec-label c">Our Method</div>
+      <h2 class="sec-h2">From raw data to<br/><em>revenue-driving decisions.</em></h2>
+    </div>
+    <div class="proc-tl" role="list">
+      <article class="p-row" id="pr0" role="listitem">
+        <div class="p-num">01</div>
+        <div>
+          <h3>Tracking Audit & Setup</h3>
+          <p class="p-desc">We audit every tracking tool on your site, fix broken events, eliminate duplicate data, and rebuild your analytics foundation from the ground up.</p>
+        </div>
+        <span class="p-tag">Phase 1</span>
+      </article>
+      <article class="p-row" id="pr1" role="listitem">
+        <div class="p-num">02</div>
+        <div>
+          <h3>Dashboard Build</h3>
+          <p class="p-desc">We connect all your data sources into a single live Looker Studio dashboard — tailored to the KPIs that actually matter for your business.</p>
+        </div>
+        <span class="p-tag">Phase 2</span>
+      </article>
+      <article class="p-row" id="pr2" role="listitem">
+        <div class="p-num">03</div>
+        <div>
+          <h3>Monitor & Analyse</h3>
+          <p class="p-desc">We watch your data continuously, flag anomalies immediately, and deliver monthly reports with clear insights and specific recommendations.</p>
+        </div>
+        <span class="p-tag">Ongoing</span>
+      </article>
+      <article class="p-row" id="pr3" role="listitem">
+        <div class="p-num">04</div>
+        <div>
+          <h3>Test, Optimise & Scale</h3>
+          <p class="p-desc">Data reveals opportunities. We run structured CRO tests, double down on what works, and continuously improve your cost per acquisition.</p>
+        </div>
+        <span class="p-tag">Scale</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="sec-label c rv">Real Outcomes</div>
+    <h2 class="sec-h2" style="text-align:center;margin-top:12px">What happens when you<br/><em>actually understand your data.</em></h2>
+    <div class="results-grid rv">
+      <article class="r-card">
+        <p class="r-big">38%</p>
+        <h3>Reduction in Wasted Ad Spend</h3>
+        <p class="r-who">E-commerce Brand</p>
+      </article>
+      <article class="r-card">
+        <p class="r-big">+210%</p>
+        <h3>Conversion Rate Improvement</h3>
+        <p class="r-who">SaaS Landing Page</p>
+      </article>
+      <article class="r-card">
+        <p class="r-big">100%</p>
+        <h3>Tracking Accuracy Achieved</h3>
+        <p class="r-who">Multi-Channel Retailer</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="sec-label c rv">Service Packs</div>
+    <h2 class="sec-h2" style="text-align:center;margin-top:12px">Choose your stage of growth.</h2>
+    <div class="pricing-grid">
+      <article class="price-card rv">
+        <h3>Starter Pack</h3>
+        <p>For businesses that need their analytics set up correctly and a clear monthly report they can actually understand and act on.</p>
+        <ul>
+          >GA4 Setup & Configuration</li>
+          >Google Search Console Setup</li>
+          >Basic Looker Studio Dashboard</li>
+          >Monthly Performance Report</li>
+          >Goal & Conversion Tracking</li>
+        </ul>
+        <a href="#cta" class="btn-s">Enquire for Pack</a>
+      </article>
+      <article class="price-card pop rv">
+        <span class="pop-tag">Recommended</span>
+        <h3>Growth Pack</h3>
+        <p>Our most popular pack for businesses that want full visibility across all channels with actionable insights every month.</p>
+        <ul>
+          >Full GA4 + GTM Setup</li>
+          >Multi-Source Live Dashboard</li>
+          >Ad Platform Reporting</li>
+          >Heatmap & Session Recording</li>
+          >Bi-Weekly Insight Calls</li>
+          >CRO Recommendations</li>
+        </ul>
+        <a href="#cta" class="btn-p">Enquire for Pack</a>
+      </article>
+      <article class="price-card rv">
+        <h3>Scale Pack</h3>
+        <p>Full analytics management for growing businesses that want data-driven decisions across every marketing channel at scale.</p>
+        <ul>
+          >Advanced Funnel Analysis</li>
+          >Custom KPI Framework</li>
+          >A/B Testing & CRO Execution</li>
+          >Dedicated Analyst</li>
+          >Weekly Reports & Calls</li>
+          >Anomaly Monitoring 24/7</li>
+        </ul>
+        <a href="#cta" class="btn-s">Enquire for Pack</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="cta-inner" id="ctain">
+      <div class="sec-label c">Free Analytics Audit</div>
+      <h2 class="sec-h2">Your data has answers.<br/><em>Let's go find them.</em></h2>
+      <p class="hero-sub">Get a free audit of your current analytics setup. We will show you what is broken, what is missing, and what your data is already trying to tell you — no fluff, no obligation.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20a%20free%20analytics%20audit." class="btn-wa">💬 WhatsApp Audit Request</a>
+        <a href="mailto:hello@simplidigital.in" class="btn-p">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-brand">
+      <img src="sdlogo.webp" alt="SimpliDigital"/>
+      <span class="n-brand">Simpli<em>Digital</em></span>
+    </div>
+    <p class="f-copy">© 2026 SimpliDigital · Hyderabad, India</p>
+  </footer>
+
+  <script>
+    var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
+    (function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();
+    document.querySelectorAll('a,button').forEach(function(el){
+      el.addEventListener('mouseenter',function(){c1.style.width='4px';c1.style.height='4px';c2.style.width='48px';c2.style.height='48px';c2.style.borderColor='rgba(0,194,203,.5)'});
+      el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px';c2.style.borderColor='rgba(0,194,203,.3)'});
+    });
+    function toggleMM(){
+      var mm=document.getElementById('mmenu');
+      var open=mm.classList.toggle('open');
+      document.querySelector('.ham').classList.toggle('open',open);
+      mm.style.display=open?'flex':'none';
+      document.body.style.overflow=open?'hidden':'';
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    onScroll();
+    function onScroll(){
+      document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
+      handleReveal();handleProcess();handleCTA();
+        }
+    function handleReveal(){
+      document.querySelectorAll('.rv').forEach(function(el){
+        if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on');
+      });
+    }
+    function handleProcess(){
+      ['pr0','pr1','pr2','pr3'].forEach(function(id,i){
+        var el=document.getElementById(id);
+        if(el&&el.getBoundingClientRect().top<window.innerHeight*.82)
+          setTimeout(function(){el.classList.add('show')},i*100);
+      });
+    }
+    function handleCTA(){
+      var el=document.getElementById('ctain');
+      if(el&&el.getBoundingClientRect().top<window.innerHeight*.85)el.classList.add('show');
+    }
+  </script>
+</body>
+</html>
+
