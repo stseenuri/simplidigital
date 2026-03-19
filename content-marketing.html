@@ -1,0 +1,321 @@
+    .price-card li::before{content:'✓';color:var(--teal);font-weight:900}
+    #cta{min-height:80vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 5vw;position:relative;background:var(--navy);overflow:hidden}
+    .cta-inner{position:relative;z-index:2;max-width:720px;opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s}
+    .cta-inner.show{opacity:1;transform:translateY(0)}
+    .btn-wa{background:#25D366;color:#fff;padding:13px 26px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+    .btn-wa:hover{transform:scale(1.04);box-shadow:0 0 30px rgba(37,211,102,.35)}
+    footer{background:#020609;padding:40px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:20px}
+    .f-brand{display:flex;align-items:center;gap:12px}
+    .f-brand img{height:28px;width:auto}
+    .f-copy{font-size:.7rem;color:rgba(255,255,255,.2)}
+    @media(max-width:900px){
+      .type-grid,.pricing-grid,.what-grid{grid-template-columns:1fr}
+      .results-grid{grid-template-columns:1fr}
+      .p-row{grid-template-columns:44px 1fr}
+      .p-tag{display:none}
+      .hero-h1{font-size:3.5rem}
+      .ham{display:flex}
+      .n-links{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div id="c1"></div><div id="c2"></div>
+
+  <nav id="nav">
+    <a class="n-logo" href="index.html">
+      <img src="sdlogo.webp" alt="SimpliDigital logo"/>
+      <span class="n-brand">Simpli<em>Digital</em></span>
+    </a>
+    <ul class="n-links">
+      ><a href="index.html">Home</a></li>
+      ><a href="index.html#services">Services</a></li>
+      ><a href="#process">Process</a></li>
+    </ul>
+    <div class="n-right">
+      <a class="n-cta" href="#cta">Free Audit</a>
+      <button class="ham" onclick="toggleMM()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mmenu">
+    <a href="index.html" onclick="toggleMM()">Home</a>
+    <a href="index.html#services" onclick="toggleMM()">Services</a>
+    <a href="#process" onclick="toggleMM()">Process</a>
+    <a href="#cta" onclick="toggleMM()">Free Audit</a>
+  </div>
+
+  <section id="hero">
+    <div class="hero-grid"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-c">
+      <div class="sec-label c">Content Marketing</div>
+      <h1 class="hero-h1">Content that attracts.<br/><em>Copy that converts.</em></h1>
+      <p class="hero-sub">We create strategic, SEO-driven content that pulls your ideal customers in, builds trust over time, and turns your website into a 24/7 lead generation machine.</p>
+      <div class="hero-btns">
+        <a href="#cta" class="btn-p">Get a Free Content Audit</a>
+        <a href="#process" class="btn-s">Our Content Process</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="types">
+    <div class="sec-label c rv">What We Create</div>
+    <h2 class="sec-h2" style="text-align:center;margin-top:12px">Every format your brand<br/>needs to <em>dominate search.</em></h2>
+    <div class="type-grid">
+      <article class="type-card rv">
+        <span class="type-ico">✍️</span>
+        <h3>Blog & Article Writing</h3>
+        <p>Long-form, keyword-optimised blog posts that rank on Google, establish your authority, and bring in qualified organic traffic month after month.</p>
+      </article>
+      <article class="type-card rv">
+        <span class="type-ico">🎬</span>
+        <h3>Video Scripts</h3>
+        <p>Compelling scripts for YouTube, Reels, and brand films — written to hook viewers in the first 3 seconds and keep them watching till the end.</p>
+      </article>
+      <article class="type-card rv">
+        <span class="type-ico">📧</span>
+        <h3>Email Copy</h3>
+        <p>Nurture sequences, newsletters, and promotional emails crafted with persuasive copy that drives opens, clicks, and revenue.</p>
+      </article>
+      <article class="type-card rv">
+        <span class="type-ico">🌐</span>
+        <h3>Website Copywriting</h3>
+        <p>Homepage, service pages, and landing pages written to communicate your value clearly, rank on Google, and convert visitors into customers.</p>
+      </article>
+      <article class="type-card rv">
+        <span class="type-ico">📱</span>
+        <h3>Social Media Content</h3>
+        <p>Platform-native captions, carousels, and story scripts that match your brand voice and drive real engagement across every channel.</p>
+      </article>
+      <article class="type-card rv">
+        <span class="type-ico">📄</span>
+        <h3>Case Studies & Whitepapers</h3>
+        <p>In-depth content pieces that showcase your expertise, build buyer confidence, and support high-value B2B sales conversations.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="what">
+    <div style="text-align:center;max-width:640px;margin:0 auto" class="rv">
+      <div class="sec-label c">What's Included</div>
+      <h2 class="sec-h2">A full content engine,<br/>not just <em>random blog posts.</em></h2>
+    </div>
+    <div class="what-grid">
+      <article class="w-card rv">
+        <span class="w-ico">🔍</span>
+        <div>
+          <h3>Keyword & Topic Research</h3>
+          <p>We find the exact search terms your audience uses and build a content roadmap around topics that have real ranking potential.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">🗓️</span>
+        <div>
+          <h3>Editorial Calendar</h3>
+          <p>A structured monthly content plan so your brand publishes consistently — no more last-minute scrambling for ideas.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">🧠</span>
+        <div>
+          <h3>Brand Voice Development</h3>
+          <p>We define your unique tone, language style, and messaging framework so every piece of content sounds unmistakably like you.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">📈</span>
+        <div>
+          <h3>On-Page SEO Optimisation</h3>
+          <p>Every article is structured with proper headings, meta tags, internal links, and schema so it's built to rank from day one.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">🔁</span>
+        <div>
+          <h3>Content Repurposing</h3>
+          <p>We turn one blog post into social captions, email newsletters, and short videos — maximising the return on every piece created.</p>
+        </div>
+      </article>
+      <article class="w-card rv">
+        <span class="w-ico">📊</span>
+        <div>
+          <h3>Performance Tracking</h3>
+          <p>Monthly reports showing traffic, rankings, time-on-page, and leads generated — so you always know exactly what your content is worth.</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="process">
+    <div style="text-align:center;max-width:640px;margin:0 auto 52px" class="rv">
+      <div class="sec-label c">Our Method</div>
+      <h2 class="sec-h2">The content system that<br/><em>compounds over time.</em></h2>
+    </div>
+    <div class="proc-tl" role="list">
+      <article class="p-row" id="pr0" role="listitem">
+        <div class="p-num">01</div>
+        <div>
+          <h3>Discovery & Strategy</h3>
+          <p class="p-desc">We learn your business, audience, competitors, and goals — then build a content strategy engineered to drive measurable results.</p>
+        </div>
+        <span class="p-tag">Phase 1</span>
+      </article>
+      <article class="p-row" id="pr1" role="listitem">
+        <div class="p-num">02</div>
+        <div>
+          <h3>Research & Planning</h3>
+          <p class="p-desc">Keyword mapping, topic clustering, and editorial calendar creation so every piece of content has a clear purpose and a path to ranking.</p>
+        </div>
+        <span class="p-tag">Phase 2</span>
+      </article>
+      <article class="p-row" id="pr2" role="listitem">
+        <div class="p-num">03</div>
+        <div>
+          <h3>Creation & Optimisation</h3>
+          <p class="p-desc">Our writers craft each piece with SEO best practices baked in — then we optimise metadata, internal links, and schema before publishing.</p>
+        </div>
+        <span class="p-tag">Ongoing</span>
+      </article>
+      <article class="p-row" id="pr3" role="listitem">
+        <div class="p-num">04</div>
+        <div>
+          <h3>Distribute & Compound</h3>
+          <p class="p-desc">We repurpose and distribute content across channels, then monitor rankings and update older articles to keep traffic growing month on month.</p>
+        </div>
+        <span class="p-tag">Scale</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="results">
+    <div class="sec-label c rv">Real Outcomes</div>
+    <h2 class="sec-h2" style="text-align:center;margin-top:12px">Content that pays for itself.</h2>
+    <div class="results-grid rv">
+      <article class="r-card">
+        <p class="r-big">+620%</p>
+        <h3>Organic Traffic Growth</h3>
+        <p class="r-who">SaaS Product Blog</p>
+      </article>
+      <article class="r-card">
+        <p class="r-big">#1</p>
+        <h3>Google Rankings Achieved</h3>
+        <p class="r-who">Local Services Brand</p>
+      </article>
+      <article class="r-card">
+        <p class="r-big">5.2x</p>
+        <h3>Lead Volume Increase</h3>
+        <p class="r-who">B2B Consulting Firm</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="sec-label c rv">Service Packs</div>
+    <h2 class="sec-h2" style="text-align:center;margin-top:12px">Choose your stage of growth.</h2>
+    <div class="pricing-grid">
+      <article class="price-card rv">
+        <h3>Starter Pack</h3>
+        <p>For businesses that need consistent, quality content to start building their organic presence and authority.</p>
+        <ul>
+          >4 Blog Posts Per Month</li>
+          >Keyword Research Included</li>
+          >On-Page SEO Optimisation</li>
+          >1 Content Format</li>
+          >Monthly Performance Report</li>
+        </ul>
+        <a href="#cta" class="btn-s">Enquire for Pack</a>
+      </article>
+      <article class="price-card pop rv">
+        <span class="pop-tag">Recommended</span>
+        <h3>Growth Pack</h3>
+        <p>Our most popular pack for brands ready to build a full content engine across multiple formats and channels.</p>
+        <ul>
+          >8 Blog Posts Per Month</li>
+          >Video Scripts Included</li>
+          >Social Media Captions</li>
+          >Email Newsletter Copy</li>
+          >Content Repurposing</li>
+          >Bi-Weekly Strategy Calls</li>
+        </ul>
+        <a href="#cta" class="btn-p">Enquire for Pack</a>
+      </article>
+      <article class="price-card rv">
+        <h3>Scale Pack</h3>
+        <p>Full-service content production for businesses that want to dominate their niche with authority content at scale.</p>
+        <ul>
+          >Unlimited Content Creation</li>
+          >All Content Formats</li>
+          >Dedicated Content Strategist</li>
+          >Whitepapers & Case Studies</li>
+          >Weekly Reports & Calls</li>
+          >Full Distribution Strategy</li>
+        </ul>
+        <a href="#cta" class="btn-s">Enquire for Pack</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="cta">
+    <div class="cta-inner" id="ctain">
+      <div class="sec-label c">Free Content Audit</div>
+      <h2 class="sec-h2">Your competitors are ranking.<br/><em>Let's outwrite them.</em></h2>
+      <p class="hero-sub">Get a free audit of your current content strategy. We will show you exactly which topics to target, what is missing, and how to start ranking — no fluff, no obligation.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20a%20free%20content%20marketing%20audit." class="btn-wa">💬 WhatsApp Audit Request</a>
+        <a href="mailto:hello@simplidigital.in" class="btn-p">Email Us</a>       </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="f-brand">
+      <img src="sdlogo.webp" alt="SimpliDigital"/>
+      <span class="n-brand">Simpli<em>Digital</em></span>
+    </div>
+    <p class="f-copy">© 2026 SimpliDigital · Hyderabad, India</p>
+  </footer>
+
+  <script>
+    var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
+    (function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();
+    document.querySelectorAll('a,button').forEach(function(el){
+      el.addEventListener('mouseenter',function(){c1.style.width='4px';c1.style.height='4px';c2.style.width='48px';c2.style.height='48px';c2.style.borderColor='rgba(0,194,203,.5)'});
+      el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px';c2.style.borderColor='rgba(0,194,203,.3)'});
+    });
+    function toggleMM(){
+      var mm=document.getElementById('mmenu');
+      var open=mm.classList.toggle('open');
+      document.querySelector('.ham').classList.toggle('open',open);
+      mm.style.display=open?'flex':'none';
+      document.body.style.overflow=open?'hidden':'';
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    onScroll();
+    function onScroll(){
+      document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
+      handleReveal();handleProcess();handleCTA();
+    }
+    function handleReveal(){
+      document.querySelectorAll('.rv').forEach(function(el){
+        if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on');
+      });
+    }
+    function handleProcess(){
+      ['pr0','pr1','pr2','pr3'].forEach(function(id,i){
+        var el=document.getElementById(id);
+        if(el&&el.getBoundingClientRect().top<window.innerHeight*.82)
+          setTimeout(function(){el.classList.add('show')},i*100);
+      });
+    }
+    function handleCTA(){
+      var el=document.getElementById('ctain');
+      if(el&&el.getBoundingClientRect().top<window.innerHeight*.85)el.classList.add('show');
+    }
+  </script>
+</body>
+</html>
+
+      
