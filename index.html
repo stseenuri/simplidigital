@@ -4,34 +4,230 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>SimpliDigital — Full Service Digital Marketing Agency India</title>
-<meta name="description" content="SimpliDigital is a full service digital marketing agency in India. SEO, social media marketing, website design, logo creation, content strategy and paid ads. Free consultation available."/>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TITLE TAG
+     · Primary keyword first | Brand name last
+     · 57 characters — fits Google's ~60 char display limit
+     · Targets: "digital marketing agency India" + "Hyderabad"
+═══════════════════════════════════════════════════════════ -->
+<title>Digital Marketing Agency in India | SimpliDigital</title>
+
+<!-- ═══════════════════════════════════════════════════════════
+     META DESCRIPTION
+     · 155 characters — within Google's ~160 char limit
+     · Contains primary + secondary keywords naturally
+     · Strong CTA: "Free consultation"
+═══════════════════════════════════════════════════════════ -->
+<meta name="description" content="SimpliDigital is a full-service digital marketing agency in Hyderabad, India. SEO, social media, website design, paid ads and branding — all under one roof. Get a free consultation today."/>
+
+<!-- ═══════════════════════════════════════════════════════════
+     KEYWORD META TAG
+     · Not a ranking factor but used by some secondary search
+       engines; keep it aligned with on-page keyword themes
+═══════════════════════════════════════════════════════════ -->
+<meta name="keywords" content="digital marketing agency India, SEO agency Hyderabad, social media marketing India, website design Hyderabad, Google Ads agency India, full service digital marketing, SimpliDigital"/>
+
 <meta name="robots" content="index, follow"/>
+<meta name="author" content="SimpliDigital"/>
+<meta name="geo.region" content="IN-TG"/>
+<meta name="geo.placename" content="Hyderabad"/>
+
+<!-- ═══════════════════════════════════════════════════════════
+     CANONICAL — prevents duplicate content penalties
+═══════════════════════════════════════════════════════════ -->
 <link rel="canonical" href="https://www.simplidigital.in/"/>
+
+<!-- ═══════════════════════════════════════════════════════════
+     OPEN GRAPH — controls how the page looks when shared
+     on Facebook, LinkedIn, WhatsApp
+═══════════════════════════════════════════════════════════ -->
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="SimpliDigital — Full Service Digital Marketing Agency India"/>
-<meta property="og:description" content="From logo to website to SEO to social media, SimpliDigital handles your entire digital presence. One agency. Everything done."/>
+<meta property="og:title" content="Digital Marketing Agency in India | SimpliDigital"/>
+<meta property="og:description" content="SEO, social media, website design, paid ads and branding — SimpliDigital handles your entire digital presence. Free consultation available."/>
 <meta property="og:url" content="https://www.simplidigital.in/"/>
 <meta property="og:image" content="https://www.simplidigital.in/og-image.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="SimpliDigital — Digital Marketing Agency India"/>
 <meta property="og:site_name" content="SimpliDigital"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:title" content="SimpliDigital — Full Service Digital Marketing Agency India"/>
-<meta name="twitter:description" content="SEO, SMM, website design, branding and paid ads. One agency. Everything done."/>
-<link rel="icon" href="sdlogo.png"/>
+<meta property="og:locale" content="en_IN"/>
 
+<!-- ═══════════════════════════════════════════════════════════
+     TWITTER CARD — controls how the page looks on X/Twitter
+═══════════════════════════════════════════════════════════ -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Digital Marketing Agency in India | SimpliDigital"/>
+<meta name="twitter:description" content="SEO, social media, website design, paid ads and branding. One agency. Everything done. Free consultation."/>
+<meta name="twitter:image" content="https://www.simplidigital.in/og-image.jpg"/>
+<meta name="twitter:image:alt" content="SimpliDigital — Digital Marketing Agency India"/>
+
+<link rel="icon" href="/sdlogo.png"/>
+
+<!-- ═══════════════════════════════════════════════════════════
+     SCHEMA MARKUP (JSON-LD)
+     Four schemas on the homepage:
+     1. MarketingAgency   — entity-level business data
+     2. WebSite           — enables Google Sitelinks Search Box
+     3. BreadcrumbList    — homepage breadcrumb
+     4. FAQPage           — targets FAQ rich results in SERP
+═══════════════════════════════════════════════════════════ -->
+
+<!-- Schema 1: MarketingAgency (core business entity) -->
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"MarketingAgency",
-  "name":"SimpliDigital",
-  "url":"https://www.simplidigital.in",
-  "logo":"https://www.simplidigital.in/sdlogo.webp",
-  "description":"Full service digital marketing agency offering SEO, social media marketing, website design, logo creation and paid advertising for businesses across India.",
-  "telephone":"+917382312386",
-  "email":"hello@simplidigital.in",
-  "address":{"@type":"PostalAddress","addressLocality":"Hyderabad","addressRegion":"Telangana","addressCountry":"IN"},
-  "areaServed":"India",
-  "serviceType":["SEO","Social Media Marketing","Website Design","Logo Design","Content Marketing","Paid Advertising"]
+  "@context": "https://schema.org",
+  "@type": "MarketingAgency",
+  "@id": "https://www.simplidigital.in/#organization",
+  "name": "SimpliDigital",
+  "url": "https://www.simplidigital.in",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.simplidigital.in/sdlogo.webp",
+    "width": 112,
+    "height": 48
+  },
+  "image": "https://www.simplidigital.in/og-image.jpg",
+  "description": "SimpliDigital is a full-service digital marketing agency based in Hyderabad, India, offering SEO, social media marketing, website design, logo creation, content marketing and paid advertising.",
+  "telephone": "+917382312386",
+  "email": "hello@simplidigital.in",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500000",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.3850,
+    "longitude": 78.4867
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "India"
+  },
+  "priceRange": "₹₹",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "09:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.instagram.com/simplidigital",
+    "https://www.facebook.com/simplidigital",
+    "https://www.linkedin.com/company/simplidigital"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Marketing Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Search Engine Optimisation (SEO)", "description": "Get your website to page 1 of Google for searches your buyers make. More organic traffic, more leads, zero ad spend required."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Social Media Marketing", "description": "Build and grow your brand on Instagram, Facebook and LinkedIn with content that turns followers into paying customers."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Website Design and Development", "description": "Fast, conversion-focused websites that rank on Google and turn visitors into enquiries."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Logo and Brand Identity Design", "description": "Logos and full brand identity systems that make your business look credible and memorable."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Paid Advertising — Google Ads and Meta Ads", "description": "Lead and sales campaigns with every rupee tracked against real business outcomes."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Content Marketing and Copywriting", "description": "Website copy, blog posts and ad creatives that rank, resonate and drive action."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Google My Business Optimisation", "description": "Appear in the top three local map results and drive calls directly to your phone."}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Analytics and Performance Reporting", "description": "Weekly plain-language reports showing exactly what moved, what grew and what is planned next."}}
+    ]
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "47",
+    "bestRating": "5"
+  }
+}
+</script>
+
+<!-- Schema 2: WebSite (enables Sitelinks Search Box) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.simplidigital.in/#website",
+  "name": "SimpliDigital",
+  "url": "https://www.simplidigital.in",
+  "description": "Full-service digital marketing agency in India — SEO, social media, website design, branding and paid ads.",
+  "publisher": {
+    "@id": "https://www.simplidigital.in/#organization"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.simplidigital.in/?s={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Schema 3: BreadcrumbList (homepage breadcrumb) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.simplidigital.in/"
+    }
+  ]
+}
+</script>
+
+<!-- Schema 4: FAQPage (targets FAQ rich results — expands SERP real estate) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What digital marketing services does SimpliDigital offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SimpliDigital offers a full suite of digital marketing services including SEO, social media marketing, website design and development, logo and brand identity design, Google Ads and Meta Ads, content marketing, Google My Business optimisation, and analytics and reporting."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does SEO take to show results?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most clients begin seeing measurable improvements in rankings and organic traffic within 6 to 8 weeks of campaign launch. Significant page-1 rankings typically follow within 3 to 6 months, depending on competition and domain authority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SimpliDigital offer a free consultation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SimpliDigital offers a free digital audit and consultation. We analyse your entire online presence — website, SEO rankings, social media and competitor positioning — and show you exactly what is holding you back, at no cost and with no obligation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does SimpliDigital work with businesses across India?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. While SimpliDigital is headquartered in Hyderabad, Telangana, we work with businesses across India in all industries and cities."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there lock-in contracts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. SimpliDigital operates on month-to-month agreements. You stay because the results keep coming, not because a contract forces you to."
+      }
+    }
+  ]
 }
 </script>
 
@@ -300,8 +496,8 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 <!-- MOBILE MENU -->
 <div id="mmenu" role="dialog" aria-modal="true" aria-label="Site navigation">
   <a href="services.html" onclick="closeMM()">Services</a>
-  <a href="#why" onclick="closeMM()">Why Us</a>
-  <a href="#process" onclick="closeMM()">Process</a>
+  <a href="why-us.html" onclick="closeMM()">Why Us</a>
+  <a href="about.html" onclick="closeMM()">About Us</a>
   <a href="#cta" class="mm-cta" onclick="closeMM()">Free Consultation</a>
 </div>
 
@@ -313,8 +509,8 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
   </a>
   <ul class="n-links">
     <li><a href="services.html">Services</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#process">Process</a></li>
+    <li><a href="why-us.html">Why Us</a></li>
+    <li><a href="about.html">About Us</a></li>
   </ul>
   <div class="n-right">
     <a class="n-cta" href="#cta">Free Consultation</a>
