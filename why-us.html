@@ -297,10 +297,22 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
     <h2 id="num-h2" class="sec-h2">Work that speaks<br/>for itself.</h2>
   </div>
   <div class="numbers-grid rv">
-    <div class="num-item"><div class="num-big" id="n1">0</div><div class="num-lbl">industries we have worked across</div></div>
-    <div class="num-item"><div class="num-big" id="n2">0</div><div class="num-lbl">logos and brand identities delivered</div></div>
-    <div class="num-item"><div class="num-big" id="n3">0</div><div class="num-lbl">websites designed and built</div></div>
-    <div class="num-item"><div class="num-big" id="n4">0%</div><div class="num-lbl">of clients on month to month terms. No contracts.</div></div>
+    <div class="num-item">
+      <div class="num-big" id="n1">0</div>
+      <div class="num-lbl">industries we’ve worked in so far (and counting)</div>
+    </div>
+    <div class="num-item">
+      <div class="num-big" id="n2">0</div>
+      <div class="num-lbl">brand identities shaped across India</div>
+    </div>
+    <div class="num-item">
+      <div class="num-big" id="n3">0</div>
+      <div class="num-lbl">websites designed, built and actively improved</div>
+    </div>
+    <div class="num-item">
+      <div class="num-big" id="n4">0%</div>
+      <div class="num-lbl">clients on month to month terms. No contracts.</div>
+    </div>
   </div>
 </section>
 
@@ -449,7 +461,12 @@ function countUp(){
   var el=document.getElementById('numbers');
   if(!el||el.getBoundingClientRect().top>window.innerHeight)return;
   counted=true;
-  var targets=[{id:'n1',end:6,suffix:''},{id:'n2',end:6,suffix:''},{id:'n3',end:3,suffix:''},{id:'n4',end:100,suffix:'%'}];
+  var targets=[
+    {id:'n1',end:6,suffix:''},
+    {id:'n2',end:10,suffix:'+'},
+    {id:'n3',end:5,suffix:'+'},
+    {id:'n4',end:100,suffix:'%'}
+  ];
   targets.forEach(function(t){
     var el=document.getElementById(t.id),start=0,dur=1800,step=16;
     var inc=t.end/(dur/step);
