@@ -1,10 +1,622 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<link rel="canonical" href="https://www.simplidigital.in/why-us"/>
-<meta http-equiv="refresh" content="0; url=https://www.simplidigital.in/why-us"/>
-<script>window.location.replace("https://www.simplidigital.in/why-us")</script>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About SimpliDigital — Digital Marketing Agency in India</title>
+<meta name="description" content="SimpliDigital is a digital marketing and web design studio led by Shivateja Seenuri. We design cinematic websites, SEO strategies and campaigns that actually move business metrics."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.simplidigital.in/about"/>
+<link rel="icon" href="sdlogo.png"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--teal:#00C2CB;--gold:#F4A100;--navy:#04090f;--white:#f5f5f7;--line:rgba(255,255,255,.07);--nh:64px}
+html{scroll-behavior:smooth}
+body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
+
+/* Cursor */
+#c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
+#c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+
+/* NAV */
+nav#nav{position:fixed;top:0;left:0;right:0;z-index:600;height:var(--nh);padding:0 5vw;display:flex;align-items:center;justify-content:space-between;background:rgba(4,9,15,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}
+.n-logo{display:flex;align-items:center;gap:9px;text-decoration:none;flex-shrink:0}
+.n-logo img{height:28px;width:auto}
+.n-brand{font-size:.95rem;font-weight:700;color:var(--white)}
+.n-brand em{color:var(--teal);font-style:normal}
+.n-links{display:flex;gap:28px;list-style:none;align-items:center;position:absolute;left:50%;transform:translateX(-50%)}
+.n-links a{font-size:.75rem;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s;font-weight:500;white-space:nowrap}
+.n-links a:hover,.n-links a.active{color:var(--white)}
+.n-right{display:flex;align-items:center;gap:14px;flex-shrink:0}
+.n-cta{font-size:.74rem;font-weight:600;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:7px 18px;border-radius:980px;text-decoration:none;transition:all .25s;white-space:nowrap}
+.n-cta:hover{background:var(--teal);color:var(--navy)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.ham span{display:block;width:22px;height:1.5px;background:var(--white);transition:all .35s;transform-origin:center}
+.ham.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.ham.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.ham.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+
+/* Mobile menu */
+#mmenu{position:fixed;inset:0;background:rgba(4,9,15,.97);backdrop-filter:blur(28px);z-index:590;display:none;flex-direction:column;align-items:center;justify-content:center;gap:36px;opacity:0;pointer-events:none;transition:opacity .4s}
+#mmenu.open{display:flex;opacity:1;pointer-events:auto}
+#mmenu a{font-size:1.8rem;font-weight:700;color:rgba(255,255,255,.45);text-decoration:none;transition:color .2s}
+#mmenu a:hover{color:var(--white)}
+#mmenu .mm-cta{font-size:1.1rem;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:14px 36px;border-radius:980px}
+
+/* Shared section styles */
+.sec-label{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.sec-label::before,.sec-label::after{content:'';width:20px;height:1px;background:var(--teal)}
+.sec-label.c{justify-content:center}
+.sec-h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1.2px;line-height:1.12;color:var(--white)}
+
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.rv.on{opacity:1;transform:translateY(0)}
+
+/* HERO */
+#hero{position:relative;min-height:80vh;padding-top:var(--nh);display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(0,194,203,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(0,194,203,.03) 1px,transparent 1px);background-size:60px 60px;mask-image:radial-gradient(ellipse 90% 90% at 50% 50%,black 10%,transparent 100%)}
+.hero-glow{position:absolute;width:650px;height:650px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:45%;left:50%;transform:translate(-50%,-50%)}
+.hero-inner{position:relative;z-index:2;display:grid;grid-template-columns:3fr 2fr;gap:60px;align-items:center;padding:80px 6vw}
+.hero-tag{font-size:.62rem;font-weight:700;letter-spacing:3.5px;text-transform:uppercase;color:var(--teal);display:flex;align-items:center;gap:10px;margin-bottom:16px}
+.hero-tag::before,.hero-tag::after{content:'';width:20px;height:1px;background:var(--teal)}
+.hero-title{font-size:clamp(2.6rem,5vw,4.8rem);font-weight:900;line-height:1.06;letter-spacing:-2px;margin-bottom:18px}
+.hero-title em{color:var(--teal);font-style:normal}
+.hero-sub{font-size:1rem;color:rgba(255,255,255,.45);line-height:1.9;font-weight:300;max-width:520px}
+.hero-meta{font-size:.74rem;color:rgba(255,255,255,.3);margin-top:14px}
+.hero-meta span{opacity:.9}
+.hero-right{justify-self:end;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:22px;padding:26px 24px;width:280px;backdrop-filter:blur(16px)}
+.hero-right h3{font-size:.82rem;font-weight:700;margin-bottom:4px}
+.hero-right p{font-size:.76rem;color:rgba(255,255,255,.5);line-height:1.6;font-weight:300;margin-bottom:14px}
+.hero-right ul{list-style:none;font-size:.72rem;color:rgba(255,255,255,.3);display:flex;flex-direction:column;gap:4px}
+.hero-right li::before{content:"• ";color:var(--teal)}
+
+/* STORY */
+#story{padding:100px 5vw;background:#050d18;border-top:1px solid var(--line)}
+.story-grid{max-width:1100px;margin:40px auto 0;display:grid;grid-template-columns:3fr 2fr;gap:60px;align-items:flex-start}
+.story-main p{font-size:.94rem;color:rgba(255,255,255,.42);line-height:1.9;font-weight:300;margin-bottom:18px}
+.story-main p strong{font-weight:600;color:rgba(255,255,255,.85)}
+.story-side{border-radius:20px;border:1px solid rgba(255,255,255,.08);padding:24px 22px;background:rgba(4,9,15,.9)}
+.story-side h3{font-size:.86rem;font-weight:700;margin-bottom:10px}
+.story-side ul{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.78rem;color:rgba(255,255,255,.45)}
+.story-side li::before{content:"→ ";color:var(--teal)}
+
+/* TIMELINE *//* APPLE‑STYLE HORIZONTAL TIMELINE */
+#timeline{
+  padding:120px 5vw 100px;
+  background:var(--navy);
+}
+
+.tl-shell{
+  position:relative;
+  max-width:1100px;
+  margin:70px auto 0;
+  padding:40px 0 0;
+}
+
+.tl-track{
+  position:absolute;
+  left:0;
+  right:0;
+  top:40px;
+  height:2px;
+  background:linear-gradient(90deg,rgba(0,194,203,.7),rgba(0,194,203,.15));
+  pointer-events:none;
+}
+
+.tl-node{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  padding:0 10px;
+}
+
+.tl-shell{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:0;
+}
+
+/* Dot + year */
+.tl-dot-wrap{
+  position:relative;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:6px;
+  margin-bottom:26px;
+}
+
+.tl-dot{
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:var(--teal);
+  box-shadow:0 0 0 5px rgba(0,194,203,.18);
+}
+
+.tl-year{
+  font-size:.75rem;
+  font-weight:700;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.55);
+}
+
+/* Card */
+.tl-card{
+  background:rgba(255,255,255,.02);
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.07);
+  padding:18px 20px 20px;
+  max-width:240px;
+}
+
+.tl-card h3{
+  font-size:.9rem;
+  font-weight:700;
+  color:var(--white);
+  margin-bottom:6px;
+}
+
+.tl-card p{
+  font-size:.78rem;
+  color:rgba(255,255,255,.4);
+  line-height:1.6;
+  font-weight:300;
+}
+
+/* Hover micro‑interaction */
+.tl-node:hover .tl-dot{
+  transform:scale(1.08);
+  box-shadow:0 0 0 7px rgba(0,194,203,.24);
+  transition:all .25s ease;
+}
+.tl-node:hover .tl-card{
+  border-color:rgba(0,194,203,.25);
+  transform:translateY(-4px);
+  transition:all .25s ease;
+}
+
+/* Responsive timeline */
+@media(max-width:860px){
+  .tl-shell{
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+    padding-top:10px;
+  }
+  .tl-track{
+    left:24px;
+    right:auto;
+    top:0;
+    bottom:0;
+    height:auto;
+    width:2px;
+    background:linear-gradient(to bottom,rgba(0,194,203,.7),rgba(0,194,203,.15));
+  }
+  .tl-node{
+    flex-direction:row;
+    align-items:flex-start;
+    text-align:left;
+    padding-left:46px;
+  }
+  .tl-dot-wrap{
+    position:absolute;
+    left:0;
+    top:2px;
+    margin-bottom:0;
+  }
+  .tl-card{
+    max-width:none;
+  }
+}
+
+
+/* PRINCIPLES */
+#principles{padding:100px 5vw;background:#050d18}
+.principles-grid{max-width:1100px;margin:50px auto 0;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.principle-card{background:rgba(255,255,255,.02);border-radius:20px;border:1px solid rgba(255,255,255,.06);padding:26px 22px;transition:all .35s}
+.principle-card:hover{border-color:rgba(0,194,203,.2);transform:translateY(-4px)}
+.principle-ico{font-size:1.4rem;margin-bottom:10px}
+.principle-card h3{font-size:.9rem;font-weight:700;margin-bottom:6px}
+.principle-card p{font-size:.78rem;color:rgba(255,255,255,.4);line-height:1.7;font-weight:300}
+
+/* FOUNDER */
+#founder{padding:100px 5vw;background:var(--navy)}
+.founder-grid{max-width:1000px;margin:50px auto 0;display:grid;grid-template-columns:2fr 3fr;gap:50px;align-items:center}
+.founder-left{border-radius:22px;border:1px solid rgba(255,255,255,.08);padding:26px 24px;background:rgba(4,9,15,.9)}
+.founder-name{font-size:1.1rem;font-weight:800;margin-bottom:4px}
+.founder-role{font-size:.8rem;color:rgba(255,255,255,.45);margin-bottom:14px}
+.founder-left p{font-size:.8rem;color:rgba(255,255,255,.42);line-height:1.7;font-weight:300;margin-bottom:12px}
+.founder-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.founder-tags span{font-size:.68rem;padding:4px 9px;border-radius:999px;border:1px solid rgba(255,255,255,.12);color:rgba(255,255,255,.6)}
+.founder-right p{font-size:.9rem;color:rgba(255,255,255,.4);line-height:1.9;font-weight:300;margin-bottom:16px}
+
+/* STATS */
+#stats{padding:80px 5vw;background:#050d18}
+.stats-strip{max-width:900px;margin:40px auto 0;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border-radius:20px;border:1px solid var(--line);overflow:hidden}
+.stat-item{background:#050d18;padding:26px 20px;text-align:center}
+.stat-num{font-size:2rem;font-weight:900;color:var(--teal);letter-spacing:-1px;margin-bottom:4px}
+.stat-label{font-size:.72rem;color:rgba(255,255,255,.35);font-weight:300;line-height:1.4}
+
+/* CTA */
+#cta{padding:100px 5vw;background:var(--navy);text-align:center;position:relative;overflow:hidden}
+.cta-glow{position:absolute;width:700px;height:700px;background:radial-gradient(circle,rgba(0,194,203,.07) 0%,transparent 65%);top:50%;left:50%;transform:translate(-50%,-50%)}
+.cta-inner{position:relative;z-index:2;max-width:640px;margin:0 auto}
+.cta-h2{font-size:clamp(2.2rem,5vw,4rem);font-weight:800;line-height:1.1;letter-spacing:-1.5px;margin-bottom:16px}
+.cta-h2 em{color:var(--teal);font-style:normal}
+.cta-p{font-size:1rem;color:rgba(255,255,255,.42);line-height:1.8;font-weight:300;margin-bottom:26px}
+.cta-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.btn-p{background:var(--teal);color:var(--navy);padding:12px 26px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+.btn-p:hover{transform:scale(1.04);box-shadow:0 0 36px rgba(0,194,203,.4)}
+.btn-wa{background:#25D366;color:#fff;padding:12px 24px;border-radius:980px;font-weight:700;font-size:.84rem;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:7px}
+.btn-wa:hover{transform:scale(1.04);box-shadow:0 0 28px rgba(37,211,102,.35)}
+.cta-note{font-size:.74rem;color:rgba(255,255,255,.26)}
+.cta-note a{color:rgba(0,194,203,.6);text-decoration:none}
+
+/* FOOTER */
+footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.f-brand{display:flex;align-items:center;gap:8px}
+.f-brand img{height:22px;width:auto}
+.f-name{font-size:.8rem;font-weight:700;color:var(--white)}
+.f-name em{color:var(--teal);font-style:normal}
+.f-tagline{font-size:.6rem;color:rgba(255,255,255,.18);font-style:italic;margin-top:1px}
+.f-links{display:flex;gap:16px;flex-wrap:wrap}
+.f-links a{font-size:.68rem;color:rgba(255,255,255,.22);text-decoration:none;transition:color .2s}
+.f-links a:hover{color:var(--teal)}
+.f-copy{font-size:.6rem;color:rgba(255,255,255,.1)}
+
+/* Responsive */
+@media(max-width:860px){
+ .n-links{display:none !important}
+ .n-cta{display:none !important}
+ .ham{display:flex !important}
+ .hero-inner{grid-template-columns:1fr;gap:26px;padding-top:80px}
+ .hero-right{justify-self:stretch;width:100%}
+ .story-grid{grid-template-columns:1fr}
+ .time-grid{border-left:none;padding-left:0}
+ .time-item{grid-template-columns:1fr}
+ .principles-grid{grid-template-columns:1fr 1fr}
+ .founder-grid{grid-template-columns:1fr}
+ .stats-strip{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+ .principles-grid{grid-template-columns:1fr}
+ .stats-strip{grid-template-columns:1fr 1fr}
+}
+</style>
 </head>
-<body></body>
+<body>
+<div id="c1"></div><div id="c2"></div>
+
+<!-- MOBILE MENU -->
+<div id="mmenu" role="dialog" aria-modal="true" aria-label="Site navigation">
+  <a href="index.html" onclick="closeMM()">Home</a>
+  <a href="services.html" onclick="closeMM()">Services</a>
+  <a href="why-us.html" onclick="closeMM()">Why Us</a>
+  <a href="about.html" onclick="closeMM()">About</a>
+  <a href="#cta" class="mm-cta" onclick="closeMM()">Free Consultation</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Main navigation">
+  <a class="n-logo" href="index.html" aria-label="SimpliDigital homepage">
+    <img src="sdlogo.webp" alt="SimpliDigital logo" width="56" height="28"/>
+    <span class="n-brand">Simpli<em>Digital</em></span>
+  </a>
+  <ul class="n-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="why-us.html">Why Us</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+  </ul>
+  <div class="n-right">
+    <a class="n-cta" href="#cta">Free Consultation</a>
+    <button class="ham" id="hambtn" onclick="toggleMM()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grid" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">About SimpliDigital</div>
+      <h1 class="hero-title">The studio where<br/>design and growth <em>meet.</em></h1>
+      <p class="hero-sub">
+        SimpliDigital is a digital marketing and web design studio led by Shivateja Seenuri in Hyderabad. 
+        We build cinematic websites, search strategies and campaigns that look beautiful and are obsessed with one thing: measurable results.
+      </p>
+      <div class="hero-meta">
+        Currently working with businesses across <span>food, interiors, fashion, wellness, social and home services.</span>
+      </div>
+    </div>
+    <aside class="hero-right">
+      <h3>Quick snapshot</h3>
+      <p>Small studio, senior level work. No account managers, no layers, no outsourcing. You work directly with the person doing your work.</p>
+      <ul>
+        <li>Based in Hyderabad · working with clients across India</li>
+        <li>Hands-on in web design, SEO, content and paid media</li>
+        <li>Month-to-month partnerships, not long contracts</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
+    <div class="sec-label c">Story</div>
+    <h2 class="sec-h2">From freelancing projects<br/>to a focused studio.</h2>
+  </div>
+  <div class="story-grid rv">
+    <div class="story-main">
+      <p>SimpliDigital started the way a lot of good studios do — with one person saying yes to too many projects. One day it was designing a logo for a new mutton brand. The next it was building a yoga studio website or helping an interior designer look premium online.</p>
+      <p>Very quickly it became clear that <strong>most small businesses were not losing because their product was bad.</strong> They were losing because their website looked outdated, their SEO was non-existent and their social media was either quiet or confusing.</p>
+      <p>SimpliDigital exists to fix that. We bring together clean design, clear messaging and marketing that is actually tracked. The work is cinematic, but the decisions are brutally practical.</p>
+    </div>
+    <aside class="story-side">
+      <h3>What we care about most</h3>
+      <ul>
+        <li>Websites that feel like a brand, not a brochure</li>
+        <li>Search visibility that compounds every month</li>
+        <li>Content that sounds like you, not an AI template</li>
+        <li>Transparent reporting your team actually reads</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- TIMELINE -->
+<section id="timeline">
+  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
+    <div class="sec-label c">Timeline</div>
+    <h2 class="sec-h2">How SimpliDigital<br/>came together.</h2>
+  </div>
+
+  <div class="tl-shell rv">
+    <div class="tl-track"></div>
+
+    <!-- 2022 -->
+    <article class="tl-node">
+      <div class="tl-dot-wrap">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2022</div>
+      </div>
+      <div class="tl-card">
+        <h3>First freelance projects</h3>
+        <p>Started taking on logo and website work for local businesses in Hyderabad — Farm Mutton, yoga studios, interior designers and more.</p>
+      </div>
+    </article>
+
+    <!-- 2023 -->
+    <article class="tl-node">
+      <div class="tl-dot-wrap">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2023</div>
+      </div>
+      <div class="tl-card">
+        <h3>From design to performance</h3>
+        <p>Realised design alone was not enough. Began studying SEO, analytics and conversion‑focused copy so every pixel had a job.</p>
+      </div>
+    </article>
+
+    <!-- 2024 -->
+    <article class="tl-node">
+      <div class="tl-dot-wrap">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2024</div>
+      </div>
+      <div class="tl-card">
+        <h3>SimpliDigital takes shape</h3>
+        <p>Branded the studio, built proprietary layouts and processes, and moved from “designer for hire” to a compact, full‑service digital partner.</p>
+      </div>
+    </article>
+
+    <!-- 2025 – now -->
+    <article class="tl-node">
+      <div class="tl-dot-wrap">
+        <div class="tl-dot"></div>
+        <div class="tl-year">2025 – now</div>
+      </div>
+      <div class="tl-card">
+        <h3>Deep focus on a few clients</h3>
+        <p>Chose to stay intentionally small and hands‑on, taking on fewer projects at a time so each one can aim to be the best work in its niche.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- PRINCIPLES -->
+<section id="principles">
+  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
+    <div class="sec-label c">Principles</div>
+    <h2 class="sec-h2">How we make decisions<br/>on every project.</h2>
+  </div>
+  <div class="principles-grid rv">
+    <div class="principle-card">
+      <div class="principle-ico">🎬</div>
+      <h3>Cinematic, not chaotic</h3>
+      <p>Every page should feel like a well directed scene. Clear focus, clean composition, zero visual noise.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-ico">📈</div>
+      <h3>Design that earns</h3>
+      <p>Pretty without performance is useless. We obsess over speed, SEO, funnels and conversion paths.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-ico">🧪</div>
+      <h3>Test, then trust</h3>
+      <p>Gut instinct is a starting point, not the strategy. We test headlines, layouts and offers, then commit.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-ico">🧩</div>
+      <h3>One story everywhere</h3>
+      <p>Your logo, website, SEO and social content should all feel like they were created in the same room.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-ico">🔍</div>
+      <h3>Simple over clever</h3>
+      <p>Clear beats clever every time. We choose language your customers understand on the first read.</p>
+    </div>
+    <div class="principle-card">
+      <div class="principle-ico">🤝</div>
+      <h3>Partnership, not vendor</h3>
+      <p>We treat your business like it is ours. If something will not help you long term, we will say no.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section id="founder">
+  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
+    <div class="sec-label c">Founder</div>
+    <h2 class="sec-h2">Who you will<br/>actually work with.</h2>
+  </div>
+  <div class="founder-grid rv">
+    <div class="founder-left">
+      <div class="founder-name">Shivateja Seenuri</div>
+      <div class="founder-role">Founder · Web Designer · Digital Marketer</div>
+      <p>Shivateja designs and codes the websites, writes the strategies and reviews every campaign that goes out under the SimpliDigital name.</p>
+      <p>Background across web development, SEO, content and cinematography-inspired design means every project is a mix of technical and visual thinking.</p>
+      <div class="founder-tags">
+        <span>Web Design</span><span>SEO</span><span>Content Strategy</span><span>Paid Ads</span><span>UI/UX</span>
+      </div>
+    </div>
+    <div class="founder-right">
+      <p>You will never be handed off to an account manager who has to “check with the team.” The person you speak with is the person doing the work. That keeps communication honest and decisions fast.</p>
+      <p>Most of the time is spent building — not presenting. We prefer sending you a live link you can click through instead of a 40 slide deck. Feedback happens directly inside Figma or on the website, not in endless email chains.</p>
+      <p>If you care about thoughtful design, real performance and working with someone who remembers every detail from the first call, you will like how SimpliDigital operates.</p>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section id="stats">
+  <div class="rv" style="max-width:720px;margin:0 auto;text-align:center">
+    <div class="sec-label c">Snapshot</div>
+    <h2 class="sec-h2">Where we are right now.</h2>
+  </div>
+  <div class="stats-strip rv">
+    <div class="stat-item">
+      <div class="stat-num">6</div>
+      <div class="stat-label">industries worked across</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">6</div>
+      <div class="stat-label">logos designed so far</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">3</div>
+      <div class="stat-label">full website builds completed</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">1</div>
+      <div class="stat-label">studio focused on doing the work right</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-inner rv">
+    <div class="sec-label c">Next Step</div>
+    <h2 class="cta-h2">If you like how we think,<br/>you will like how we <em>build.</em></h2>
+    <p class="cta-p">Tell us about your business, where you are stuck and what “good” looks like for you. We will come back with an honest point of view and a plan.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20to%20discuss%20a%20project." class="btn-wa">💬 WhatsApp Us</a>
+      <a href="mailto:hello@simplidigital.in" class="btn-p">Email Us</a>
+    </div>
+    <div class="cta-note">Prefer a call? Dial <a href="tel:+917382312386">+91 73823 12386</a>.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer role="contentinfo">
+  <div class="f-brand">
+    <img src="sdlogo.webp" alt="SimpliDigital" width="44" height="22"/>
+    <div>
+      <div class="f-name">Simpli<em>Digital</em></div>
+      <div class="f-tagline">Simplifying Digital. Amplifying Growth.</div>
+    </div>
+  </div>
+  <div class="f-links" role="navigation" aria-label="Footer navigation">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="why-us.html">Why Us</a>
+    <a href="about.html">About</a>
+  </div>
+  <p class="f-copy">© 2026 SimpliDigital · India</p>
+</footer>
+
+<script>
+// cursor
+var c1=document.getElementById('c1'),c2=document.getElementById('c2'),
+    mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
+document.addEventListener('mousemove',function(e){
+  mx=e.clientX;my=e.clientY;
+  c1.style.left=mx+'px';c1.style.top=my+'px';
+});
+(function lp(){
+  fx+=(mx-fx)*.1;fy+=(my-fy)*.1;
+  c2.style.left=fx+'px';c2.style.top=fy+'px';
+  requestAnimationFrame(lp);
+})();
+
+document.querySelectorAll('a,button').forEach(function(el){
+  el.addEventListener('mouseenter',function(){
+    c1.style.width='4px';c1.style.height='4px';
+    c2.style.width='48px';c2.style.height='48px';
+  });
+  el.addEventListener('mouseleave',function(){
+    c1.style.width='7px';c1.style.height='7px';
+    c2.style.width='30px';c2.style.height='30px';
+  });
+});
+
+// mobile menu
+function toggleMM(){
+  var mm=document.getElementById('mmenu'),
+      hb=document.getElementById('hambtn');
+  var willOpen=!mm.classList.contains('open');
+  if(willOpen){
+    mm.style.display='flex';
+    requestAnimationFrame(function(){mm.classList.add('open')});
+  }else{
+    mm.classList.remove('open');
+    setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);
+  }
+  hb.classList.toggle('open',willOpen);
+  hb.setAttribute('aria-expanded',String(willOpen));
+  document.body.style.overflow=willOpen?'hidden':'';
+}
+function closeMM(){
+  var mm=document.getElementById('mmenu'),
+      hb=document.getElementById('hambtn');
+  mm.classList.remove('open');
+  setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);
+  hb.classList.remove('open');
+  hb.setAttribute('aria-expanded','false');
+  document.body.style.overflow='';
+}
+
+// reveal on scroll
+function reveal(){
+  document.querySelectorAll('.rv').forEach(function(el){
+    if(el.getBoundingClientRect().top<window.innerHeight*.88) el.classList.add('on');
+  });
+}
+window.addEventListener('scroll',reveal,{passive:true});
+reveal();
+</script>
+</body>
 </html>
