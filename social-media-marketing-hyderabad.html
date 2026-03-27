@@ -156,29 +156,32 @@
 
   <!-- NAV -->
   <nav id="nav">
-    <a class="n-logo" href="/">
-      <img src="sdlogo.webp" alt="SimpliDigital logo"/>
-      <span class="n-brand">Simpli<em>Digital</em></span>
-    </a>
-    <ul class="n-links">
-      <li><a href="/">Home</a></li>
-      <li><a href="index.html#services">Services</a></li>
-      <li><a href="#process">Process</a></li>
-    </ul>
-    <div class="n-right">
-      <a class="n-cta" href="#cta">Free Audit</a>
-      <button class="ham" onclick="toggleMM()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <div id="mmenu">
-    <a href="/" onclick="toggleMM()">Home</a>
-    <a href="index.html#services" onclick="toggleMM()">Services</a>
-    <a href="#process" onclick="toggleMM()">Process</a>
-    <a href="#cta" onclick="toggleMM()">Free Audit</a>
+  <a class="n-logo" href="/">
+    <img src="sdlogo.webp" alt="SimpliDigital logo"/>
+    <span class="n-brand">Simpli<em>Digital</em></span>
+  </a>
+  <ul class="n-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="services-hyderabad" class="active">Services</a></li>
+    <li><a href="why-us">Why Us</a></li>
+    <li><a href="about">About Us</a></li>
+  </ul>
+  <div class="n-right">
+    <a class="n-cta" href="#cta">Free Consultation</a>
+    <button class="ham" id="hambtn" onclick="toggleMM()" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
+</nav>
+
+ <div id="mmenu">
+  <a href="/" onclick="toggleMM()">Home</a>
+  <a href="services-hyderabad" onclick="toggleMM()">Services</a>
+  <a href="why-us" onclick="toggleMM()">Why Us</a>
+  <a href="about" onclick="toggleMM()">About Us</a>
+  <a href="#cta" onclick="toggleMM()" style="color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:14px 36px;border-radius:980px;font-size:1.1rem">Free Consultation</a>
+</div>
+
 
   <!-- HERO -->
   <section id="hero">
