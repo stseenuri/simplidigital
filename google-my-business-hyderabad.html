@@ -379,7 +379,7 @@
       mm.style.display=open?'flex':'none';
       document.body.style.overflow=open?'hidden':'';
     }
-    window.addEventListener('scroll',onScroll,{passive:true});
+    window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('load',function(){handleReveal();handleProcess();handleCTA();});
     onScroll();
     function onScroll(){
       document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
