@@ -1,35 +1,4 @@
-# robots.txt — simplidigital.in
-# Updated: March 2026
-
 User-agent: *
-Allow: /
+Disallow:
 
-# Core pages
-Allow: /
-Allow: /about
-Allow: /why-us
-Allow: /contact
-
-# Service pages
-Allow: /services-hyderabad
-Allow: /seo-services-hyderabad
-Allow: /social-media-marketing-hyderabad
-Allow: /website-design-company-hyderabad
-Allow: /logo-design-agency-hyderabad
-Allow: /paid-advertising-hyderabad
-Allow: /content-marketing-agency-hyderabad
-Allow: /google-my-business-hyderabad
-Allow: /analytics-reporting-services-hyderabad
-
-# Block image assets from crawl budget
-Disallow: /sdlogo.png
-Disallow: /sdlogo.webp
-Disallow: /tys.jpeg
-Disallow: /zapwash.png
-Disallow: /fm_logo.png
-Disallow: /ma_logo.png
-Disallow: /logo-chinkulu.png
-Disallow: /logo-vinthapadalu.png
-
-# Sitemap
 Sitemap: https://www.simplidigital.in/sitemap.xml
