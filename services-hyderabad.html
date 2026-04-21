@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
 </script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
@@ -129,7 +130,7 @@ h1.page-h1.in{opacity:1;transform:translateY(0)}
 .srv-cta svg{transition:transform .2s}
 .srv-cta:hover svg{transform:translateX(4px)}
 
-/* SERVICE CARD — now clickable */
+/* SERVICE CARD */
 .srv-visual{position:relative}
 .srv-card-big{display:block;text-decoration:none;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:20px;padding:36px;position:relative;overflow:hidden;transition:all .35s;cursor:pointer}
 .srv-card-big::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),transparent);opacity:0;transition:opacity .4s}
@@ -210,8 +211,45 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 .sec-label::before,.sec-label::after{content:'';width:20px;height:1px;background:var(--teal)}
 .sec-label.c{justify-content:center}
 .sec-h2{font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-1.2px;line-height:1.12;color:var(--white)}
-.rv{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
-.rv.on{opacity:1;transform:translateY(0)}
+
+/* =============================================
+   FIX: SCROLL REVEAL — CSS-native, no blank spaces
+   Elements are always visible (opacity:1 fallback).
+   In supporting browsers, uses scroll-driven animation.
+   JS .on class is kept as a progressive enhancement only.
+   ============================================= */
+.rv {
+  opacity: 1; /* ALWAYS VISIBLE — fallback for all browsers */
+}
+
+@supports (animation-timeline: scroll()) {
+  .rv {
+    opacity: 0;
+    animation: rv-fade linear both;
+    animation-timeline: view();
+    animation-range: entry 0% entry 60%;
+  }
+  .rv.on {
+    opacity: 1 !important;
+    animation: none !important;
+  }
+}
+
+@keyframes rv-fade { to { opacity: 1; } }
+
+/* Hero text animations (triggered by JS on load) */
+h1.page-h1,
+.hero-sub,
+.hero-btns {
+  opacity: 0;
+  transition: opacity .8s ease, transform .8s ease;
+}
+h1.page-h1 { transform: translateY(20px); transition-delay: .1s; }
+.hero-sub   { transform: translateY(16px); transition-delay: .4s; }
+.hero-btns  { transition-delay: .7s; }
+h1.page-h1.in,
+.hero-sub.in,
+.hero-btns.in { opacity: 1; transform: translateY(0); }
 
 /* RESPONSIVE */
 @media(max-width:860px){
@@ -228,6 +266,9 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 </style>
 </head>
 <body>
+<div id="c1" aria-hidden="true"></div>
+<div id="c2" aria-hidden="true"></div>
+
 <div id="mmenu" role="dialog" aria-modal="true" aria-label="Site navigation">
   <a href="/" onclick="closeMM()">Home</a>
   <a href="#services-nav" onclick="closeMM()">Services</a>
@@ -322,7 +363,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 <section class="srv-section" id="smm" aria-labelledby="smm-h2">
   <div class="srv-section-bg-num" aria-hidden="true">02</div>
   <div class="srv-layout">
-    <div class="srv-content">
+    <div class="srv-content rv">
       <div class="srv-num-label"><span>02</span><span></span></div>
       <h2 id="smm-h2">Social Media<br/><em>Marketing</em></h2>
       <p class="srv-tagline">We build and grow your brand on Instagram, Facebook and LinkedIn with content that drives engagement, builds genuine trust and turns followers into paying customers.</p>
@@ -336,7 +377,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
       </ul>
       <a href="social-media-marketing-hyderabad" class="srv-cta">Explore Social Media Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
-    <div class="srv-visual">
+    <div class="srv-visual rv">
       <a href="social-media-marketing-hyderabad" class="srv-card-big">
         <span class="srv-icon-xl" aria-hidden="true">&#128241;</span>
         <p class="srv-card-h3">Where your buyers spend their time <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></p>
@@ -370,7 +411,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
       </ul>
       <a href="website-design-company-hyderabad" class="srv-cta">Explore Website Design Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
-    <div class="srv-visual">
+    <div class="srv-visual rv">
       <a href="website-design-company-hyderabad" class="srv-card-big">
         <span class="srv-icon-xl" aria-hidden="true">&#128187;</span>
         <p class="srv-card-h3">Your website is your best salesperson <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></p>
@@ -390,7 +431,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 <section class="srv-section" id="brand" aria-labelledby="brand-h2">
   <div class="srv-section-bg-num" aria-hidden="true">04</div>
   <div class="srv-layout">
-    <div class="srv-content">
+    <div class="srv-content rv">
       <div class="srv-num-label"><span>04</span><span></span></div>
       <h2 id="brand-h2">Logo and<br/><em>Brand Identity</em></h2>
       <p class="srv-tagline">We create logos and full brand identity systems that make your business look credible, memorable and professional from the very first impression your customer has of you.</p>
@@ -404,7 +445,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
       </ul>
       <a href="logo-design-agency-hyderabad" class="srv-cta">Explore Branding Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
-    <div class="srv-visual">
+    <div class="srv-visual rv">
       <a href="logo-design-agency-hyderabad" class="srv-card-big">
         <span class="srv-icon-xl" aria-hidden="true">&#127775;</span>
         <p class="srv-card-h3">First impressions are permanent <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></p>
@@ -438,7 +479,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
       </ul>
       <a href="paid-advertising-hyderabad" class="srv-cta">Explore Paid Ads Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
-    <div class="srv-visual">
+    <div class="srv-visual rv">
       <a href="paid-advertising-hyderabad" class="srv-card-big">
         <span class="srv-icon-xl" aria-hidden="true">&#127919;</span>
         <p class="srv-card-h3">Every rupee accountable <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></p>
@@ -458,7 +499,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 <section class="srv-section" id="content" aria-labelledby="content-h2">
   <div class="srv-section-bg-num" aria-hidden="true">06</div>
   <div class="srv-layout">
-    <div class="srv-content">
+    <div class="srv-content rv">
       <div class="srv-num-label"><span>06</span><span></span></div>
       <h2 id="content-h2">Content and<br/><em>Copywriting</em></h2>
       <p class="srv-tagline">From website copy to blog posts to ad creatives, we write content that ranks on search engines, resonates with your audience and moves people to take action.</p>
@@ -472,7 +513,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
       </ul>
       <a href="content-marketing-agency-hyderabad" class="srv-cta">Explore Content Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
-    <div class="srv-visual">
+    <div class="srv-visual rv">
       <a href="content-marketing-agency-hyderabad" class="srv-card-big">
         <span class="srv-icon-xl" aria-hidden="true">&#9997;&#65039;</span>
         <p class="srv-card-h3">Content that earns and converts <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></p>
@@ -506,7 +547,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
       </ul>
       <a href="google-my-business-hyderabad" class="srv-cta">Explore GMB Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
-    <div class="srv-visual">
+    <div class="srv-visual rv">
       <a href="google-my-business-hyderabad" class="srv-card-big">
         <span class="srv-icon-xl" aria-hidden="true">&#128205;</span>
         <p class="srv-card-h3">The local search pack drives real calls <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></p>
@@ -526,7 +567,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 <section class="srv-section" id="analytics" aria-labelledby="analytics-h2">
   <div class="srv-section-bg-num" aria-hidden="true">08</div>
   <div class="srv-layout">
-    <div class="srv-content">
+    <div class="srv-content rv">
       <div class="srv-num-label"><span>08</span><span></span></div>
       <h2 id="analytics-h2">Analytics and<br/><em>Reporting</em></h2>
       <p class="srv-tagline">Every Monday you receive a plain report showing exactly what moved, what grew and what is planned next. Numbers tied to revenue outcomes, not vanity metrics that mean nothing to your business.</p>
@@ -540,7 +581,7 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
       </ul>
       <a href="analytics-reporting-services-hyderabad" class="srv-cta">Explore Analytics Services <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
     </div>
-    <div class="srv-visual">
+    <div class="srv-visual rv">
       <a href="analytics-reporting-services-hyderabad" class="srv-card-big">
         <span class="srv-icon-xl" aria-hidden="true">&#128202;</span>
         <p class="srv-card-h3">You always know what is working <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></p>
@@ -548,8 +589,8 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
         <div class="stat-row">
           <div class="stat-box"><div class="stat-box-num">100%</div><div class="stat-box-lbl">transparency on where every rupee goes</div></div>
           <div class="stat-box"><div class="stat-box-num">Weekly</div><div class="stat-box-lbl">reports every Monday without fail</div></div>
-          <div class="stat-box"><div class="stat-box-num">0</div><div class="stat-box-lbl">vanity metrics — everything tied to revenue</div></div>
-          <div class="stat-box"><div class="stat-box-num">Real</div><div class="stat-box-lbl">time dashboard access to all your data</div></div>
+          <div class="stat-box"><div class="stat-box-num">0</div><div class="stat-box-lbl">vanity metrics in any report we send</div></div>
+          <div class="stat-box"><div class="stat-box-num">ROI</div><div class="stat-box-lbl">tied to real business outcomes not impressions</div></div>
         </div>
       </a>
     </div>
@@ -558,60 +599,57 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 
 <!-- PACKAGES -->
 <section id="packages" aria-labelledby="pkg-h2">
-  <div style="text-align:center;max-width:640px;margin:0 auto" class="rv">
-    <div class="sec-label c">Pricing</div>
-    <h2 id="pkg-h2" class="sec-h2">Simple packages.<br/>No hidden costs.</h2>
-    <p style="font-size:.9rem;color:rgba(255,255,255,.35);margin-top:12px;line-height:1.7;font-weight:300">Every package is month to month. No lock in. Custom plans available for larger businesses.</p>
+  <div class="rv" style="text-align:center;padding:0 5vw;margin-bottom:0">
+    <div class="sec-label c">Packages</div>
+    <h2 class="sec-h2" id="pkg-h2" style="text-align:center">Simple, transparent <em style="color:var(--teal);font-style:normal">pricing.</em></h2>
+    <p style="font-size:.95rem;color:rgba(255,255,255,.4);margin:12px auto 0;max-width:500px;line-height:1.75;font-weight:300">No contracts. No hidden fees. Pick a plan that fits where you are today and upgrade when you are ready to scale.</p>
   </div>
   <div class="pkg-grid rv">
     <div class="pkg-card">
       <div class="pkg-name">Starter</div>
-      <h3>Digital Foundation</h3>
-      <p class="pkg-desc">Perfect for businesses that need to establish a credible online presence and start ranking locally.</p>
+      <h3>Launch</h3>
+      <p class="pkg-desc">Perfect for new businesses establishing their digital presence and first Google rankings.</p>
       <div class="pkg-divider"></div>
       <ul class="pkg-features">
-        <li>Google My Business optimisation</li>
-        <li>On page SEO for up to 5 pages</li>
-        <li>Social media setup and branding</li>
-        <li>8 social media posts per month</li>
-        <li>Monthly performance report</li>
-        <li class="no">Paid advertising management</li>
-        <li class="no">Content and copywriting</li>
-        <li class="no">Website design or development</li>
+        <li>SEO — 10 target keywords</li>
+        <li>Google My Business setup</li>
+        <li>On-page optimisation (5 pages)</li>
+        <li>Monthly ranking report</li>
+        <li class="no">Social media management</li>
+        <li class="no">Paid advertising</li>
+        <li class="no">Content creation</li>
       </ul>
       <a href="#cta" class="pkg-btn">Get Started</a>
     </div>
     <div class="pkg-card featured">
       <div class="pkg-name">Growth</div>
-      <h3>Full Digital Growth</h3>
-      <p class="pkg-desc">For businesses serious about growing their online presence across search, social and content.</p>
+      <h3>Scale</h3>
+      <p class="pkg-desc">For established businesses ready to dominate their local market across multiple channels.</p>
       <div class="pkg-divider"></div>
       <ul class="pkg-features">
-        <li>Everything in Starter</li>
-        <li>Full SEO campaign with link building</li>
-        <li>16 social media posts per month</li>
-        <li>2 SEO blog articles per month</li>
-        <li>Google My Business weekly posts</li>
-        <li>Paid ads management up to 30K budget</li>
-        <li>Weekly ranking and traffic report</li>
-        <li class="no">Website design or development</li>
+        <li>SEO — 25 target keywords</li>
+        <li>Google My Business management</li>
+        <li>On-page optimisation (15 pages)</li>
+        <li>Social media (2 platforms)</li>
+        <li>4 blog posts per month</li>
+        <li>Monthly strategy call</li>
+        <li class="no">Paid advertising</li>
       </ul>
       <a href="#cta" class="pkg-btn">Get Started</a>
     </div>
     <div class="pkg-card">
-      <div class="pkg-name">Complete</div>
-      <h3>Total Digital Dominance</h3>
-      <p class="pkg-desc">The complete package for businesses that want to own their market online across every channel.</p>
+      <div class="pkg-name">Authority</div>
+      <h3>Dominate</h3>
+      <p class="pkg-desc">Full-service digital marketing for businesses serious about becoming the market leader.</p>
       <div class="pkg-divider"></div>
       <ul class="pkg-features">
-        <li>Everything in Growth</li>
-        <li>Custom website design and development</li>
-        <li>Logo and brand identity design</li>
-        <li>4 SEO articles per month</li>
-        <li>Paid ads management unlimited budget</li>
-        <li>Competitor intelligence reporting</li>
-        <li>Dedicated account manager</li>
-        <li>Priority support and response</li>
+        <li>SEO — unlimited keywords</li>
+        <li>Google My Business management</li>
+        <li>Full website optimisation</li>
+        <li>Social media (3 platforms)</li>
+        <li>8 blog posts per month</li>
+        <li>Paid ads management included</li>
+        <li>Weekly strategy call</li>
       </ul>
       <a href="#cta" class="pkg-btn">Get Started</a>
     </div>
@@ -620,109 +658,137 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 
 <!-- FAQ -->
 <section id="faq" aria-labelledby="faq-h2">
-  <div style="text-align:center;max-width:640px;margin:0 auto" class="rv">
-    <div class="sec-label c">Questions</div>
-    <h2 id="faq-h2" class="sec-h2">Things businesses<br/>ask us most.</h2>
+  <div class="rv" style="text-align:center;padding:0 5vw">
+    <div class="sec-label c">FAQ</div>
+    <h2 class="sec-h2" id="faq-h2" style="text-align:center">Questions we <em style="color:var(--teal);font-style:normal">always get.</em></h2>
   </div>
   <div class="faq-list rv">
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><h3>How long does SEO take to show results?</h3><div class="faq-icon">+</div></div>
-      <div class="faq-a"><p>Most businesses start seeing ranking movements within 6 to 8 weeks of starting. Significant traffic and lead growth typically comes from month 3 onward. SEO is a compounding asset — the longer it runs, the stronger and more valuable it becomes.</p></div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+        <h3>How long does SEO take to show results?</h3>
+        <div class="faq-icon">+</div>
+      </div>
+      <div class="faq-a"><p>Most clients see meaningful ranking movement within 60 to 90 days. Significant traffic growth typically happens between months 3 and 6. SEO is a compounding investment — the longer you do it, the stronger the results become and the harder they are for competitors to reverse.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><h3>Do you work with businesses outside Hyderabad?</h3><div class="faq-icon">+</div></div>
-      <div class="faq-a"><p>Yes. We work with businesses across India and handle everything remotely. The only thing that matters is your results, not your location. We have clients in Hyderabad, Bangalore, Mumbai, Delhi and beyond.</p></div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+        <h3>Do you work with businesses outside Hyderabad?</h3>
+        <div class="faq-icon">+</div>
+      </div>
+      <div class="faq-a"><p>Yes. We work with businesses across India. Our SEO, social media, content and paid ads services are fully remote and have driven results for clients in Mumbai, Bangalore, Delhi, Chennai and beyond. Location is not a barrier to great digital marketing.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><h3>What makes SimpliDigital different from other agencies?</h3><div class="faq-icon">+</div></div>
-      <div class="faq-a"><p>We are a full service agency that handles everything from branding to SEO to paid ads under one roof. We work month to month because we are confident our results earn your continued business every single month.</p></div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+        <h3>What makes SimpliDigital different from other agencies?</h3>
+        <div class="faq-icon">+</div>
+      </div>
+      <div class="faq-a"><p>We tie every metric to actual business outcomes. No vanity reports full of impressions and reach that do not pay your bills. You get clear weekly reports showing rankings, traffic and leads — and a team that treats your marketing budget as if it were their own.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><h3>Is there a minimum contract period?</h3><div class="faq-icon">+</div></div>
-      <div class="faq-a"><p>No. All our packages are month to month. We do not believe in locking clients into long contracts. If our results are not strong enough for you to stay, you should not stay. That pressure keeps us performing at our best every month.</p></div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+        <h3>Can I start with just one service?</h3>
+        <div class="faq-icon">+</div>
+      </div>
+      <div class="faq-a"><p>Absolutely. Many clients start with SEO or Google My Business and expand once they see results. There are no lock-in contracts and no pressure to buy more than you need right now. We earn your trust with results first.</p></div>
     </div>
     <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><h3>Can I just take one service instead of the full package?</h3><div class="faq-icon">+</div></div>
-      <div class="faq-a"><p>Absolutely. You can start with just SEO, just social media or just a website. Many of our clients start with one service and expand as they see results. Contact us and we will build a plan that fits exactly where your business is right now.</p></div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q" onclick="toggleFaq(this)"><h3>How does the free consultation work?</h3><div class="faq-icon">+</div></div>
-      <div class="faq-a"><p>You contact us via WhatsApp, email or phone. We review your current digital presence, identify the biggest gaps and opportunities, and walk you through exactly what we would do and what kind of results you could expect. No sales pressure. No obligation.</p></div>
+      <div class="faq-q" onclick="toggleFaq(this)" role="button" tabindex="0" aria-expanded="false">
+        <h3>How do I get started?</h3>
+        <div class="faq-icon">+</div>
+      </div>
+      <div class="faq-a"><p>Book a free consultation using the button below. We will audit your current digital presence, identify the highest-impact opportunities for your business, and give you a clear roadmap — with no obligation to proceed.</p></div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section id="cta" aria-labelledby="cta-h2">
+<section id="cta">
   <div class="cta-glow" aria-hidden="true"></div>
   <div class="cta-inner rv">
-    <div class="sec-label c">Ready to Start</div>
-    <h2 class="cta-h2" id="cta-h2">Pick a service.<br/>Or let us pick the right<br/><em>ones for you.</em></h2>
-    <p class="cta-p">Tell us about your business and we will put together a plan that makes sense for where you are right now and where you want to go. No cost. No obligation.</p>
+    <div class="sec-label c">Get Started</div>
+    <h2 class="cta-h2">Ready to grow your<br/>business <em>online?</em></h2>
+    <p class="cta-p">Book a free 30-minute consultation. We will audit your digital presence, identify your biggest growth opportunities and give you a clear plan — no obligation, no sales pressure.</p>
     <div class="cta-btns">
-      <a href="https://wa.me/917382312386?text=Hi%20SimpliDigital%2C%20I%27d%20like%20a%20free%20consultation." class="btn-wa">&#128172; WhatsApp Us</a>
-      <a href="mailto:hello@simplidigital.in" class="btn-p">Email Us <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="https://wa.me/919XXXXXXXXX" class="btn-wa" target="_blank" rel="noopener noreferrer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <a href="mailto:hello@simplidigital.in" class="btn-s">Send an Email</a>
     </div>
-    <p class="cta-contact">Call: <a href="tel:+917382312386">+91 73823 12386</a> &nbsp;·&nbsp; <a href="mailto:hello@simplidigital.in">hello@simplidigital.in</a></p>
+    <p class="cta-contact">Or call us at <a href="tel:+919XXXXXXXXX">+91 9XX XXX XXXX</a></p>
   </div>
 </section>
 
-<footer role="contentinfo">
+<!-- FOOTER -->
+<footer>
   <div class="f-brand">
     <img src="sdlogo.webp" alt="SimpliDigital" width="44" height="22"/>
-    <div><div class="f-name">Simpli<em>Digital</em></div><div class="f-tagline">Simplifying Digital. Amplifying Growth.</div></div>
+    <div>
+      <div class="f-name">Simpli<em>Digital</em></div>
+      <div class="f-tagline">Digital Marketing Agency, Hyderabad</div>
+    </div>
   </div>
-  <div class="f-links" role="navigation" aria-label="Footer navigation">
+  <nav class="f-links" aria-label="Footer navigation">
     <a href="/">Home</a>
     <a href="services-hyderabad">Services</a>
     <a href="why-us">Why Us</a>
-    <a href="https://wa.me/917382312386" aria-label="WhatsApp">WhatsApp</a>
-    <a href="mailto:hello@simplidigital.in" aria-label="Email">Email</a>
-  </div>
-  <p class="f-copy">&copy; 2026 SimpliDigital · India</p>
+    <a href="about">About Us</a>
+    <a href="seo-services-hyderabad">SEO</a>
+    <a href="website-design-company-hyderabad">Web Design</a>
+    <a href="social-media-marketing-hyderabad">Social Media</a>
+    <a href="#cta">Contact</a>
+  </nav>
+  <p class="f-copy">&copy; 2025 SimpliDigital. All rights reserved.</p>
 </footer>
 
 <script>
-// CURSOR
-var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
+// CUSTOM CURSOR
+var c1=document.getElementById('c1'),c2=document.getElementById('c2');
+var mx=0,my=0,cx=0,cy=0;
 document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
-(function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();
-document.querySelectorAll('a,button').forEach(function(el){
-  el.addEventListener('mouseenter',function(){c1.style.width='4px';c1.style.height='4px';c2.style.width='48px';c2.style.height='48px'});
-  el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px'});
-});
+setInterval(function(){cx+=(mx-cx)*.15;cy+=(my-cy)*.15;c2.style.left=cx+'px';c2.style.top=cy+'px'},16);
 
 // MOBILE MENU
 function toggleMM(){
-  var mm=document.getElementById('mmenu'),hb=document.getElementById('hambtn');
-  var willOpen=!mm.classList.contains('open');
-  if(willOpen){mm.style.display='flex';requestAnimationFrame(function(){mm.classList.add('open')})}
-  else{mm.classList.remove('open');setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420)}
-  hb.classList.toggle('open',willOpen);
-  hb.setAttribute('aria-expanded',String(willOpen));
-  document.body.style.overflow=willOpen?'hidden':'';
+  var m=document.getElementById('mmenu'),b=document.getElementById('hambtn');
+  var open=m.classList.toggle('open');
+  b.classList.toggle('open',open);
+  b.setAttribute('aria-expanded',open);
+  document.body.style.overflow=open?'hidden':'';
 }
 function closeMM(){
-  var mm=document.getElementById('mmenu'),hb=document.getElementById('hambtn');
-  mm.classList.remove('open');
-  setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);
-  hb.classList.remove('open');hb.setAttribute('aria-expanded','false');
+  var m=document.getElementById('mmenu'),b=document.getElementById('hambtn');
+  m.classList.remove('open');b.classList.remove('open');
+  b.setAttribute('aria-expanded','false');
   document.body.style.overflow='';
 }
 
-// HERO IN
+// HERO REVEAL — fires on window load (after fonts/layout settle)
 window.addEventListener('load',function(){
   document.querySelector('h1.page-h1').classList.add('in');
   document.querySelector('.hero-sub').classList.add('in');
   document.querySelector('.hero-btns').classList.add('in');
 });
 
-// SCROLL REVEAL + TAB HIGHLIGHT
+// SCROLL REVEAL FALLBACK (for browsers without animation-timeline support)
+var supportsScrollTimeline = CSS.supports('animation-timeline','scroll()');
+if(!supportsScrollTimeline){
+  function revealVisible(){
+    document.querySelectorAll('.rv:not(.on)').forEach(function(el){
+      if(el.getBoundingClientRect().top < window.innerHeight * .88) el.classList.add('on');
+    });
+  }
+  window.addEventListener('scroll',revealVisible,{passive:true});
+  window.addEventListener('load',revealVisible);
+  // Safety net: reveal everything after 1.5s regardless
+  setTimeout(function(){
+    document.querySelectorAll('.rv').forEach(function(el){ el.classList.add('on'); });
+  },1500);
+}
+
+// TAB HIGHLIGHT ON SCROLL
 var sections=['seo','smm','web','brand','ads','content','gmb','analytics'];
 window.addEventListener('scroll',function(){
-  document.querySelectorAll('.rv').forEach(function(el){
-    if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on');
-  });
   var current='seo';
   sections.forEach(function(id){
     var el=document.getElementById(id);
@@ -737,21 +803,20 @@ window.addEventListener('scroll',function(){
 function scrollToSection(id){
   var el=document.getElementById(id);
   if(!el)return;
-  var top=el.getBoundingClientRect().top+window.pageYOffset-(64+48+8);
+  var top=el.getBoundingClientRect().top+window.pageYOffset-(64+48+16);
   window.scrollTo({top:top,behavior:'smooth'});
 }
 
-// FAQ
-function toggleFaq(el){
-  var item=el.parentElement;
-  var wasOpen=item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(function(i){i.classList.remove('open')});
-  if(!wasOpen)item.classList.add('open');
+// FAQ TOGGLE
+function toggleFaq(btn){
+  var item=btn.closest('.faq-item');
+  var isOpen=item.classList.toggle('open');
+  btn.setAttribute('aria-expanded',isOpen);
 }
-
-// INITIAL REVEAL
-document.querySelectorAll('.rv').forEach(function(el){
-  if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on');
+document.querySelectorAll('.faq-q').forEach(function(q){
+  q.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleFaq(q);}
+  });
 });
 </script>
 </body>
