@@ -1,16 +1,13 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head> 
- <script>
-window.addEventListener('load', function() {
-  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-54X9TDJK');
-});
-</script>
+<head> <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-54X9TDJK');</script>
+<!-- End Google Tag Manager -->
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 
@@ -238,9 +235,14 @@ window.addEventListener('load', function() {
     }
   ]
 }
-</script><link rel="preconnect" href="https://fonts.googleapis.com">
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style"
+  href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+  onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap">
 </noscript>
      <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
@@ -256,8 +258,8 @@ html{scroll-behavior:auto}
 body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
 
 /* CURSOR */
-#c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;{position:fixed;top:0;left:0;width:7px;height:7px;...will-change:transform;};mix-blend-mode:difference}
-#c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;{position:fixed;top:0;left:0;width:30px;height:30px;...will-change:transform;}
+#c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
+#c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
 
 /* ══ NAV ══════════════════════════════════════════════ */
 nav{
@@ -818,11 +820,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 // ── CURSOR
 var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
-document.addEventListener('mousemove', function(e) {
-  mx = e.clientX; my = e.clientY;
-  c1.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
-});
- (function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=c2.style.transform = 'translate(' + fx + 'px,' + fy + 'px)';
+document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
+(function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();
 document.querySelectorAll('a,button').forEach(function(el){
   el.addEventListener('mouseenter',function(){c1.style.width='4px';c1.style.height='4px';c2.style.width='48px';c2.style.height='48px';c2.style.borderColor='rgba(0,194,203,.5)'});
   el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px';c2.style.borderColor='rgba(0,194,203,.3)'});
