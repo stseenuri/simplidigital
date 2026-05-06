@@ -261,8 +261,8 @@ html{scroll-behavior:auto}
 body{background:var(--navy);color:var(--white);font-family:'Inter',sans-serif;overflow-x:hidden;cursor:none}
 
 /* CURSOR */
-#c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference}
-#c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%)}
+#c1{position:fixed;width:7px;height:7px;background:var(--teal);border-radius:50%;pointer-events:none;z-index:9999;{position:fixed;top:0;left:0;width:7px;height:7px;...will-change:transform;};mix-blend-mode:difference}
+#c2{position:fixed;width:30px;height:30px;border:1px solid rgba(0,194,203,.3);border-radius:50%;pointer-events:none;z-index:9998;{position:fixed;top:0;left:0;width:30px;height:30px;...will-change:transform;}
 
 /* ══ NAV ══════════════════════════════════════════════ */
 nav{
@@ -823,8 +823,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script>
 // ── CURSOR
 var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
-document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});
-(function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();
+document.addEventListener('mousemove', function(e) {
+  mx = e.clientX; my = e.clientY;
+  c1.style.transform = 'translate(' + mx + 'px,' + my + 'px)';
+});
+ (function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=c2.style.transform = 'translate(' + fx + 'px,' + fy + 'px)';
 document.querySelectorAll('a,button').forEach(function(el){
   el.addEventListener('mouseenter',function(){c1.style.width='4px';c1.style.height='4px';c2.style.width='48px';c2.style.height='48px';c2.style.borderColor='rgba(0,194,203,.5)'});
   el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px';c2.style.borderColor='rgba(0,194,203,.3)'});
