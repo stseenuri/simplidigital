@@ -299,14 +299,6 @@ nav.scrolled{background:rgba(4,9,15,.98);}
 #mmenu a:hover{color:var(--white)}
 #mmenu .mm-cta{font-size:1.1rem;color:var(--teal);border:1px solid rgba(0,194,203,.3);padding:14px 36px;border-radius:980px}
 
-/* LOADER */
-#loader{position:fixed;inset:0;background:var(--navy);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:20px}
-#loader img{height:52px;width:auto;opacity:0;transform:scale(.85);transition:opacity .6s,transform .6s}
-#loader img.in{opacity:1;transform:scale(1)}
-.ld-bar{width:160px;height:1px;background:rgba(255,255,255,.06);border-radius:100px;overflow:hidden}
-.ld-prog{height:100%;width:0;background:linear-gradient(90deg,var(--teal),var(--gold));transition:width .04s linear}
-.ld-pct{font-size:.6rem;letter-spacing:4px;color:rgba(255,255,255,.18)}
-
 /* ══ HERO ═════════════════════════════════════════════
    padding-top = nav height so H1 is never hidden under nav
    min-height = 100vh so it fills the screen
@@ -501,13 +493,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- Google Tag Manager (noscript) --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-54X9TDJK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- End Google Tag Manager (noscript) -->
 <div id="c1"></div><div id="c2"></div>
-
-<!-- LOADER -->
-<div id="loader" role="status" aria-label="Loading SimpliDigital">
-  <img src="sdlogo.webp" alt="SimpliDigital" id="ldimg" width="120" height="52"/>
-  <div class="ld-bar"><div class="ld-prog" id="ldprog"></div></div>
-  <div class="ld-pct" id="ldpct" aria-live="polite">0%</div>
-</div>
 
 <!-- MOBILE MENU -->
 <div id="mmenu" role="dialog" aria-modal="true" aria-label="Site navigation">
@@ -851,22 +836,6 @@ function closeMM(){
   document.body.style.overflow='';
 }
 
-// ── LOADER
-var pct=0,prog=document.getElementById('ldprog'),ldpct=document.getElementById('ldpct'),ldimg=document.getElementById('ldimg');
-setTimeout(function(){ldimg.classList.add('in')},100);
-var lt=setInterval(function(){
-  pct+=Math.random()*3.5+1.5;
-  if(pct>=100){pct=100;clearInterval(lt);setTimeout(doneLoad,200)}
-  prog.style.width=Math.min(pct,100)+'%';
-  ldpct.textContent=Math.round(Math.min(pct,100))+'%';
-},38);
-function doneLoad(){
-  var ld=document.getElementById('loader');
-  ld.style.transition='opacity .7s ease';
-  ld.style.opacity='0';
-  setTimeout(function(){ld.style.display='none';heroIn()},720);
-}
-
 // ── HERO
 function heroIn(){
   var he=document.getElementById('he');
@@ -959,7 +928,8 @@ function handleCTA(){
   if(el&&el.getBoundingClientRect().top<window.innerHeight*.85)el.classList.add('show');
 }
 
-// ── DRAG
+heroIn();
+     // ── DRAG
 (function(){
   var el=document.getElementById('dragrow');if(!el)return;
   var down=false,sx=0,sl=0;
