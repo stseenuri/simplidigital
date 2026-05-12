@@ -125,7 +125,17 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 @media(max-width:860px){.n-links,.n-cta,.n-breadcrumb{display:none !important}.ham{display:flex !important}.results-grid{grid-template-columns:1fr 1fr}.p-row{grid-template-columns:44px 1fr}.p-tag{display:none}}
 @media(max-width:560px){.segments-grid{grid-template-columns:1fr}.srv-grid{grid-template-columns:1fr 1fr}.results-grid{grid-template-columns:1fr}h1.hero-h1{letter-spacing:-1px}}
 @media(max-width:400px){.srv-grid{grid-template-columns:1fr}}
-  </style>
+  
+/* FOOTER AREAS ROW */
+.f-areas{display:flex;flex-wrap:wrap;gap:8px;align-items:center;width:100%;padding-top:12px;border-top:1px solid rgba(255,255,255,.04);margin-top:4px}
+.f-areas-label{font-size:.6rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:rgba(0,194,203,.5);white-space:nowrap;margin-right:4px}
+.f-areas a{font-size:.64rem;color:rgba(255,255,255,.18);text-decoration:none;transition:color .2s;padding:2px 0}
+.f-areas a:hover{color:var(--teal)}
+.f-areas a[aria-current="page"]{color:rgba(0,194,203,.6)}
+footer{flex-direction:column;align-items:flex-start}
+@media(max-width:560px){.f-areas{gap:6px}}
+
+</style>
  </head>
  <body>
   <noscript>
@@ -1246,62 +1256,45 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
    </div>
   </div>
   <footer role="contentinfo">
-   <div class="f-brand">
-    <img alt="SimpliDigital — Digital Marketing Agency Madhapur Hyderabad" height="22" src="sdlogo.webp" width="44"/>
+  <div class="f-brand">
+    <img src="/sdlogo.webp" alt="SimpliDigital — Digital Marketing Agency Hyderabad" width="44" height="22"/>
     <div>
-     <div class="f-name">
-      Simpli
-      <em>
-       Digital
-      </em>
-     </div>
-     <div class="f-tagline">
-      Simplifying Digital. Amplifying Growth.
-     </div>
+      <div class="f-name">Simpli<em>Digital</em></div>
+      <div class="f-tagline">Simplifying Digital. Amplifying Growth.</div>
     </div>
-   </div>
-   <div aria-label="Footer navigation" class="f-links" role="navigation">
-    <a href="/">
-     Home
-    </a>
-    <a href="services-hyderabad">
-     Services
-    </a>
-    <a href="seo-services-hyderabad">
-     SEO
-    </a>
-    <a href="social-media-marketing-hyderabad">
-     Social Media
-    </a>
-    <a href="website-design-company-hyderabad">
-     Web Design
-    </a>
-    <a href="google-my-business-hyderabad">
-     GMB
-    </a>
-    <a href="paid-advertising-hyderabad">
-     Google Ads
-    </a>
-    <a href="digital-marketing-agency-kondapur">
-     Kondapur
-    </a>
-    <a href="digital-marketing-agency-kukatpally">
-     Kukatpally
-    </a>
-    <a href="why-us">
-     Why Us
-    </a>
-    <a href="about">
-     About
-    </a>
-    <a aria-label="WhatsApp" href="https://wa.me/917382312386" rel="noopener noreferrer" target="_blank">
-     WhatsApp
-    </a>
-   </div>
-   <p class="f-copy">
-    © 2026 SimpliDigital · Digital Marketing Agency in Madhapur, Hyderabad
-   </p>
-  </footer>
+  </div>
+  <nav class="f-links" role="navigation" aria-label="Footer navigation">
+    <a href="/">Home</a>
+    <a href="/services-hyderabad">Services</a>
+    <a href="/seo-services-hyderabad">SEO</a>
+    <a href="/social-media-marketing-hyderabad">Social Media</a>
+    <a href="/website-design-company-hyderabad">Web Design</a>
+    <a href="/google-my-business-hyderabad">GMB</a>
+    <a href="/paid-advertising-hyderabad">Google Ads</a>
+    <a href="/why-us">Why Us</a>
+    <a href="/about">About</a>
+  </nav>
+  <div class="f-areas" role="navigation" aria-label="Areas we serve">
+    <span class="f-areas-label">Areas We Serve:</span>
+    <a href="/digital-marketing-agency-ameerpet">Ameerpet</a>
+    <a href="/digital-marketing-agency-banjarahills">Banjara Hills</a>
+    <a href="/digital-marketing-agency-begumpet">Begumpet</a>
+    <a href="/digital-marketing-agency-dilsukhnagar">Dilsukhnagar</a>
+    <a href="/digital-marketing-agency-gachibowli">Gachibowli</a>
+    <a href="/digital-marketing-agency-habsiguda">Habsiguda</a>
+    <a href="/digital-marketing-agency-hitechcity">HITEC City</a>
+    <a href="/digital-marketing-agency-jublieehills">Jubilee Hills</a>
+    <a href="/digital-marketing-agency-kondapur">Kondapur</a>
+    <a href="/digital-marketing-agency-kukatapally">Kukatpally</a>
+    <a href="/digital-marketing-agency-madhapur" aria-current="page">Madhapur</a>
+    <a href="/digital-marketing-agency-manikonda">Manikonda</a>
+    <a href="/digital-marketing-agency-secunderabad">Secunderabad</a>
+    <a href="/digital-marketing-agency-tarnaka">Tarnaka</a>
+    <a href="/digital-marketing-agency-uppal">Uppal</a>
+    <a href="/digital-marketing-agency-warangal">Warangal</a>
+  </div>
+  <p class="f-copy">&copy; 2026 SimpliDigital &middot; Digital Marketing Agency in Hyderabad, Telangana</p>
+</footer>
   <script>
    var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY;c1.style.left=mx+'px';c1.style.top=my+'px'});(function lp(){fx+=(mx-fx)*.1;fy+=(my-fy)*.1;c2.style.left=fx+'px';c2.style.top=fy+'px';requestAnimationFrame(lp)})();document.querySelectorAll('a,button').forEach(function(el){el.addEventListener('mouseenter',function(){c1.style.width='4px';c1.style.height='4px';c2.style.width='48px';c2.style.height='48px';c2.style.borderColor='rgba(0,194,203,.5)'});el.addEventListener('mouseleave',function(){c1.style.width='7px';c1.style.height='7px';c2.style.width='30px';c2.style.height='30px';c2.style.borderColor='rgba(0,194,203,.3)'})});function toggleMM(){var mm=document.getElementById('mmenu'),hb=document.getElementById('hambtn');var willOpen=!mm.classList.contains('open');if(willOpen){mm.style.display='flex';requestAnimationFrame(function(){mm.classList.add('open')})}else{mm.classList.remove('open');setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420)}hb.classList.toggle('open',willOpen);hb.setAttribute('aria-expanded',String(willOpen));document.body.style.overflow=willOpen?'hidden':''}function closeMM(){var mm=document.getElementById('mmenu'),hb=document.getElementById('hambtn');mm.classList.remove('open');setTimeout(function(){if(!mm.classList.contains('open'))mm.style.display='none'},420);hb.classList.remove('open');hb.setAttribute('aria-expanded','false');document.body.style.overflow=''}(function heroIn(){document.getElementById('hlp').style.opacity='1';['hw0','hw1','hw2'].forEach(function(id,i){setTimeout(function(){var el=document.getElementById(id);if(el)el.style.transform='translateY(0)'},200+i*180)});setTimeout(function(){var p=document.getElementById('hp');if(p){p.style.opacity='1';p.style.transform='translateY(0)'}},780);setTimeout(function(){var b=document.getElementById('hb');if(b){b.style.opacity='1';b.style.transform='translateY(0)'}},980);setTimeout(function(){var t=document.getElementById('ht');if(t)t.style.opacity='1'},1100)})();window.addEventListener('scroll',onScroll,{passive:true});function onScroll(){document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);document.querySelectorAll('.rv').forEach(function(el){if(el.getBoundingClientRect().top<window.innerHeight*.88)el.classList.add('on')});['pr0','pr1','pr2','pr3'].forEach(function(id){var el=document.getElementById(id);if(el&&el.getBoundingClientRect().top<window.innerHeight*.85)el.classList.add('show')});var ci=document.getElementById('ctain');if(ci&&ci.getBoundingClientRect().top<window.innerHeight*.85)ci.classList.add('show')}onScroll();function toggleFaq(btn){var item=btn.parentElement,wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(el){el.classList.remove('open');el.querySelector('.faq-q').setAttribute('aria-expanded','false')});if(!wasOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true')}}document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();toggleFaq(btn)}})});
   </script>
