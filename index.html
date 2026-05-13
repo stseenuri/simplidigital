@@ -447,8 +447,9 @@ h1.hero-h1 .tc{color:var(--teal)}
 .cta-contact a{color:rgba(0,194,203,.55);text-decoration:none;transition:color .2s}
 .cta-contact a:hover{color:var(--teal)}
 
-/* FOOTER */
-footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255,.04);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+/* FOOTER *//* FOOTER */
+footer{background:#020609;padding:40px 5vw 24px;border-top:1px solid rgba(255,255,255,.04);display:flex;flex-direction:column;gap:20px}
+.f-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px}
 .f-brand{display:flex;align-items:center;gap:8px}
 .f-brand img{height:22px;width:auto}
 .f-name{font-size:.8rem;font-weight:700;color:var(--white)}
@@ -457,6 +458,8 @@ footer{background:#020609;padding:24px 5vw;border-top:1px solid rgba(255,255,255
 .f-links{display:flex;gap:16px;flex-wrap:wrap}
 .f-links a{font-size:.68rem;color:rgba(255,255,255,.22);text-decoration:none;transition:color .2s}
 .f-links a:hover{color:var(--teal)}
+.f-locations{border-top:1px solid rgba(255,255,255,.06);padding-top:16px}
+.f-loc-label{font-size:.6rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(0,194,203,.5);margin-bottom:10px}
 .f-copy{font-size:.6rem;color:rgba(255,255,255,.1)}
 
 .rv{opacity:0;transform:translateY(36px);transition:opacity .75s ease,transform .75s ease}
@@ -782,23 +785,47 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- FOOTER -->
 <footer role="contentinfo">
-  <div class="f-brand">
-    <img src="sdlogo.webp" alt="SimpliDigital full service digital marketing agency India" width="44" height="22"/>
-    <div>
-      <div class="f-name">Simpli<em>Digital</em></div>
-      <div class="f-tagline">Simplifying Digital. Amplifying Growth.</div>
+  <div class="f-top">
+    <div class="f-brand">
+      <img src="sdlogo.webp" alt="SimpliDigital full service digital marketing agency India" width="44" height="22"/>
+      <div>
+        <div class="f-name">Simpli<em>Digital</em></div>
+        <div class="f-tagline">Simplifying Digital. Amplifying Growth.</div>
+      </div>
+    </div>
+    <div class="f-links" role="navigation" aria-label="Footer navigation">
+      <a href="services-hyderabad">Services</a>
+      <a href="why-us">Why Us</a>
+      <a href="about">Process</a>
+      <a href="https://wa.me/917382312386" aria-label="WhatsApp">WhatsApp</a>
+      <a href="mailto:hello@simplidigital.in" aria-label="Email">Email</a>
     </div>
   </div>
-  <div class="f-links" role="navigation" aria-label="Footer navigation">
-    <a href="services-hyderabad">Services</a>
-    <a href="why-us">Why Us</a>
-    <a href="about">Process</a>
-    <a href="https://wa.me/917382312386" aria-label="WhatsApp">WhatsApp</a>
-    <a href="mailto:hello@simplidigital.in" aria-label="Email">Email</a>
+  <div class="f-locations" role="navigation" aria-label="Cities we serve across India">
+    <p class="f-loc-label">📍 Cities We Serve Across India</p>
+    <div class="f-links">
+      <a href="digital-marketing-agency-hyderabad">Hyderabad</a>
+      <a href="digital-marketing-agency-mumbai">Mumbai</a>
+      <a href="digital-marketing-agency-delhi">Delhi</a>
+      <a href="digital-marketing-agency-bangalore">Bangalore</a>
+      <a href="digital-marketing-agency-chennai">Chennai</a>
+      <a href="digital-marketing-agency-kolkata">Kolkata</a>
+      <a href="digital-marketing-agency-pune">Pune</a>
+      <a href="digital-marketing-agency-ahmedabad">Ahmedabad</a>
+      <a href="digital-marketing-agency-jaipur">Jaipur</a>
+      <a href="digital-marketing-agency-surat">Surat</a>
+      <a href="digital-marketing-agency-lucknow">Lucknow</a>
+      <a href="digital-marketing-agency-chandigarh">Chandigarh</a>
+      <a href="digital-marketing-agency-kochi">Kochi</a>
+      <a href="digital-marketing-agency-coimbatore">Coimbatore</a>
+      <a href="digital-marketing-agency-nagpur">Nagpur</a>
+      <a href="digital-marketing-agency-vizag">Vizag</a>
+      <a href="digital-marketing-agency-bhopal">Bhopal</a>
+      <a href="digital-marketing-agency-indore">Indore</a>
+    </div>
   </div>
-  <p class="f-copy">&copy; 2026 SimpliDigital · India</p>
+  <p class="f-copy">&copy; 2026 SimpliDigital &middot; India</p>
 </footer>
-
 <script>
 // ── CURSOR
 var c1=document.getElementById('c1'),c2=document.getElementById('c2'),mx=window.innerWidth/2,my=window.innerHeight/2,fx=mx,fy=my;
